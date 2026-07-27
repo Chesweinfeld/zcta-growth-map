@@ -1,4 +1,5 @@
-import { Map as MLMap, NavigationControl, ScaleControl, addProtocol }
+import { Map as MLMap, NavigationControl, ScaleControl, addProtocol,
+         setWorkerCount, getWorkerCount, prewarm }
   from "./vendor/maplibre-gl.mjs";
 import { Protocol } from "./vendor/pmtiles.mjs";
 import { TILES_URL } from "./config.js";
@@ -108,7 +109,11 @@ function fillColor() {
   return ["case", ["==", ["get", state.metric], null], pal().nodata, expr];
 }
 
-function filterExpr() {
+// Filters are expressed as PAINT, not as layer filters. Changing a layer
+// filter makes MapLibre re-parse every loaded tile from raw vector data, which
+// is what made the sliders and checkboxes stutter; changing a data-driven paint
+// property only re-evaluates attributes. Same visual result, no re-tessellation.
+function visibleExpr() {
   const f = ["all", [">=", ["coalesce", ["get", "pop_2024"], 0], state.minPop]];
   if (state.hideRecut) f.push(["!", ["get", "boundary_changed"]]);
   if (state.st) f.push(["==", ["get", "state"], state.st]);
@@ -117,11 +122,37 @@ function filterExpr() {
   return f;
 }
 
+// The JS mirror of visibleExpr, so hover ignores what the map is hiding -
+// zeroed-out opacity still generates pointer events.
+function passesFilter(rec) {
+  if (!rec) return false;
+  if ((rec.pop_2024 ?? 0) < state.minPop) return false;
+  if (state.hideRecut && rec.boundary_changed) return false;
+  if (state.st && rec.state !== state.st) return false;
+  if (state.metric.startsWith("hu") && !rec.comparable_hu) return false;
+  return true;
+}
+
+const fillOpacity = () => [
+  "case", visibleExpr(), state.basemap ? 0.82 : 0.95, 0,
+];
+
+let paintQueued = false;
 function applyPaint() {
+  // The range slider fires continuously; one repaint per frame is plenty.
+  if (paintQueued) return;
+  paintQueued = true;
+  requestAnimationFrame(() => {
+    paintQueued = false;
+    paintNow();
+  });
+}
+
+function paintNow() {
   if (!map || !map.getLayer("zcta-fill")) return;
   map.setPaintProperty("zcta-fill", "fill-color", fillColor());
-  map.setFilter("zcta-fill", filterExpr());
-  map.setFilter("zcta-line", filterExpr());
+  map.setPaintProperty("zcta-fill", "fill-opacity", fillOpacity());
+  map.setPaintProperty("zcta-line", "line-opacity", ["case", visibleExpr(), 1, 0]);
 }
 
 function buildStyle() {
@@ -129,6 +160,8 @@ function buildStyle() {
     zctas: {
       type: "vector",
       url: `pmtiles://${TILES_URL}`,
+      // Lets hover/selection ride on feature-state instead of a filter swap.
+      promoteId: "zcta",
       attribution: "U.S. Census Bureau ACS 5-year, 2020 ZCTAs",
     },
     states: { type: "geojson", data: "data/states.geojson" },
@@ -146,8 +179,13 @@ function buildStyle() {
       type: "fill",
       source: "zctas",
       "source-layer": "zctas",
-      paint: { "fill-color": fillColor(), "fill-opacity": state.basemap ? 0.82 : 0.95 },
-      filter: filterExpr(),
+      paint: {
+        "fill-color": fillColor(),
+        "fill-opacity": fillOpacity(),
+        // 30k polygons per view: the per-polygon antialias pass is pure cost
+        // here, since neighbours share edges and the basemap carries the detail.
+        "fill-antialias": false,
+      },
     },
     {
       id: "zcta-line",
@@ -155,16 +193,26 @@ function buildStyle() {
       source: "zctas",
       "source-layer": "zctas",
       minzoom: 8,
-      paint: { "line-color": pal().border, "line-width": 0.5 },
-      filter: filterExpr(),
+      paint: {
+        "line-color": pal().border,
+        "line-width": 0.5,
+        "line-opacity": ["case", visibleExpr(), 1, 0],
+      },
     },
     {
       id: "zcta-hover",
       type: "line",
       source: "zctas",
       "source-layer": "zctas",
-      paint: { "line-color": pal().ink, "line-width": 1.5 },
-      filter: ["==", ["get", "zcta"], ""],
+      paint: {
+        "line-color": pal().ink,
+        "line-width": [
+          "case",
+          ["boolean", ["feature-state", "selected"], false], 2,
+          ["boolean", ["feature-state", "hover"], false], 1.5,
+          0,
+        ],
+      },
     },
     {
       id: "state-line",
@@ -256,13 +304,38 @@ function detailHTML(zcta) {
     ${flags.map((f) => `<div class="flag">${f}</div>`).join("")}`;
 }
 
+let hoverId = null;
+
+function setHover(id) {
+  if (hoverId === id) return;
+  const src = { source: "zctas", sourceLayer: "zctas" };
+  if (hoverId != null) map.setFeatureState({ ...src, id: hoverId }, { hover: false });
+  hoverId = id;
+  if (id != null) map.setFeatureState({ ...src, id }, { hover: true });
+}
+
+function setSelected(id) {
+  const src = { source: "zctas", sourceLayer: "zctas" };
+  if (state.selected != null)
+    map.setFeatureState({ ...src, id: state.selected }, { selected: false });
+  state.selected = id;
+  if (id != null) map.setFeatureState({ ...src, id }, { selected: true });
+}
+
 function wireMap() {
   const tip = $("#tooltip");
 
   map.on("mousemove", "zcta-fill", (e) => {
     const p = e.features[0].properties;
+    // Hidden features still emit pointer events, so re-check the filter here.
+    if (!passesFilter(byZcta[p.zcta] ?? p)) {
+      setHover(null);
+      tip.hidden = true;
+      map.getCanvas().style.cursor = "";
+      return;
+    }
     map.getCanvas().style.cursor = "pointer";
-    map.setFilter("zcta-hover", ["==", ["get", "zcta"], p.zcta]);
+    setHover(p.zcta);
     tip.hidden = false;
     tip.style.left = `${e.point.x}px`;
     tip.style.top = `${e.point.y}px`;
@@ -274,12 +347,13 @@ function wireMap() {
   });
   map.on("mouseleave", "zcta-fill", () => {
     map.getCanvas().style.cursor = "";
-    map.setFilter("zcta-hover", ["==", ["get", "zcta"], ""]);
+    setHover(null);
     tip.hidden = true;
   });
   map.on("click", "zcta-fill", (e) => {
     const p = e.features[0].properties;
-    state.selected = p.zcta;
+    if (!passesFilter(byZcta[p.zcta] ?? p)) return;
+    setSelected(p.zcta);
     $("#detail").hidden = false;
     $("#detail").innerHTML = `<button id="close-detail">&times;</button>${detailHTML(p.zcta)}`;
     $("#close-detail").onclick = () => ($("#detail").hidden = true);
@@ -331,8 +405,17 @@ function wireUI() {
   $("#basemap").onchange = (e) => {
     state.basemap = e.target.checked;
     if (!map) return;
-    map.setStyle(buildStyle());
-    map.once("styledata", wireLayersOnly);
+    // Add/remove just the raster layer. setStyle() would rebuild the whole
+    // style and re-parse every vector tile for a basemap checkbox.
+    if (state.basemap) {
+      if (!map.getSource("carto")) map.addSource("carto", carto());
+      if (!map.getLayer("carto"))
+        map.addLayer({ id: "carto", type: "raster", source: "carto" }, "zcta-fill");
+    } else {
+      if (map.getLayer("carto")) map.removeLayer("carto");
+      if (map.getSource("carto")) map.removeSource("carto");
+    }
+    applyPaint();
   };
 
   $("#top").onclick = (e) => {
@@ -352,24 +435,22 @@ function wireUI() {
     store.set("zcta-theme", next);
     renderLegend();
     if (!map) return;
-    map.setStyle(buildStyle());
-    map.once("styledata", wireLayersOnly);
+    // Recolor in place, same reason as the basemap toggle: repainting is cheap,
+    // rebuilding the style is not.
+    map.setPaintProperty("bg", "background-color", pal().plane);
+    map.setPaintProperty("zcta-line", "line-color", pal().border);
+    map.setPaintProperty("zcta-hover", "line-color", pal().ink);
+    map.setPaintProperty("state-line", "line-color", pal().rule);
+    map.getSource("carto")?.setTiles(carto().tiles);
+    applyPaint();
   };
-}
-
-// Re-applied after a setStyle(); the DOM handlers above survive, layer state does not.
-function wireLayersOnly() {
-  applyPaint();
-  if (!map) return;
-  if (state.selected) map.setFilter("zcta-hover", ["==", ["get", "zcta"], state.selected]);
 }
 
 function flyTo(z) {
   const r = byZcta[z];
   if (!r || !map) return;
-  state.selected = z;
+  setSelected(z);
   map.flyTo({ center: [r.lon, r.lat], zoom: 10.5, duration: 1200 });
-  map.setFilter("zcta-hover", ["==", ["get", "zcta"], z]);
   renderTop();
   $("#detail").hidden = false;
   $("#detail").innerHTML = `<button id="close-detail">&times;</button>${detailHTML(z)}`;
@@ -397,11 +478,33 @@ async function loadSidecar() {
 (async function init() {
   initTheme();
   addProtocol("pmtiles", new Protocol().tile);
+
+  // Tile parsing is the bottleneck when zooming; the default worker count is
+  // conservative. Spin the workers up before the first tile arrives, too.
+  const cores = navigator.hardwareConcurrency || 4;
+  setWorkerCount(Math.max(getWorkerCount(), Math.min(cores - 1, 8)));
+  prewarm();
   summary = await fetch("data/summary.json").then((r) => r.json());
 
   $("#state").insertAdjacentHTML(
     "beforeend",
     summary.states.map((s) => `<option value="${s}">${s}</option>`).join("")
+  );
+
+  // Filters can be set from the query string, so a filtered view is a link you
+  // can send someone: ?state=TX&metric=hu_pct&minpop=5000
+  const q = new URLSearchParams(location.search);
+  if (METRICS[q.get("metric")]) state.metric = q.get("metric");
+  if (q.has("minpop")) state.minPop = Math.max(0, +q.get("minpop") || 0);
+  if (summary.states.includes(q.get("state"))) state.st = q.get("state");
+  if (q.get("recut") === "show") state.hideRecut = false;
+
+  $("#state").value = state.st;
+  $("#minpop").value = state.minPop;
+  $("#minpop-out").textContent = state.minPop.toLocaleString();
+  $("#hide-recut").checked = state.hideRecut;
+  [...$("#metric").children].forEach((c) =>
+    c.setAttribute("aria-checked", String(c.dataset.metric === state.metric))
   );
 
   // The panel is useful on its own, so it renders before (and independently of)
@@ -424,6 +527,13 @@ async function loadSidecar() {
       minZoom: 3,
       maxZoom: 13,
       hash: true,
+      // Smoothness settings, all about work avoided per frame:
+      fadeDuration: 0,          // no cross-fade re-render while zooming
+      renderWorldCopies: false, // one copy of the world, not three
+      refreshExpiredTiles: false,
+      antialias: false,
+      maxTileCacheSize: 800,    // keep tiles across zoom in/out instead of refetching
+      collectResourceTiming: false,
     });
   } catch (err) {
     $("#map").innerHTML =

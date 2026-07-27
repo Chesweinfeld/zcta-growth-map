@@ -8,7 +8,8 @@ python3 scripts/serve.py     # http://127.0.0.1:8787
 ```
 
 Live site: **GitHub Pages**, published from `web/` by
-`.github/workflows/pages.yml` on every push to `main`.
+`.github/workflows/pages.yml` on every push to `main`. Tiles live in object
+storage — see [Deploying](#deploying).
 
 ## What it shows
 
@@ -77,19 +78,37 @@ table if you want to do your own analysis.
 
 ## Performance
 
-The first build shipped 111 MB of loose `.pbf` tiles across 16,463 files, and
-3 MB of JSON blocking the first paint. Three changes:
+Two different problems, fixed in different places.
 
-- **Attributes trimmed to what the map uses.** Labels and detail-panel numbers
-  were being repeated in all eight zoom levels; they now live once in
-  `data/zctas.json` and are joined client-side by ZIP. Roughly 3.5× off the tiles.
-- **One PMTiles archive instead of 16,463 files**, read by HTTP range request.
-  Compression is on (it was disabled for the old dev server).
-- **The sidecar loads after the map paints**, not before, and is not awaited.
+**Download size** (the wait before the map appears). The first build shipped
+111 MB of loose `.pbf` tiles across 16,463 files plus 3 MB of JSON blocking the
+first paint. Now: attributes are trimmed to the nine the map paints or filters
+on (labels and detail numbers were being repeated at every zoom level, and now
+live once in `data/zctas.json`), everything is one PMTiles archive read by range
+request, and the sidecar loads *after* the map paints and is not awaited.
+**111 MB → 34 MB.**
 
-Result: **111 MB → 34 MB**, first paint ~640 KB → ~180 KB. The map is
-interactive before the sidecar lands; the ZIP search stays disabled until it
-does, and the ranking fills in.
+Tile resolution is deliberately left alone — z10 at full detail. Coarser
+geometry would shrink the archive a lot more, but zooming in has to stay sharp.
+
+**Runtime smoothness** (using it after it loads), which is where the lag
+actually was:
+
+- **Filters are paint, not layer filters.** Changing a layer filter makes
+  MapLibre re-parse every loaded tile from raw vector data. The min-population
+  slider did that on every input event. The filters now compile to a
+  `fill-opacity` expression, so a filter change re-evaluates attributes instead
+  of re-tessellating. `passesFilter()` mirrors the same rules in JS, because
+  zero-opacity features still emit pointer events.
+- **Hover and selection use feature-state**, not a filter swap on every
+  mousemove — the source sets `promoteId: "zcta"` so features carry an id.
+- **The theme and basemap toggles mutate the style in place** rather than
+  calling `setStyle()`, which would rebuild everything and re-parse all tiles.
+- **`fill-antialias: false`** — with 30k polygons per view, the per-polygon
+  antialias pass is pure cost when neighbours share edges.
+- `fadeDuration: 0`, `renderWorldCopies: false`, a larger tile cache so zooming
+  back out re-uses tiles, and more parse workers (the default is conservative).
+- Repaints are coalesced to one per animation frame.
 
 Range requests are the one hosting requirement. GitHub Pages supports them;
 `scripts/serve.py` implements them so local development matches.
@@ -129,22 +148,57 @@ the ◐ button to set the theme explicitly.
 
 ## Deploying
 
-The site is static and self-contained under `web/`. To publish:
+The app is static under `web/`; the tiles are a build artifact and are **not**
+committed (a 34 MB binary would land in git history on every rebuild and stay
+there forever). So the app and the tiles are published separately.
 
-1. Create an empty GitHub repo (public — Pages is free for public repos).
+**1. Tiles → object storage.**
+
+```bash
+BUCKET=your-bucket bash scripts/upload_tiles.sh              # Cloudflare R2
+TARGET=s3 BUCKET=your-bucket bash scripts/upload_tiles.sh    # S3
+```
+
+Then set CORS **once** — the browser reads the archive by byte range, so the
+bucket has to allow the `Range` header and expose `Content-Range`. Edit the
+origins in `scripts/r2-cors.json` (or `s3-cors.json`) to your Pages URL, then:
+
+```bash
+npx wrangler r2 bucket cors set your-bucket --file scripts/r2-cors.json
+```
+
+Point `TILES_URL` in `web/config.js` at the public URL and commit that one line.
+Getting this wrong shows an on-screen message naming the URL rather than a blank
+map. You can test a bucket before committing with `?tiles=<url>`.
+
+**2. App → GitHub Pages.**
+
+1. Create an empty public repo.
 2. `git remote add origin git@github.com:<you>/<repo>.git && git push -u origin main`
-3. Repo **Settings → Pages → Source: GitHub Actions**. The included workflow
-   does the rest.
+3. **Settings → Pages → Source: GitHub Actions.**
 
-The link is `https://<you>.github.io/<repo>/`. All asset paths are relative, so
-the project subpath works without configuration.
+The link is `https://<you>.github.io/<repo>/`. All paths are relative, so the
+project subpath works with no configuration.
 
-One caveat about committing tiles: `zctas.pmtiles` is a 34 MB binary, and every
-rebuild you commit adds another 34 MB to history that `git clone` will carry
-forever. Fine occasionally; if you end up regenerating often, move the archive
-to object storage (Cloudflare R2, S3) and point the `zctas` source URL at it —
-the client code needs no other change. Don't reach for Git LFS: GitHub Pages
-serves LFS pointer files, not the content, and the map breaks.
+Filters are shareable as links: `?state=TX&minpop=10000&metric=hu_pct`, and the
+map position lives in the `#` hash, so any view you are looking at can be sent
+to someone as-is.
+
+If you would rather keep everything in one place, committing the archive does
+work — GitHub Pages serves files up to 100 MB and supports ranges. Just know
+each rebuild you commit adds another 34 MB to history permanently. Don't reach
+for Git LFS as a workaround: Pages serves LFS pointer files, not content, and
+the map breaks.
 
 Also note the basemap comes from CARTO's public tile service. That is someone
 else's infrastructure; at real traffic, self-host or switch providers.
+
+## Browser support
+
+Verified in Chrome and Safari. The requirement is WebGL2 (Safari 15+, 2021) and
+ES modules; there is no build step and no polyfill. If WebGL is unavailable the
+panel, rankings and search still work and the map area explains itself instead
+of rendering blank.
+
+`localStorage` access is wrapped — Safari private browsing throws on it rather
+than returning null, and a theme preference is not worth taking the app down for.

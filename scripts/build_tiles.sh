@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # GeoJSON -> a single PMTiles archive the browser range-requests.
 #
+# Full resolution on purpose: z10 at tippecanoe's default detail. Zooming in has
+# to stay sharp, so the speed work lives in the client (paint-driven filters,
+# feature-state hover) rather than in coarser geometry.
+#
 # Only the attributes the map paints or filters on are kept: labels and the
 # detail-panel numbers would otherwise be repeated in every one of the eight
 # zoom levels, which was most of the weight. Those live in data/zctas.json and
