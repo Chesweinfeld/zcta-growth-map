@@ -1,0 +1,11 @@
+{
+  "CORSRules": [
+    {
+      "AllowedOrigins": ["https://YOUR-USER.github.io", "http://localhost:8787"],
+      "AllowedMethods": ["GET", "HEAD"],
+      "AllowedHeaders": ["range", "if-match"],
+      "ExposeHeaders": ["content-range", "content-length", "etag"],
+      "MaxAgeSeconds": 86400
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# Secrets
+.env
+
+# Regenerable inputs and intermediates (hundreds of MB)
+data/raw/
+data/geo/
+web/data/zctas.geojson
+
+__pycache__/
+.DS_Store
+web/data/zctas*.geojson
+web/tiles/

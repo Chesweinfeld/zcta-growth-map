@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Declares that the page themes itself, so Chrome's auto-dark leaves it
+     alone - it darkens the HTML but not the map canvas, which splits the UI. -->
+<meta name="color-scheme" content="light dark">
+<title>Fastest-growing ZIP code areas, 2011-2024</title>
+<link rel="stylesheet" href="vendor/maplibre-gl.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <aside id="panel">
+    <header>
+      <h1>Where America grew</h1>
+      <p class="sub">ZIP Code Tabulation Areas, ACS 2007&ndash;2011 &rarr; 2020&ndash;2024</p>
+    </header>
+
+    <div class="tiles" id="tiles"></div>
+
+    <section>
+      <h2>Metric</h2>
+      <div class="seg" id="metric" role="radiogroup" aria-label="Metric">
+        <button role="radio" data-metric="pop_pct" aria-checked="true">Population %</button>
+        <button role="radio" data-metric="hu_pct" aria-checked="false">Housing %</button>
+        <button role="radio" data-metric="pop_change" aria-checked="false">People added</button>
+        <button role="radio" data-metric="hu_change" aria-checked="false">Units added</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Legend</h2>
+      <div id="legend" class="legend"></div>
+      <p class="note" id="legend-note"></p>
+    </section>
+
+    <section>
+      <h2>Filters</h2>
+      <label class="field">
+        <span>Minimum 2024 population <output id="minpop-out">1,000</output></span>
+        <input type="range" id="minpop" min="0" max="20000" step="500" value="1000">
+      </label>
+      <label class="field">
+        <span>State</span>
+        <select id="state"><option value="">All states</option></select>
+      </label>
+      <label class="check">
+        <input type="checkbox" id="hide-recut" checked>
+        <span>Hide ZCTAs whose boundaries were redrawn</span>
+      </label>
+      <label class="check">
+        <input type="checkbox" id="basemap" checked>
+        <span>Show street basemap &amp; labels</span>
+      </label>
+    </section>
+
+    <section>
+      <h2>Top 100 <span class="muted" id="top-metric"></span></h2>
+      <input type="search" id="search" placeholder="Jump to a ZIP code, e.g. 34211" disabled>
+      <ol class="top" id="top"></ol>
+    </section>
+
+    <footer>
+      <p>Source: U.S. Census Bureau, ACS 5-year estimates (B01003, B25001) and
+      2020 ZCTA boundaries. Percentages are estimates with sampling error;
+      small areas are the least certain.</p>
+    </footer>
+  </aside>
+
+  <main id="map-wrap">
+    <div id="map"></div>
+    <div id="tooltip" class="tooltip" hidden></div>
+    <div id="detail" class="detail" hidden></div>
+    <button id="theme" title="Toggle light/dark">&#9681;</button>
+  </main>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
