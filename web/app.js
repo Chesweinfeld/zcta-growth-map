@@ -152,7 +152,11 @@ function passesFilter(rec) {
   return true;
 }
 
-const baseOpacity = () => (state.basemap ? 0.82 : 0.95);
+// 0.66 over the basemap so streets and place labels stay legible through the
+// choropleth; 0.95 with the basemap off, where there is nothing underneath
+// worth showing through. The no-ZCTA mask uses the same value, so grey and
+// coloured areas let the same amount of basemap through.
+const baseOpacity = () => (state.basemap ? 0.66 : 0.95);
 
 const fillOpacity = () => ["case", visibleExpr(), baseOpacity(), 0];
 
