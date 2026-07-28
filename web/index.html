@@ -45,15 +45,15 @@
     <section>
       <h2>Filters</h2>
       <label class="field">
-        <span>Minimum 2024 population <output id="minpop-out">1,000</output></span>
-        <input type="range" id="minpop" min="0" max="20000" step="500" value="1000">
+        <span>Minimum 2024 population <output id="minpop-out">0</output></span>
+        <input type="range" id="minpop" min="0" max="20000" step="500" value="0">
       </label>
       <label class="field">
         <span>State</span>
         <select id="state"><option value="">All states</option></select>
       </label>
       <label class="check">
-        <input type="checkbox" id="hide-recut" checked>
+        <input type="checkbox" id="hide-recut">
         <span>Hide ZCTAs whose boundaries were redrawn</span>
       </label>
       <label class="check">
@@ -83,16 +83,17 @@
       Tabulation Areas are not published in the ACS 1-year product at all, at any
       population size.</p>
 
-      <p><strong>Why parts of the map are blank.</strong> ZIP Code Tabulation
+      <p><strong>Why parts of the map are grey.</strong> ZIP Code Tabulation
       Areas do not tile the country. They are built from address ranges, so land
       with no addresses &mdash; wilderness, national parks, desert, large water
       bodies, some military land &mdash; belongs to no ZCTA at all. About
-      <strong>20% of U.S. land area</strong> sits outside every ZCTA and stays
-      blank at any filter setting. The rest of the blank space is the filters:
-      the minimum-population slider and the re-cut boundary toggle both hide
-      areas, and turning them fully off fills in everything that has a polygon.
-      Areas that exist but have no usable estimate are drawn grey rather than
-      left blank &mdash; there are only 306 of those.</p>
+      <strong>20% of U.S. land area</strong> sits outside every ZCTA, and no
+      filter setting will fill it in because there is no polygon to draw. That
+      land is shaded grey, the same as a ZCTA with no usable estimate, because in
+      both cases the answer is the same: no figure exists. Only 306 ZCTAs are
+      grey for the second reason. Both filters below start off, so the first view
+      shows every ZCTA that has an estimate; raising the minimum population or
+      hiding redrawn boundaries greys out more.</p>
 
       <p>Source: U.S. Census Bureau, ACS 5-year estimates (B01003, B25001) and
       2020 ZCTA boundaries. Percentages are estimates with sampling error;

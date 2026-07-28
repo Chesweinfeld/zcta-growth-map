@@ -24,9 +24,14 @@ const BREAKS = {
 
 const state = {
   metric: "pop_pct",
-  minPop: 1000,
+  // Both guards start OFF, so the first view is the whole country and nothing
+  // is silently withheld. They previously hid 11,201 ZCTAs - a third of the
+  // map - which read as missing data rather than as a filter. The guards still
+  // matter (a 300-person ZCTA going to 900 is a +200% "boom" that is mostly
+  // sampling noise), so they remain one click away and still gate the rankings.
+  minPop: 0,
   st: "",
-  hideRecut: true,
+  hideRecut: false,
   selected: null,
   basemap: true,
 };
@@ -147,9 +152,9 @@ function passesFilter(rec) {
   return true;
 }
 
-const fillOpacity = () => [
-  "case", visibleExpr(), state.basemap ? 0.82 : 0.95, 0,
-];
+const baseOpacity = () => (state.basemap ? 0.82 : 0.95);
+
+const fillOpacity = () => ["case", visibleExpr(), baseOpacity(), 0];
 
 let paintQueued = false;
 function applyPaint() {
@@ -166,6 +171,9 @@ function paintNow() {
   if (!map || !map.getLayer("zcta-fill")) return;
   map.setPaintProperty("zcta-fill", "fill-color", fillColor());
   map.setPaintProperty("zcta-fill", "fill-opacity", fillOpacity());
+  if (map.getLayer("land-nodata")) {
+    map.setPaintProperty("land-nodata", "fill-opacity", baseOpacity());
+  }
   map.setPaintProperty("zcta-line", "line-opacity", ["case", visibleExpr(), 1, 0]);
 }
 
@@ -188,6 +196,17 @@ function buildStyle() {
     layers.push({ id: "carto", type: "raster", source: "carto", paint: { "raster-opacity": 1 } });
   }
   layers.push(
+    {
+      // Grey wash over US land, under the choropleth. ZCTAs are built from
+      // address ranges and cover only ~80% of the country's land area, so a
+      // fifth of the map has no polygon at all. Without this the gaps read as
+      // basemap - as if nothing were there - rather than as "no estimate",
+      // which is what they are. Anything with a ZCTA paints over it.
+      id: "land-nodata",
+      type: "fill",
+      source: "states",
+      paint: { "fill-color": NODATA, "fill-opacity": baseOpacity() },
+    },
     {
       id: "zcta-fill",
       type: "fill",
@@ -514,6 +533,9 @@ async function loadSidecar() {
   if (METRICS[q.get("metric")]) state.metric = q.get("metric");
   if (q.has("minpop")) state.minPop = Math.max(0, +q.get("minpop") || 0);
   if (summary.states.includes(q.get("state"))) state.st = q.get("state");
+  // Re-cut ZCTAs now show by default, so the link needs to be able to hide
+  // them; "show" stays accepted so older shared links keep working.
+  if (q.get("recut") === "hide") state.hideRecut = true;
   if (q.get("recut") === "show") state.hideRecut = false;
 
   $("#state").value = state.st;
