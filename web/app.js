@@ -37,17 +37,25 @@ const $ = (s) => document.querySelector(s);
 // properties, and getComputedStyle at style-build time was picking up whichever
 // theme happened to be resolved - so the palette lives here and is pushed into
 // CSS for the panel, rather than read back out of it.
+// The choropleth ramp is deliberately theme-INDEPENDENT. A given growth value
+// has to read as the same color in light and dark, or the two modes encode the
+// data differently and screenshots taken in one cannot be compared against the
+// other. Only the surround - plane, rules, borders, basemap - follows the theme.
+// Nine classes, symmetric about a neutral middle: blue = decline, red = growth.
+const RAMP = ["#184f95", "#2a78d6", "#86b6ef", "#cde2fb", "#f0efec",
+              "#fed4d0", "#ec9991", "#c34c48", "#823430"];
+
 const PALETTE = {
   light: {
-    ramp: ["#184f95", "#2a78d6", "#86b6ef", "#cde2fb", "#f0efec",
-           "#fed4d0", "#ec9991", "#c34c48", "#823430"],
+    ramp: RAMP,
+    // nodata stays per-theme: it encodes no value, so it should recede into
+    // whichever plane it sits on rather than read as a class of its own.
     nodata: "#dedcd5", plane: "#f9f9f7", ink: "#0b0b0b",
     rule: "#c3c2b7", border: "rgba(11,11,11,0.35)",
     basemap: "rastertiles/voyager",
   },
   dark: {
-    ramp: ["#85baff", "#4487db", "#2c5991", "#1f344e", "#383835",
-           "#4b2724", "#893d39", "#cf5e58", "#f89a92"],
+    ramp: RAMP,
     nodata: "#2c2c2a", plane: "#0d0d0d", ink: "#ffffff",
     rule: "#383835", border: "rgba(255,255,255,0.35)",
     basemap: "dark_all",

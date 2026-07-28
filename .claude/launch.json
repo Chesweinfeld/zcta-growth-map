@@ -5,7 +5,8 @@
       "name": "zcta-map",
       "runtimeExecutable": "python3",
       "runtimeArgs": ["scripts/serve.py"],
-      "port": 8787
+      "port": 8787,
+      "autoPort": true
     }
   ]
 }

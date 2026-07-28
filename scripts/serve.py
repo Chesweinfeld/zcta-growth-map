@@ -13,7 +13,8 @@ import re
 import socketserver
 from pathlib import Path
 
-PORT = 8787
+# 8787 by default; $PORT lets a harness that assigns its own port drive this.
+PORT = int(os.environ.get("PORT") or 8787)
 ROOT = Path(__file__).resolve().parents[1] / "web"
 RANGE_RE = re.compile(r"bytes=(\d*)-(\d*)")
 
