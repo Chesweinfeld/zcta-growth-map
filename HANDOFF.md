@@ -71,47 +71,37 @@ features still emit pointer events, so hover must re-check.
 
 ## State of the repo
 
-Local git, branch `main`, **two commits, nothing pushed**. `.git` is 2.9 MB —
-the 34 MB PMTiles blob was removed from history on purpose (`git rm --cached` +
-amend + `reflog expire` + `gc`). **Do not commit `web/tiles/`.** `.env` holds
-the Census API key and is gitignored.
+Branch `main`, pushed to **`github.com/Chesweinfeld/zcta-growth-map`** (public).
+`.git` is ~3 MB — the 34 MB PMTiles blob was removed from history on purpose
+(`git rm --cached` + amend + `reflog expire` + `gc`). **Do not commit
+`web/tiles/`.** `.env` holds the Census API key and is gitignored.
 
-## Open items
+## Deployment — done, and where everything lives
 
-GitHub account is **`Chesweinfeld`**; the Pages origin is therefore
-`https://chesweinfeld.github.io`, already filled into
-`scripts/{r2,s3}-cors.json`. Target repo: `Chesweinfeld/zcta-growth-map`
-(public), site at `https://chesweinfeld.github.io/zcta-growth-map/`.
+**Site: https://chesweinfeld.github.io/zcta-growth-map/**
 
-Blocked on the user — account-level, cannot be done from a chat session:
+- GitHub: `Chesweinfeld/zcta-growth-map`, public. Pages builds from
+  `.github/workflows/pages.yml` on every push to `main`, publishing `web/` as
+  the site root. Pages source had to be switched on once by hand
+  (Settings → Pages → Source: GitHub Actions); `enablement: true` on
+  `configure-pages` did not do it unattended, though it is left in place so a
+  fresh fork deploys without the manual step.
+- Tiles: Cloudflare R2 bucket **`zcta-tiles`**, account
+  `4450b4b5b3c9ad94680ca6585c1bd938`, public at
+  `https://pub-87663236083743889aff2a008693c67f.r2.dev/zctas.pmtiles`.
+  Public access is a **separate** step from the upload —
+  `wrangler r2 bucket dev-url enable zcta-tiles`. Uploading alone serves nothing.
+- CORS lives in `scripts/r2-cors.json` and is applied with
+  `wrangler r2 bucket cors set zcta-tiles --file scripts/r2-cors.json`.
 
-1. **R2 is not enabled on the Cloudflare account.** `wrangler r2 bucket list`
-   fails with `code: 10042 — Please enable R2 through the Cloudflare Dashboard`.
-   Enabling requires accepting the R2 terms and putting a payment method on
-   file, even for the free tier.
-2. **The wrangler OAuth token has no `r2` scope.** `wrangler whoami` lists
-   `workers`, `workers_kv`, `d1`, `pages`, … but no `r2`. After enabling R2,
-   re-run `npx wrangler login` so the new consent screen includes it. Wrangler
-   is otherwise authenticated as `chesapeakeisaiah@gmail.com`, account
-   `4450b4b5b3c9ad94680ca6585c1bd938`.
-3. **The empty GitHub repo must be created by hand.** The GitHub MCP token
-   returns `403 Resource not accessible by personal access token` on
-   `POST /user/repos`. Once the empty repo exists `git push` works on its own —
-   the osxkeychain helper already holds a working credential.
+To re-publish tiles after a rebuild: `BUCKET=zcta-tiles bash
+scripts/upload_tiles.sh`. CORS and public access persist; they are bucket-level
+and do not need reapplying.
 
-Then, in order:
-
-4. Upload tiles: `BUCKET=<name> bash scripts/upload_tiles.sh`, then set CORS
-   once. The bucket **must** allow the `Range` header and expose
-   `Content-Range` — this is the failure mode to check first if the map is blank.
-   A failed tile load shows an on-screen message naming the URL.
-5. Set `TILES_URL` in `web/config.js` to the public bucket URL and commit.
-6. Push to GitHub, then Settings → Pages → Source: GitHub Actions. Workflow is
-   already committed at `.github/workflows/pages.yml`.
-7. The Cloudflare plugin is installed, but its MCP servers
-   (`cloudflare-api`, `-bindings`, `-builds`, `-observability`) still need OAuth
-   authorization in an interactive session before they can be used to verify the
-   bucket/CORS from inside a chat.
+Still open: the Cloudflare plugin's MCP servers (`cloudflare-api`, `-bindings`,
+`-builds`, `-observability`) need OAuth authorization in an interactive session
+before they can be used to inspect the bucket from inside a chat. Everything
+above was done through `wrangler` instead, which is fully authenticated.
 
 ## Gotchas discovered the hard way
 
@@ -129,6 +119,12 @@ Then, in order:
 - **The user's Chrome force-darkens pages** (an extension), inverting the HTML
   panel but not the map canvas. Looks like a theming bug, isn't. The theme is
   stamped explicitly on `<html>` at boot so the panel and map can't disagree.
+- **`scripts/r2-cors.json` is NOT in S3 syntax.** R2's API wants
+  `{"rules":[{"allowed":{origins,methods,headers}, exposeHeaders, maxAgeSeconds}]}`
+  — request-side fields nested under `allowed`, the rest as siblings. The file
+  was originally written as a bare S3-style array and wrangler rejected it
+  outright. `scripts/s3-cors.json` is still S3 syntax on purpose, for the `s3`
+  target in `upload_tiles.sh`.
 - **GitHub Releases cannot host the PMTiles archive — ruled out by test, don't
   retry it.** It looks ideal (2 GB asset limit, free, same repo) and it used to
   work, but release assets now redirect to `release-assets.githubusercontent.com`
