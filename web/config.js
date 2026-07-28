@@ -21,8 +21,13 @@
 //
 // ?tiles=<url> overrides at runtime, for testing a bucket before committing;
 // ?tiles=tiles/zctas.pmtiles falls back to a local build under web/tiles/.
-const override = new URLSearchParams(location.search).get("tiles");
+const q = new URLSearchParams(location.search);
+const BUCKET = "https://pub-87663236083743889aff2a008693c67f.r2.dev";
 
 export const TILES_URL =
-  override ||
-  "https://pub-87663236083743889aff2a008693c67f.r2.dev/zctas-z13-tiger.pmtiles";
+  q.get("tiles") || `${BUCKET}/zctas-z13-tiger.pmtiles`;
+
+// The grey for land no ZCTA covers - about a fifth of the country. Precomputed
+// as (US land - all ZCTAs) and tiled rather than shipped as GeoJSON, where it
+// is 6 MB gzipped and would block first paint. Overridable as ?mask=<url>.
+export const MASK_URL = q.get("mask") || `${BUCKET}/nozcta.pmtiles`;

@@ -240,18 +240,11 @@ def main() -> None:
     }
     (OUT / "summary.json").write_text(json.dumps(summary, indent=2, default=str))
 
-    # State outlines, so the map still has structure with the basemap off - and
-    # the land mask the map greys in where no ZCTA exists, which is why this is
-    # the 500k file at ~55 m rather than the 20m file at ~2 km. The mask sits
-    # under the choropleth, so its only visible edge is the coastline; at the
-    # old resolution grey spilled kilometres into open water at deep zoom.
-    # Costs ~4.5 MB against a 0.16 MB predecessor, paid once at load.
-    states = gpd.read_file(f"zip://{GEO / 'cb_2020_us_state_500k.zip'}")[["STUSPS", "geometry"]]
-    # The 500k file carries four territories the 20m one does not (AS, GU, MP,
-    # VI). None has ZCTA coverage, so they would render as lone grey shapes in
-    # the Pacific; drop them to keep the same 52 areas as before.
-    states = states[~states["STUSPS"].isin(["AS", "GU", "MP", "VI"])]
-    states["geometry"] = states.geometry.simplify(0.0005, preserve_topology=True)
+    # State outlines, so the map still has structure with the basemap off.
+    # Hairlines only - the no-ZCTA mask below carries its own coastline at 500k,
+    # so this does not need to be accurate as a filled shape and can stay cheap.
+    states = gpd.read_file(f"zip://{GEO / 'cb_2020_us_state_20m.zip'}")[["STUSPS", "geometry"]]
+    states["geometry"] = states.geometry.simplify(0.02, preserve_topology=True)
     states.to_file(OUT / "states.geojson", driver="GeoJSON", coordinate_precision=3)
 
     # Flat table for the search box and the ranking panel (no geometry).

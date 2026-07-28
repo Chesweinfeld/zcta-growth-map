@@ -5,6 +5,7 @@
 data/raw/
 data/geo/
 web/data/zctas.geojson
+web/data/nozcta*.geojson
 
 __pycache__/
 .DS_Store

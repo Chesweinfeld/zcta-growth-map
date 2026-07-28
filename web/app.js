@@ -2,7 +2,7 @@ import { Map as MLMap, NavigationControl, ScaleControl, addProtocol,
          setWorkerCount, getWorkerCount, prewarm }
   from "./vendor/maplibre-gl.mjs";
 import { Protocol } from "./vendor/pmtiles.mjs";
-import { TILES_URL } from "./config.js";
+import { TILES_URL, MASK_URL } from "./config.js";
 
 const METRICS = {
   pop_pct:    { label: "Population %",  unit: "%",      pct: true,  noun: "population growth" },
@@ -187,6 +187,12 @@ function buildStyle() {
       attribution: "U.S. Census Bureau ACS 5-year, 2020 ZCTAs",
     },
     states: { type: "geojson", data: "data/states.geojson" },
+    // US land belonging to no ZCTA, precomputed as (states - ZCTAs) so the grey
+    // lands exactly in the holes rather than being approximated. Tiled for the
+    // same reason the choropleth is: as GeoJSON it is 6 MB gzipped and would
+    // block first paint; as PMTiles it is range-read and the root directory is
+    // 0.4 KB.
+    nozcta: { type: "vector", url: `pmtiles://${MASK_URL}` },
   };
   const layers = [
     { id: "bg", type: "background", paint: { "background-color": pal().plane } },
@@ -197,14 +203,19 @@ function buildStyle() {
   }
   layers.push(
     {
-      // Grey wash over US land, under the choropleth. ZCTAs are built from
-      // address ranges and cover only ~80% of the country's land area, so a
-      // fifth of the map has no polygon at all. Without this the gaps read as
-      // basemap - as if nothing were there - rather than as "no estimate",
-      // which is what they are. Anything with a ZCTA paints over it.
+      // Grey for land that belongs to no ZCTA - about a fifth of the country,
+      // since ZCTAs are built from address ranges and do not tile it. Without
+      // this those holes read as basemap, as if nothing were there, rather than
+      // as "no estimate", which is what they are.
+      //
+      // This draws ONLY in the holes. An earlier version washed the grey over
+      // all US land and let the choropleth paint on top, which stacked two
+      // 0.82-opacity fills over the basemap and left ~3% of it showing: the
+      // OpenStreetMap labels went invisible everywhere.
       id: "land-nodata",
       type: "fill",
-      source: "states",
+      source: "nozcta",
+      "source-layer": "nozcta",
       paint: { "fill-color": NODATA, "fill-opacity": baseOpacity() },
     },
     {
