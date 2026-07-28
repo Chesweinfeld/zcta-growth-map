@@ -270,8 +270,11 @@ function renderLegend() {
     `<div class="row"><span class="sw" style="background:${pal().nodata}"></span>no estimate</div>`
   );
   $("#legend").innerHTML = rows.join("");
-  $("#legend-note").textContent = `Shading shows ${METRICS[state.metric].noun} between the
-    ACS 2007–2011 and 2020–2024 five-year estimates.`;
+  // "2011" and "2024" are ACS 5-year dataset names, not single years - the
+  // footer note spells that out rather than repeating it at every mention.
+  $("#legend-note").textContent =
+    `Shading shows ${METRICS[state.metric].noun} between the 2011 and 2024 ACS
+     5-year estimates.`;
 }
 
 // The ranking answers the question the filters are currently asking, so it is
