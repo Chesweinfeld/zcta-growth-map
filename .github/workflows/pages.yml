@@ -22,7 +22,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # enablement: true turns Pages on via the API using this workflow's
+      # pages: write permission, so the repo does not have to be clicked through
+      # in Settings first. Without it this step fails on a repo where Pages has
+      # never been enabled.
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       # Publishes web/ as the site root. The sidecar data is committed and the
       # tiles are hosted off-repo (see TILES_URL in web/config.js), so there is
       # nothing to build here - the Python pipeline runs locally.
