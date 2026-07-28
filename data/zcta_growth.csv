@@ -17,6 +17,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 36603,"Mobile, AL",AL,9211,7760,-1451,-15.8,3688,3833,145,3.9,2033.6,True,True,False,0.981
 36782,"Sweet Water, AL",AL,2915,1850,-1065,-36.5,1337,978,-359,-26.9,9.0,True,True,False,0.932
 36916,"Pennington, AL",AL,406,652,246,60.6,415,370,-45,-10.8,14.6,False,False,True,0.584
+36741,"Wilcox County, AL",AL,,,,,,,,,,False,False,True,0.0
 35007,"Alabaster, AL",AL,25954,28586,2632,10.1,9744,10944,1200,12.3,732.1,True,True,False,0.913
 35010,"Alexander City, AL",AL,21289,19347,-1942,-9.1,9969,10752,783,7.9,86.9,True,True,False,0.957
 35020,"Bessemer, AL",AL,26898,24892,-2006,-7.5,12870,12291,-579,-4.5,1503.6,True,True,False,0.988
@@ -41,6 +42,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 34288,"North Port, FL",FL,10709,18231,7522,70.2,5401,6752,1351,25.0,945.2,True,True,False,1.0
 34638,"Land O' Lakes, FL",FL,18506,37644,19138,103.4,7315,12712,5397,73.8,813.3,True,True,False,0.998
 34787,"Horizon West, FL",FL,44162,101441,57279,129.7,17218,35901,18683,108.5,1508.4,True,True,False,0.986
+33550,"Mango, FL",FL,,,,,,,,,,False,False,True,0.0
 99516,"Anchorage, AK",AK,20125,21500,1375,6.8,7203,7734,531,7.4,489.7,True,True,False,0.976
 99568,"Ninilchik, AK",AK,118,465,347,294.1,146,293,147,100.7,0.5,False,False,True,0.022
 99615,"Aleneva, AK",AK,12609,12194,-415,-3.3,4821,5305,484,10.0,3.0,True,True,False,0.978
@@ -62,6 +64,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 34473,"Marion Oaks, FL",FL,16066,26813,10747,66.9,7444,10150,2706,36.4,748.1,True,True,False,0.936
 34614,"North Weeki Wachee, FL",FL,6298,10935,4637,73.6,2774,3838,1064,38.4,199.1,True,True,False,0.975
 34950,"Fort Pierce, FL",FL,16051,17461,1410,8.8,7045,7787,742,10.5,3379.7,True,True,False,0.99
+33022,"Hollywood, FL",FL,,,,,,,,,,False,False,True,0.0
 32024,"Lake City, FL",FL,19192,20670,1478,7.7,8099,8773,674,8.3,142.1,True,True,False,0.964
 32025,"Lake City, FL",FL,22529,22948,419,1.9,8547,9063,516,6.0,219.4,True,True,False,0.921
 32040,"Glen St. Mary, FL",FL,7738,8978,1240,16.0,3022,3257,235,7.8,74.1,True,True,False,0.975
@@ -118,6 +121,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 99820,"Angoon, AK",AK,427,480,53,12.4,357,276,-81,-22.7,0.5,False,False,False,0.881
 99919,"Thorne Bay, AK",AK,534,570,36,6.7,371,326,-45,-12.1,11.5,False,False,False,0.977
 99925,"Klawock, AK",AK,689,841,152,22.1,388,440,52,13.4,15.7,False,False,False,1.0
+99725,"Ester, AK",AK,,,,,,,,,,False,False,True,0.0
 99589,"Goodnews Bay, AK",AK,372,115,-257,-69.1,101,40,-61,-60.4,0.5,False,False,True,0.012
 99630,"Mekoryuk, AK",AK,177,287,110,62.1,117,145,28,23.9,40.6,False,False,False,0.901
 99638,"Nikolski, AK",AK,40,1,-39,-97.5,31,7,-24,-77.4,0.0,False,False,True,0.146
@@ -480,6 +484,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 36768,"Pine Apple, AL",AL,844,671,-173,-20.5,680,563,-117,-17.2,3.0,False,True,False,0.897
 36867,"Phenix City, AL",AL,20898,22821,1923,9.2,9921,10651,730,7.4,1815.5,True,True,False,0.985
 36904,"Butler, AL",AL,3974,4275,301,7.6,2056,2140,84,4.1,18.5,True,True,False,0.961
+36008,"Autauga County, AL",AL,,,,,,,,,,False,False,True,0.0
 32709,"Christmas, FL",FL,2858,1696,-1162,-40.7,968,689,-279,-28.8,11.4,True,True,False,0.786
 32720,"DeLand, FL",FL,30703,36259,5556,18.1,14082,14509,427,3.0,546.9,True,True,False,0.841
 32732,"Geneva, FL",FL,4544,5275,731,16.1,2107,2068,-39,-1.9,94.5,True,True,False,0.998
@@ -629,6 +634,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 86401,"Kingman, AZ",AZ,25126,30124,4998,19.9,10967,14058,3091,28.2,24.6,True,True,False,0.862
 86429,"Bullhead City, AZ",AZ,6471,8619,2148,33.2,4837,5664,827,17.1,31.4,True,True,True,0.305
 86544,"Red Rock, AZ",AZ,1266,1472,206,16.3,709,641,-68,-9.6,5.4,True,True,False,0.855
+85378,"Surprise, AZ",AZ,,,,,,,,,,False,False,True,0.0
 84531,"Halchita, UT",UT,522,518,-4,-0.8,298,155,-143,-48.0,1.9,False,False,False,0.999
 86504,"Fort Defiance, AZ",AZ,6594,5760,-834,-12.6,2253,2096,-157,-7.0,28.6,True,True,True,0.702
 86515,"Tse Bonito, NM",NM,4746,3433,-1313,-27.7,1730,1443,-287,-16.6,29.7,True,True,True,0.586
@@ -670,6 +676,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 19348,"Kennett Square, PA",PA,22092,23621,1529,6.9,8438,9253,815,9.7,641.4,True,True,False,0.956
 19401,"Norristown, PA",PA,41329,43359,2030,4.9,18015,17740,-275,-1.5,7049.1,True,True,False,0.979
 19507,"Bethel, PA",PA,3216,3563,347,10.8,1375,1337,-38,-2.8,87.7,True,True,False,0.903
+16675,"Cambria County, PA",PA,,,,,,,,,,False,False,True,0.0
+16864,"Orviston, PA",PA,,,,,,,,,,False,False,True,0.0
 15010,"Big Beaver, PA",PA,28375,28542,167,0.6,12813,12693,-120,-0.9,559.1,True,True,False,0.973
 15044,"Gibsonia, PA",PA,26127,27370,1243,4.8,10100,11365,1265,12.5,700.9,True,True,False,0.986
 15052,"Industry, PA",PA,3550,2873,-677,-19.1,1550,1292,-258,-16.6,150.7,True,True,False,0.901
@@ -692,6 +700,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 05667,"Plainfield, VT",VT,2301,2412,111,4.8,1014,1152,138,13.6,48.8,True,True,False,0.87
 05761,"Pawlet, VT",VT,1185,1081,-104,-8.8,578,632,54,9.3,26.4,True,True,True,0.737
 05770,"Addison County, VT",VT,1099,1185,86,7.8,519,545,26,5.0,28.2,True,True,False,0.919
+05666,"Washington County, VT",VT,,,,,,,,,,False,False,True,0.0
 05045,"Fairlee, VT",VT,2067,1779,-288,-13.9,1136,1000,-136,-12.0,41.2,True,True,False,0.962
 05046,"Groton, VT",VT,1012,1241,229,22.6,645,797,152,23.6,20.0,True,True,False,0.962
 05076,"Orange County, VT",VT,545,495,-50,-9.2,316,274,-42,-13.3,18.2,False,False,False,0.93
@@ -805,6 +814,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 19438,"Harleysville, PA",PA,23382,25438,2056,8.8,8916,9715,799,9.0,1145.4,True,True,False,0.987
 19550,"Rehrersburg, PA",PA,557,488,-69,-12.4,124,160,36,29.0,314.4,False,False,False,0.999
 19608,"Gouglersville, PA",PA,21455,24178,2723,12.7,8206,9427,1221,14.9,919.3,True,True,False,0.931
+16475,"Erie County, PA",PA,,,,,,,,,,False,False,True,0.0
+17769,"Lycoming County, PA",PA,,,,,,,,,,False,False,True,0.0
 15012,"Fellsburg, PA",PA,16133,15412,-721,-4.5,7379,7660,281,3.8,451.8,True,True,False,0.951
 15062,"Monessen, PA",PA,7817,6780,-1037,-13.3,4291,3857,-434,-10.1,2343.4,True,True,False,1.0
 15065,"Brackenridge, PA",PA,11742,10894,-848,-7.2,5463,5838,375,6.9,874.5,True,True,False,0.993
@@ -960,6 +971,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 19541,"Dauberville, PA",PA,4114,4367,253,6.1,1548,1670,122,7.9,201.4,True,True,False,0.974
 19607,"Shillington, PA",PA,21598,24045,2447,11.3,9752,9978,226,2.3,2143.2,True,True,False,0.944
 19610,"Wyomissing, PA",PA,15332,16581,1249,8.1,6574,7484,910,13.8,2339.5,True,True,False,0.985
+15682,"Armstrong County, PA",PA,,,,,,,,,,False,False,True,0.0
 15018,"Allegheny County, PA",PA,835,712,-123,-14.7,411,427,16,3.9,869.7,False,True,False,0.908
 15019,"Bulger, PA",PA,1976,1056,-920,-46.6,891,660,-231,-25.9,45.5,True,True,False,0.953
 15030,"Allegheny County, PA",PA,1009,1018,9,0.9,550,598,48,8.7,677.8,True,True,False,0.987
@@ -1166,6 +1178,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 05836,"Caledonia County, VT",VT,1159,1531,372,32.1,565,789,224,39.6,46.6,True,True,False,0.782
 05860,"Orleans, VT",VT,2380,2728,348,14.6,1517,1655,138,9.1,35.6,True,True,False,0.918
 05907,"Essex County, VT",VT,179,108,-71,-39.7,400,186,-214,-53.5,1.5,False,False,False,0.976
+05731,"Rutland County, VT",VT,,,,,,,,,,False,False,True,0.0
 05033,"Bradford, VT",VT,2680,3081,401,15.0,1334,1338,4,0.3,83.6,True,True,False,0.786
 05037,"Windsor County, VT",VT,533,949,416,78.0,398,621,223,56.0,74.1,False,False,False,0.822
 05043,"Orange County, VT",VT,939,907,-32,-3.4,424,479,55,13.0,100.0,False,True,False,0.874
@@ -1304,6 +1317,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 19530,"Kutztown, PA",PA,15714,15573,-141,-0.9,5332,4889,-443,-8.3,285.2,True,True,False,0.964
 19551,"Robesonia, PA",PA,4792,4778,-14,-0.3,1878,1895,17,0.9,188.6,True,True,False,0.95
 19602,"Reading, PA",PA,18535,18495,-40,-0.2,8644,8034,-610,-7.1,9062.4,True,True,False,0.991
+17014,"Juniata County, PA",PA,,,,,,,,,,False,False,True,0.0
 15009,"Ohioville, PA",PA,15095,15565,470,3.1,6500,7151,651,10.0,667.8,True,True,False,1.0
 15050,"Shippingport, PA",PA,2688,2155,-533,-19.8,999,871,-128,-12.8,91.4,True,True,False,0.935
 15054,"Langeloth, PA",PA,334,352,18,5.4,163,254,91,55.8,425.9,False,False,True,0.158
@@ -1381,6 +1395,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 19311,"Toughkenamon, PA",PA,8759,11692,2933,33.5,2685,3706,1021,38.0,931.8,True,True,False,0.929
 19373,"Cheyney University, PA",PA,4342,2357,-1985,-45.7,861,759,-102,-11.8,733.0,True,True,False,0.924
 19533,"Leesport, PA",PA,7714,8648,934,12.1,2210,3094,884,40.0,501.0,True,True,False,0.918
+15365,"Taylorstown, PA",PA,,,,,,,,,,False,False,True,0.0
+15416,"Fayette County, PA",PA,,,,,,,,,,False,False,True,0.0
 15001,"Aliquippa, PA",PA,32769,31976,-793,-2.4,15430,15964,534,3.5,529.9,True,True,False,0.981
 15026,"Clinton, PA",PA,3118,4175,1057,33.9,1508,1748,240,15.9,120.8,True,True,False,0.915
 15090,"Franklin Park, PA",PA,20585,25763,5178,25.2,7974,9926,1952,24.5,1178.1,True,True,False,0.923
@@ -1413,6 +1429,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 97368,"Rose Lodge, OR",OR,3614,2803,-811,-22.4,2030,1777,-253,-12.5,46.1,True,True,False,0.889
 97405,"Eugene, OR",OR,43839,46933,3094,7.1,19613,20490,877,4.5,363.4,True,True,False,0.98
 02916,"East Providence, RI",RI,8605,8695,90,1.0,3890,3936,46,1.2,3277.1,True,True,False,0.966
+02829,"Harmony, RI",RI,,,,,,,,,,False,False,True,0.0
 02814,"Chepachet, RI",RI,7467,7587,120,1.6,3167,3348,181,5.7,174.9,True,True,False,0.983
 02832,"Hope Valley, RI",RI,5166,4998,-168,-3.3,2321,2042,-279,-12.0,201.6,True,True,False,0.857
 02865,"Providence County, RI",RI,17119,18447,1328,7.8,6921,7206,285,4.1,1119.8,True,True,False,0.994
@@ -1516,6 +1533,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 20003,"Washington, DC",DC,25836,37482,11646,45.1,12138,22394,10256,84.5,16492.8,True,True,False,0.953
 20011,"Washington, DC",DC,58108,67434,9326,16.0,25311,29874,4563,18.0,12573.8,True,True,False,0.898
 20001,"Washington, DC",DC,38395,44616,6221,16.2,17760,26928,9168,51.6,21793.1,True,True,False,0.971
+20431,"Washington, DC",DC,,,,,,,,,,False,False,True,0.0
 20009,"Washington, DC",DC,46366,50150,3784,8.2,28721,32028,3307,11.5,38048.2,True,True,False,0.98
 20008,"Washington, DC",DC,27641,29434,1793,6.5,17219,18058,839,4.9,9528.1,True,True,False,0.973
 20032,"Washington, DC",DC,33628,40920,7292,21.7,15780,19734,3954,25.1,7798.0,True,True,False,0.971
@@ -1606,6 +1624,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 84663,"Springville, UT",UT,29326,36207,6881,23.5,9209,11470,2261,24.6,330.2,True,True,False,0.895
 84728,"Millard County, UT",UT,257,44,-213,-82.9,76,20,-56,-73.7,0.1,False,False,False,0.994
 84743,"Kingston, UT",UT,39,373,334,856.4,13,108,95,730.8,59.3,False,False,True,0.725
+84129,"Taylorsville, UT",UT,,,,,,,,,,False,False,True,0.0
 84003,"American Fork, UT",UT,41249,57430,16181,39.2,11494,17265,5771,50.2,780.5,True,True,True,0.734
 84005,"Eagle Mountain, UT",UT,19498,52530,33032,169.4,4878,12764,7886,161.7,1438.6,True,True,False,0.841
 84018,"Morgan County, UT",UT,130,182,52,40.0,30,21,-9,-30.0,1.0,False,False,False,0.792
@@ -1625,6 +1644,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 72837,"Dover, AR",AR,7527,8499,972,12.9,3417,3967,550,16.1,34.8,True,True,False,0.914
 72927,"Booneville, AR",AR,8632,7944,-688,-8.0,3925,3726,-199,-5.1,24.6,True,True,False,0.943
 72946,"Mountainburg, AR",AR,3586,3844,258,7.2,1712,1568,-144,-8.4,40.7,True,True,False,0.847
+72713,"Bentonville, AR",AR,,,,,,,,,,False,False,True,0.0
+71942,"Friendship, AR",AR,,,,,,,,,,False,False,True,0.0
 65733,"Taney County, MO",MO,636,801,165,25.9,598,505,-93,-15.6,12.3,False,True,False,0.927
 72644,"Diamond City, AR",AR,2153,2369,216,10.0,1208,1243,35,2.9,27.0,True,True,False,0.957
 71601,"Pine Bluff, AR",AR,17472,13367,-4105,-23.5,7610,6301,-1309,-17.2,115.9,True,True,False,0.932
@@ -1727,6 +1748,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 82723,"Osage, WY",WY,272,140,-132,-48.5,119,85,-34,-28.6,1.0,False,False,True,0.603
 82939,"Carter, WY",WY,1623,1476,-147,-9.1,671,656,-15,-2.2,18.8,True,True,False,0.844
 83118,"Nordic, WY",WY,487,433,-54,-11.1,230,331,101,43.9,4.7,False,False,True,0.195
+72182,"Jefferson County, AR",AR,,,,,,,,,,False,False,True,0.0
 71652,"Kingsland, AR",AR,980,993,13,1.3,541,571,30,5.5,9.0,False,True,False,0.999
 71726,"Chidester, AR",AR,1182,1108,-74,-6.3,1023,843,-180,-17.6,5.7,True,True,False,0.97
 71945,"Hatfield, AR",AR,1691,1469,-222,-13.1,722,753,31,4.3,30.0,True,True,False,0.994
@@ -1827,6 +1849,9 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 72745,"Lowell, AR",AR,10674,15447,4773,44.7,4744,5586,842,17.7,485.2,True,True,False,0.974
 72801,"Russellville, AR",AR,17849,19019,1170,6.6,7325,7443,118,1.6,2374.1,True,True,False,0.934
 72851,"New Blaine, AR",AR,615,829,214,34.8,327,353,26,8.0,15.5,False,False,False,0.866
+72053,"College Station, AR",AR,,,,,,,,,,False,False,True,0.0
+72405,"Jonesboro, AR",AR,,,,,,,,,,False,False,True,0.0
+71748,"Ivan, AR",AR,,,,,,,,,,False,False,True,0.0
 71640,"Eudora, AR",AR,3665,2265,-1400,-38.2,1600,1331,-269,-16.8,9.8,True,True,False,0.786
 71643,"Gould, AR",AR,1574,5129,3555,225.9,651,599,-52,-8.0,37.1,True,True,False,0.767
 71646,"Hamburg, AR",AR,6483,6563,80,1.2,2778,2911,133,4.8,17.4,True,True,False,0.885
@@ -1855,6 +1880,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 85940,"Vernon, AZ",AZ,982,1185,203,20.7,613,669,56,9.1,12.1,False,True,True,0.702
 86025,"Holbrook, AZ",AZ,5548,5226,-322,-5.8,2328,2160,-168,-7.2,7.1,True,True,False,0.853
 86034,"Whitecone, AZ",AZ,2414,1983,-431,-17.9,986,1001,15,1.5,4.1,True,True,False,0.911
+85639,"Topawa, AZ",AZ,,,,,,,,,,False,False,True,0.0
 18976,"Bucks County, PA",PA,18788,22202,3414,18.2,6926,8367,1441,20.8,2081.6,True,True,False,0.961
 19029,"Delaware County, PA",PA,4039,3980,-59,-1.5,1714,1917,203,11.8,1832.0,True,True,False,0.984
 19053,"Trevose, PA",PA,25993,28509,2516,9.7,10284,10942,658,6.4,2706.0,True,True,False,0.97
@@ -1877,6 +1903,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 15214,"Pittsburgh, PA",PA,15451,14048,-1403,-9.1,7724,6894,-830,-10.7,3051.7,True,True,False,0.954
 15243,"Allegheny County, PA",PA,13060,13456,396,3.0,5662,6069,407,7.2,4463.4,True,True,False,0.99
 15342,"McGovern, PA",PA,4918,5097,179,3.6,2383,2475,92,3.9,1590.0,True,True,False,0.965
+84322,"Logan, UT",UT,,,,,,,,,,False,False,True,0.0
 84006,"West Jordan, UT",UT,934,1060,126,13.5,285,382,97,34.0,40.9,False,False,False,0.771
 84043,"Lehi, UT",UT,45912,88390,42478,92.5,12745,25350,12605,98.9,2838.6,True,True,False,0.96
 84094,"Sandy, UT",UT,27085,27507,422,1.6,9144,9883,739,8.1,5411.1,True,True,False,0.986
@@ -1983,6 +2010,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 05672,"Stowe, VT",VT,4298,5285,987,23.0,3163,3895,732,23.1,72.5,True,True,False,0.996
 05753,"Middlebury, VT",VT,10519,11094,575,5.5,3944,4121,177,4.5,132.4,True,True,False,0.999
 05862,"Peacham, VT",VT,381,361,-20,-5.2,403,279,-124,-30.8,15.1,False,False,False,0.954
+05351,"Windham County, VT",VT,,,,,,,,,,False,False,True,0.0
 05038,"Chelsea, VT",VT,1378,1371,-7,-0.5,743,803,60,8.1,31.4,True,True,False,0.91
 05048,"Hartland, VT",VT,2557,2506,-51,-2.0,1209,1176,-33,-2.7,84.7,True,True,False,0.878
 05089,"Windsor, VT",VT,5026,4462,-564,-11.2,2413,2473,60,2.5,102.0,True,True,False,0.862
@@ -2179,6 +2207,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 03605,"Sullivan County, NH",NH,1144,907,-237,-20.7,615,602,-13,-2.1,28.8,False,True,False,1.0
 03608,"Walpole, NH",NH,2227,3167,940,42.2,986,1513,527,53.4,92.4,True,True,False,0.987
 03849,"Carroll County, NH",NH,1307,1465,158,12.1,1190,1152,-38,-3.2,65.8,True,True,False,0.938
+03897,"Carroll County, NH",NH,,,,,,,,,,False,False,True,0.0
 03038,"Derry, NH",NH,33689,34474,785,2.3,13678,14507,829,6.1,961.7,True,True,False,0.999
 03047,"Hillsborough County, NH",NH,1493,1730,237,15.9,702,740,38,5.4,65.6,True,True,False,0.996
 03269,"Belknap County, NH",NH,2939,3066,127,4.3,1647,1567,-80,-4.9,62.0,True,True,False,0.957
@@ -2248,6 +2277,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 97826,"Echo, OR",OR,926,1178,252,27.2,347,477,130,37.5,3.5,False,False,False,0.932
 97905,"Baker County, OR",OR,243,63,-180,-74.1,185,81,-104,-56.2,0.3,False,False,False,0.9
 97920,"Malheur County, OR",OR,12,34,22,183.3,10,23,13,130.0,0.2,False,False,False,0.972
+97003,"Aloha, OR",OR,,,,,,,,,,False,False,True,0.0
 97011,"Mount Hood Villages, OR",OR,677,620,-57,-8.4,485,481,-4,-0.8,135.5,False,True,False,0.894
 97023,"Estacada, OR",OR,10001,12111,2110,21.1,3794,4995,1201,31.7,61.6,True,True,True,0.633
 97039,"Moro, OR",OR,403,413,10,2.5,211,208,-3,-1.4,3.7,False,False,False,0.957
@@ -2316,6 +2346,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 59635,"Spokane Creek, MT",MT,7073,8292,1219,17.2,2727,3423,696,25.5,104.3,True,True,False,0.822
 59752,"Wheatland, MT",MT,2999,5404,2405,80.2,1523,2160,637,41.8,13.4,True,True,True,0.712
 59870,"Stevensville, MT",MT,10442,12506,2064,19.8,4581,5153,572,12.5,49.0,True,True,False,0.994
+59273,"Valley County, MT",MT,,,,,,,,,,False,False,True,0.0
+59319,"Carter County, MT",MT,,,,,,,,,,False,False,True,0.0
 87016,"Estancia, NM",NM,4042,2421,-1621,-40.1,1349,1234,-115,-8.5,4.2,True,True,False,0.941
 87072,"Cochiti, NM",NM,426,789,363,85.2,199,317,118,59.3,44.4,False,False,False,1.0
 87123,"Albuquerque, NM",NM,41983,42252,269,0.6,18486,20564,2078,11.2,1464.3,True,True,False,0.999
@@ -2445,6 +2477,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 49883,"Schoolcraft County, MI",MI,97,234,137,141.2,263,266,3,1.1,0.8,False,False,False,0.879
 49896,"Menominee County, MI",MI,1658,1660,2,0.1,810,714,-96,-11.9,27.3,True,True,False,0.945
 49945,"Lake Linden, MI",MI,2436,2729,293,12.0,1985,2318,333,16.8,18.3,True,True,False,0.991
+49696,"Grand Traverse County, MI",MI,,,,,,,,,,False,False,True,0.0
 48073,"Royal Oak, MI",MI,32850,33106,256,0.8,17333,17497,164,0.9,4477.4,True,True,False,0.997
 01029,"Berkshire County, MA",MA,577,539,-38,-6.6,1048,903,-145,-13.8,54.1,False,True,False,1.0
 01038,"Hatfield, MA",MA,2553,2491,-62,-2.4,1238,1118,-120,-9.7,270.1,True,True,False,1.0
@@ -2568,6 +2601,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 01097,"Hampden County, MA",MA,53,143,90,169.8,23,78,55,239.1,82.2,False,False,False,1.0
 81433,"Silverton, CO",CO,777,651,-126,-16.2,632,583,-49,-7.8,2.9,False,True,False,1.0
 81635,"Battlement Mesa, CO",CO,6704,7486,782,11.7,2928,3152,224,7.7,22.6,True,True,False,0.815
+80826,"Lincoln County, CO",CO,,,,,,,,,,False,False,True,0.0
 82082,"Pine Bluffs, WY",WY,1557,1891,334,21.5,693,866,173,25.0,5.9,True,True,True,0.673
 80014,"Aurora, CO",CO,35618,39496,3878,10.9,19136,19857,721,3.8,5513.0,True,True,False,0.975
 80015,"Centennial, CO",CO,63089,72316,9227,14.6,22241,25904,3663,16.5,4446.2,True,True,False,0.875
@@ -2842,6 +2876,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 02543,"Woods Hole, MA",MA,613,747,134,21.9,797,1147,350,43.9,66.0,False,True,False,0.867
 02575,"Dukes County, MA",MA,2421,2718,297,12.3,2268,2071,-197,-8.7,119.5,True,True,False,1.0
 02740,"New Bedford, MA",MA,43505,46281,2776,6.4,19921,20654,733,3.7,8052.5,True,True,False,0.986
+01380,"Franklin County, MA",MA,,,,,,,,,,False,False,True,0.0
 01057,"Monson Center, MA",MA,8492,8176,-316,-3.7,3626,3490,-136,-3.8,183.6,True,True,False,0.997
 01060,"Northampton, MA",MA,14984,16492,1508,10.1,7137,8407,1270,17.8,1517.5,True,True,False,0.993
 01072,"Franklin County, MA",MA,1518,1521,3,0.2,805,708,-97,-12.0,79.7,True,True,False,0.92
@@ -3220,6 +3255,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 97838,"Hermiston, OR",OR,25213,28512,3299,13.1,9636,10574,938,9.7,140.9,True,True,False,0.758
 97901,"Adrian, OR",OR,593,954,361,60.9,296,389,93,31.4,6.8,False,False,True,0.698
 97918,"Vale, OR",OR,4453,4567,114,2.6,1774,1871,97,5.5,7.8,True,True,True,0.66
+97703,"Bend, OR",OR,,,,,,,,,,False,False,True,0.0
 97002,"Butteville, OR",OR,5199,6358,1159,22.3,1983,2457,474,23.9,153.2,True,True,False,0.996
 97017,"Clackamas County, OR",OR,3015,3427,412,13.7,1075,1125,50,4.7,75.8,True,True,False,0.915
 97021,"Dufur, OR",OR,695,1608,913,131.4,405,726,321,79.3,6.1,False,True,False,0.928
@@ -3277,6 +3313,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 89404,"Denio, NV",NV,0,36,36,,0,41,41,,0.1,False,False,True,0.358
 89415,"Hawthorne, NV",NV,4143,3405,-738,-17.8,2453,1798,-655,-26.7,9.0,True,True,True,0.47
 89460,"Gardnerville Ranchos, NV",NV,13521,14534,1013,7.5,5716,5968,252,4.4,263.3,True,True,False,0.948
+89496,"Churchill County, NV",NV,,,,,,,,,,False,False,True,0.0
 89002,"Henderson, NV",NV,32853,37664,4811,14.6,11909,14076,2167,18.2,4339.9,True,True,False,0.996
 89008,"Caliente, NV",NV,1211,1251,40,3.3,701,716,15,2.1,0.7,True,True,False,0.993
 89101,"Las Vegas, NV",NV,45812,42739,-3073,-6.7,19140,18050,-1090,-5.7,7945.6,True,True,False,0.983
@@ -3354,6 +3391,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 59256,"Sheridan County, MT",MT,59,258,199,337.3,52,98,46,88.5,3.3,False,False,False,0.753
 59315,"Bloomfield, MT",MT,124,104,-20,-16.1,80,56,-24,-30.0,0.4,False,False,False,0.929
 59404,"Great Falls, MT",MT,26458,28822,2364,8.9,10865,11810,945,8.7,87.0,True,True,False,0.962
+89070,"Clark County, NV",NV,,,,,,,,,,False,False,True,0.0
 89439,"Reno, NV",NV,1457,2532,1075,73.8,762,1277,515,67.6,155.7,True,True,True,0.561
 89044,"Henderson, NV",NV,13705,30818,17113,124.9,6698,13740,7042,105.1,528.1,True,True,True,0.277
 89081,"North Las Vegas, NV",NV,27393,41408,14015,51.2,9939,14230,4291,43.2,5747.0,True,True,False,0.996
@@ -3371,6 +3409,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 89129,"Las Vegas, NV",NV,51374,53435,2061,4.0,21294,22096,802,3.8,5353.0,True,True,False,0.998
 89161,"Blue Diamond, NV",NV,53,444,391,737.7,16,267,251,1568.8,3.0,False,False,True,0.127
 89820,"Battle Mountain, NV",NV,5463,5562,99,1.8,2182,2541,359,16.5,2.7,True,True,False,0.97
+89437,"Storey County, NV",NV,,,,,,,,,,False,False,True,0.0
 89020,"Amargosa Valley, NV",NV,1134,1835,701,61.8,497,916,419,84.3,8.5,True,True,False,0.918
 89441,"Spanish Springs, NV",NV,11336,14460,3124,27.6,4082,5606,1524,37.3,291.1,True,True,False,0.83
 89451,"Incline Village, NV",NV,8228,9285,1057,12.8,7429,7758,329,4.4,220.1,True,True,True,0.596
@@ -3415,6 +3454,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 99610,"Cohoe, AK",AK,2075,2222,147,7.1,1222,1425,203,16.6,25.6,True,True,False,0.998
 99683,"Petersville, AK",AK,484,583,99,20.5,797,1188,391,49.1,0.4,False,True,False,0.853
 99726,"Evansville, AK",AK,54,33,-21,-38.9,78,40,-38,-48.7,0.1,False,False,False,0.877
+99608,"Karluk, AK",AK,,,,,,,,,,False,False,True,0.0
 99559,"Bethel, AK",AK,7571,7241,-330,-4.4,2655,2744,89,3.4,128.1,True,True,False,0.949
 99587,"Anchorage, AK",AK,1726,1949,223,12.9,1437,1593,156,10.9,5.7,True,True,True,0.705
 99627,"McGrath, AK",AK,474,255,-219,-46.2,280,244,-36,-12.9,0.0,False,False,True,0.585
@@ -3423,6 +3463,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 99757,"Lake Minchumina, AK",AK,0,7,7,,45,22,-23,-51.1,0.0,False,False,False,0.985
 99780,"Mentasta Lake, AK",AK,1717,1884,167,9.7,973,974,1,0.1,0.4,True,True,True,0.168
 99829,"Whitestone Logging Camp, AK",AK,774,862,88,11.4,425,402,-23,-5.4,9.1,False,True,True,0.076
+99675,"Takotna, AK",AK,,,,,,,,,,False,False,True,0.0
 59454,"Kevin, MT",MT,153,123,-30,-19.6,125,92,-33,-26.4,1.0,False,False,True,0.691
 59472,"Sand Coulee, MT",MT,771,507,-264,-34.2,313,251,-62,-19.8,9.2,False,False,True,0.648
 59479,"Stanford, MT",MT,927,746,-181,-19.5,570,403,-167,-29.3,1.1,False,True,False,0.938
@@ -3712,6 +3753,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 58274,"Portland, ND",ND,1168,930,-238,-20.4,492,413,-79,-16.1,7.1,False,True,False,0.969
 45881,"Rawson, OH",OH,1794,1683,-111,-6.2,565,654,89,15.8,55.3,True,True,False,0.967
 45898,"Willshire, OH",OH,1094,917,-177,-16.2,530,415,-115,-21.7,31.4,False,True,False,0.983
+44630,"Greentown, OH",OH,,,,,,,,,,False,False,True,0.0
 43009,"Champaign County, OH",OH,2351,2229,-122,-5.2,882,767,-115,-13.0,66.0,True,True,False,0.982
 43013,"Hartford (Croton), OH",OH,1007,1754,747,74.2,439,599,160,36.4,87.3,True,True,False,0.9
 43023,"Granville South, OH",OH,12617,15688,3071,24.3,4101,5401,1300,31.7,314.1,True,True,False,0.977
@@ -3769,6 +3811,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 26591,"Worthington, WV",WV,2018,1568,-450,-22.3,803,596,-207,-25.8,129.9,True,True,False,0.947
 26679,"Summersville, WV",WV,1501,1628,127,8.5,994,1068,74,7.4,31.1,True,True,False,0.964
 26855,"Grant County, WV",WV,801,633,-168,-21.0,510,377,-133,-26.1,36.0,False,False,False,0.905
+26463,"Harrison County, WV",WV,,,,,,,,,,False,False,True,0.0
+24993,"Monroe County, WV",WV,,,,,,,,,,False,False,True,0.0
 24817,"Bradshaw, WV",WV,974,1931,957,98.3,430,821,391,90.9,85.3,False,True,True,0.499
 24822,"Wyoming County, WV",WV,757,890,133,17.6,448,518,70,15.6,44.8,False,True,False,0.838
 24844,"Iaeger, WV",WV,1720,1049,-671,-39.0,913,568,-345,-37.8,18.4,True,True,True,0.714
@@ -3961,6 +4005,10 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 26617,"Nicholas County, WV",WV,109,763,654,600.0,90,253,163,181.1,71.5,False,False,True,0.551
 26680,"Fayette County, WV",WV,187,307,120,64.2,162,180,18,11.1,8.9,False,False,False,0.773
 26802,"Brandywine, WV",WV,1401,893,-508,-36.3,889,561,-328,-36.9,7.1,False,True,False,0.876
+25231,"Jackson County, WV",WV,,,,,,,,,,False,False,True,0.0
+25909,"Prosperity, WV",WV,,,,,,,,,,False,False,True,0.0
+25685,"Mingo County, WV",WV,,,,,,,,,,False,False,True,0.0
+25421,"Berkeley County, WV",WV,,,,,,,,,,False,False,True,0.0
 24701,"Bluefield, WV",WV,20383,17117,-3266,-16.0,10581,9223,-1358,-12.8,279.6,True,True,False,0.937
 24716,"Bud, WV",WV,327,544,217,66.4,97,198,101,104.1,185.1,False,False,False,0.762
 24719,"Covel, WV",WV,426,123,-303,-71.1,131,122,-9,-6.9,120.8,False,False,False,0.99
@@ -4139,6 +4187,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 26615,"Braxton County, WV",WV,315,115,-200,-63.5,144,111,-33,-22.9,17.7,False,False,True,0.671
 26707,"Bayard, WV",WV,453,299,-154,-34.0,212,166,-46,-21.7,11.2,False,False,False,0.937
 26808,"Hampshire County, WV",WV,849,903,54,6.4,433,389,-44,-10.2,33.9,False,False,True,0.448
+25667,"Chattaroy, WV",WV,,,,,,,,,,False,False,True,0.0
+24985,"Monroe County, WV",WV,,,,,,,,,,False,False,True,0.0
 20135,"Shenandoah Retreat, VA",VA,3085,3585,500,16.2,1505,1471,-34,-2.3,92.8,True,True,False,0.984
 24712,"Athens, WV",WV,2045,2913,868,42.4,741,972,231,31.2,245.9,True,True,True,0.629
 24737,"Montcalm, WV",WV,209,1186,977,467.5,141,651,510,361.7,116.4,False,False,True,0.01
@@ -4484,6 +4534,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 45817,"Bluffton, OH",OH,6550,5926,-624,-9.5,2458,2543,85,3.5,92.6,True,True,False,0.998
 45843,"Forest, OH",OH,3925,4184,259,6.6,1709,1756,47,2.8,41.5,True,True,False,0.973
 45891,"Van Wert, OH",OH,15573,15584,11,0.1,7018,6819,-199,-2.8,116.1,True,True,False,0.976
+45423,"Dayton, OH",OH,,,,,,,,,,False,False,True,0.0
 43001,"Granville South, OH",OH,2189,2892,703,32.1,829,1252,423,51.0,98.7,True,True,False,0.894
 43003,"Ashley, OH",OH,2788,3723,935,33.5,1117,1608,491,44.0,110.0,True,True,False,0.931
 43004,"Columbus, OH",OH,22943,31477,8534,37.2,8834,11673,2839,32.1,2517.7,True,True,False,0.978
@@ -4510,6 +4561,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 67841,"Ensign, KS",KS,426,377,-49,-11.5,185,149,-36,-19.5,3.4,False,False,False,0.818
 67867,"Montezuma, KS",KS,1707,1596,-111,-6.5,649,633,-16,-2.5,7.0,True,True,False,0.934
 67879,"Greeley County unified government (balance), KS",KS,1232,1302,70,5.7,629,658,29,4.6,1.8,True,True,False,1.0
+67102,"Cowley County, KS",KS,,,,,,,,,,False,False,True,0.0
 66007,"Basehor, KS",KS,5837,10150,4313,73.9,2276,3788,1512,66.4,323.4,True,True,True,0.723
 66026,"Fontana, KS",KS,974,840,-134,-13.8,362,245,-117,-32.3,17.3,False,False,False,0.845
 66039,"Kincaid, KS",KS,670,784,114,17.0,324,406,82,25.3,7.6,False,False,False,0.933
@@ -4679,6 +4731,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 45769,"Pomeroy, OH",OH,6742,5395,-1347,-20.0,3070,2770,-300,-9.8,51.4,True,True,False,0.953
 45860,"Maria Stein, OH",OH,2150,2326,176,8.2,660,740,80,12.1,70.0,True,True,False,0.999
 45887,"Spencerville, OH",OH,4721,4422,-299,-6.3,1851,1884,33,1.8,63.4,True,True,False,0.975
+43414,"Wood County, OH",OH,,,,,,,,,,False,False,True,0.0
 37862,"Sevierville, TN",TN,21027,21767,740,3.5,13242,14207,965,7.3,266.1,True,True,False,0.958
 38053,"Millington, TN",TN,28656,25303,-3353,-11.7,11102,10900,-202,-1.8,155.8,True,True,False,0.993
 38067,"Saulsbury, TN",TN,1571,1830,259,16.5,771,1122,351,45.5,31.0,True,True,False,0.933
@@ -5079,6 +5132,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 42453,"St. Charles, KY",KY,553,452,-101,-18.3,263,196,-67,-25.5,19.7,False,False,True,0.62
 42462,"Waverly, KY",KY,1453,1546,93,6.4,613,580,-33,-5.4,31.6,True,True,False,0.884
 42729,"Hart County, KY",KY,1611,2142,531,33.0,1297,1163,-134,-10.3,52.2,True,True,False,0.981
+41181,"Carter County, KY",KY,,,,,,,,,,False,False,True,0.0
 38079,"Tiptonville, TN",TN,5584,4262,-1322,-23.7,1551,1442,-109,-7.0,38.6,True,True,False,0.896
 40008,"Bloomfield, KY",KY,3949,4020,71,1.8,1590,1802,212,13.3,44.7,True,True,False,0.856
 40022,"Shelby County, KY",KY,914,903,-11,-1.2,343,357,14,4.1,55.3,False,False,False,0.935
@@ -5258,6 +5312,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 42649,"Pine Knot, KY",KY,2001,2003,2,0.1,1031,939,-92,-8.9,27.3,True,True,False,0.939
 42718,"Campbellsville, KY",KY,24028,26768,2740,11.4,10623,11201,578,5.4,100.8,True,True,False,0.946
 42741,"Adair County, KY",KY,575,420,-155,-27.0,273,154,-119,-43.6,32.9,False,False,False,0.814
+41386,"Owsley County, KY",KY,,,,,,,,,,False,False,True,0.0
 70769,"Prairieville, LA",LA,35526,49278,13752,38.7,13203,18236,5033,38.1,1029.5,True,True,False,0.99
 70809,"Baton Rouge, LA",LA,23890,25732,1842,7.7,12125,13754,1629,13.4,1788.9,True,True,False,0.989
 71049,"Logansport, LA",LA,3185,3175,-10,-0.3,1552,1767,215,13.9,34.0,True,True,False,0.929
@@ -5268,6 +5323,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 71417,"Rock Hill, LA",LA,4762,4940,178,3.7,2250,2422,172,7.6,35.1,True,True,False,0.969
 71424,"Rapides Parish, LA",LA,1909,1439,-470,-24.6,631,529,-102,-16.2,39.1,True,True,False,0.937
 71485,"Woodworth, LA",LA,2179,2890,711,32.6,958,1160,202,21.1,62.8,True,True,False,0.847
+70825,"Baton Rouge, LA",LA,,,,,,,,,,False,False,True,0.0
 70037,"Belle Chasse, LA",LA,16408,16639,231,1.4,6324,6730,406,6.4,333.3,True,True,False,0.992
 70122,"New Orleans, LA",LA,25598,35253,9655,37.7,14088,17179,3091,21.9,5623.4,True,True,False,0.997
 70357,"Golden Meadow, LA",LA,4047,2351,-1696,-41.9,1799,1136,-663,-36.9,13.0,True,True,False,0.999
@@ -5279,6 +5335,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 47917,"Tab, IN",IN,602,239,-363,-60.3,291,138,-153,-52.6,6.6,False,False,False,0.959
 47918,"Attica, IN",IN,6105,5657,-448,-7.3,2847,2678,-169,-5.9,40.4,True,True,False,0.989
 47975,"Pine Village, IN",IN,547,604,57,10.4,294,271,-23,-7.8,15.3,False,False,False,0.923
+47174,"Crawford County, IN",IN,,,,,,,,,,False,False,True,0.0
 46033,"Carmel, IN",IN,34632,40881,6249,18.0,11944,15032,3088,25.9,2345.9,True,True,False,0.978
 46052,"Lebanon, IN",IN,22161,23553,1392,6.3,9533,10006,473,5.0,132.6,True,True,False,0.988
 46062,"Noblesville, IN",IN,29020,41060,12040,41.5,11595,15745,4150,35.8,1225.3,True,True,False,0.951
@@ -5324,6 +5381,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 39836,"Coleman, GA",GA,442,368,-74,-16.7,295,359,64,21.7,5.1,False,False,False,0.983
 28736,"Glenville, NC",NC,870,1000,130,14.9,1284,1405,121,9.4,25.7,False,True,False,0.851
 28768,"Brevard, NC",NC,7135,6759,-376,-5.3,3504,3550,46,1.3,81.4,True,True,False,0.997
+28542,"Jacksonville, NC",NC,,,,,,,,,,False,False,True,0.0
 27007,"Surry County, NC",NC,1874,2095,221,11.8,779,958,179,23.0,101.8,True,True,False,0.988
 27009,"Forsyth County, NC",NC,3038,2939,-99,-3.3,1185,1217,32,2.7,178.1,True,True,False,0.943
 27028,"Mocksville, NC",NC,25817,26566,749,2.9,11429,11197,-232,-2.0,137.8,True,True,False,0.979
@@ -5476,6 +5534,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 47933,"Crawfordsville, IN",IN,28402,28357,-45,-0.2,12334,12342,8,0.1,120.3,True,True,False,0.965
 47974,"Perrysville, IN",IN,1137,1441,304,26.7,559,585,26,4.7,36.0,True,True,False,0.999
 47990,"Waynetown, IN",IN,1507,1374,-133,-8.8,618,592,-26,-4.2,30.8,True,True,False,0.877
+47435,"Brown County, IN",IN,,,,,,,,,,False,False,True,0.0
 46030,"Arcadia, IN",IN,3447,3035,-412,-12.0,1398,1220,-178,-12.7,91.6,True,True,False,0.921
 46034,"Cicero, IN",IN,7157,7531,374,5.2,3257,3530,273,8.4,240.5,True,True,False,0.88
 46049,"Kempton, IN",IN,879,763,-116,-13.2,430,402,-28,-6.5,29.1,False,True,False,0.98
@@ -5602,6 +5661,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 38827,"Belmont, MS",MS,2617,2625,8,0.3,1097,1386,289,26.3,76.1,True,True,False,0.965
 38851,"Houston, MS",MS,8918,8802,-116,-1.3,3653,3887,234,6.4,40.2,True,True,False,0.974
 38967,"Winona, MS",MS,7532,6693,-839,-11.1,3231,3592,361,11.2,39.1,True,True,False,0.953
+27584,"Vance County, NC",NC,,,,,,,,,,False,False,True,0.0
 27018,"Smithtown, NC",NC,7544,7388,-156,-2.1,3643,3448,-195,-5.4,89.8,True,True,False,0.982
 27022,"Stokes County, NC",NC,1701,1285,-416,-24.5,908,732,-176,-19.4,38.9,True,True,False,0.962
 27043,"Pinnacle, NC",NC,6428,6295,-133,-2.1,2861,2981,120,4.2,92.0,True,True,False,0.979
@@ -5639,6 +5699,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 71325,"Cheneyville, LA",LA,1386,1273,-113,-8.2,669,589,-80,-12.0,19.2,True,True,False,0.995
 71353,"Melville, LA",LA,1625,1399,-226,-13.9,890,810,-80,-9.0,17.2,True,True,True,0.657
 71435,"Grayson, LA",LA,4052,3499,-553,-13.6,1890,1698,-192,-10.2,16.6,True,True,False,0.919
+70629,"Lake Charles, LA",LA,,,,,,,,,,False,False,True,0.0
 70041,"Empire, LA",LA,1684,1747,63,3.7,993,1227,234,23.6,57.2,True,True,True,0.336
 70076,"Garyville, LA",LA,907,100,-807,-89.0,269,66,-203,-75.5,87.6,False,False,True,0.395
 70086,"St. James, LA",LA,2418,1793,-625,-25.8,807,847,40,5.0,46.6,True,True,True,0.59
@@ -5660,6 +5721,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 47955,"Linden, IN",IN,1071,854,-217,-20.3,474,394,-80,-16.9,32.6,False,False,False,0.949
 47959,"Monon, IN",IN,2793,2679,-114,-4.1,1337,1139,-198,-14.8,39.3,True,True,False,0.957
 47994,"Wingate, IN",IN,351,674,323,92.0,210,247,37,17.6,31.0,False,False,True,0.615
+46980,"Wabash County, IN",IN,,,,,,,,,,False,False,True,0.0
 70525,"Church Point, LA",LA,12080,14687,2607,21.6,4964,5610,646,13.0,142.8,True,True,False,0.978
 70591,"Welsh, LA",LA,5283,5983,700,13.3,2132,2339,207,9.7,34.8,True,True,False,0.97
 70662,"Sugartown, LA",LA,566,488,-78,-13.8,275,270,-5,-1.8,17.4,False,False,True,0.745
@@ -5707,6 +5769,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 28717,"Cashiers, NC",NC,2029,1265,-764,-37.7,2805,2241,-564,-20.1,34.8,True,True,False,0.98
 28734,"Franklin, NC",NC,26639,29659,3020,11.3,17054,18690,1636,9.6,98.5,True,True,False,0.983
 28905,"Marble, NC",NC,2423,3056,633,26.1,1344,1529,185,13.8,67.6,True,True,False,0.985
+28359,"Lumberton, NC",NC,,,,,,,,,,False,False,True,0.0
+28223,"Charlotte, NC",NC,,,,,,,,,,False,False,True,0.0
 70040,"Poydras, LA",LA,1905,1056,-849,-44.6,909,509,-400,-44.0,11.1,True,True,True,0.65
 70339,"Pierre Part, LA",LA,6395,4848,-1547,-24.2,3462,2869,-593,-17.1,88.0,True,True,False,0.968
 70343,"Bourg, LA",LA,4997,5280,283,5.7,1892,2052,160,8.5,230.7,True,True,False,0.999
@@ -5892,6 +5956,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 42503,"Somerset, KY",KY,23364,25321,1957,8.4,10593,11589,996,9.4,195.6,True,True,False,0.99
 42647,"Stearns, KY",KY,4293,3349,-944,-22.0,2080,1601,-479,-23.0,24.2,True,True,False,0.997
 42722,"Hart County, KY",KY,688,596,-92,-13.4,312,217,-95,-30.4,35.1,False,False,False,0.965
+40803,"Leslie County, KY",KY,,,,,,,,,,False,False,True,0.0
 40003,"Shelby County, KY",KY,2020,1807,-213,-10.5,760,769,9,1.2,41.7,True,True,False,0.918
 40025,"Glenview, KY",KY,73,565,492,674.0,39,216,177,453.8,438.9,False,False,True,0.128
 40040,"Mackville, KY",KY,473,779,306,64.7,184,446,262,142.4,43.2,False,False,False,0.967
@@ -6158,6 +6223,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 28692,"Cove Creek, NC",NC,3503,4367,864,24.7,2265,3304,1039,45.9,109.2,True,True,False,0.92
 28729,"Etowah, NC",NC,2698,3681,983,36.4,1272,1533,261,20.5,886.6,True,True,False,0.966
 28783,"Jackson County, NC",NC,1229,1785,556,45.2,1023,989,-34,-3.3,26.3,True,True,False,0.911
+27969,"Gates County, NC",NC,,,,,,,,,,False,False,True,0.0
 27013,"Cleveland, NC",NC,6066,6575,509,8.4,2698,2489,-209,-7.7,87.2,True,True,False,0.98
 27040,"Winston-Salem, NC",NC,11246,12665,1419,12.6,4350,5360,1010,23.2,479.9,True,True,False,0.981
 27041,"Pilot Mountain, NC",NC,6897,8303,1406,20.4,3222,3689,467,14.5,137.6,True,True,False,0.935
@@ -6339,6 +6405,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 28756,"Columbus, NC",NC,4693,4706,13,0.3,2394,2444,50,2.1,59.3,True,True,False,0.991
 28803,"Asheville, NC",NC,28752,33718,4966,17.3,14501,18441,3940,27.2,878.8,True,True,False,0.995
 28902,"Clay County, NC",NC,1645,986,-659,-40.1,974,784,-190,-19.5,43.8,False,True,False,0.967
+28136,"Polkville, NC",NC,,,,,,,,,,False,False,True,0.0
 27006,"Advance, NC",NC,13764,16247,2483,18.0,6155,7361,1206,19.6,258.8,True,True,False,0.986
 27017,"Dobson, NC",NC,9619,10085,466,4.8,4185,4292,107,2.6,93.0,True,True,False,0.978
 27019,"Germanton, NC",NC,3482,3544,62,1.8,1790,1806,16,0.9,99.2,True,True,False,0.914
@@ -6480,6 +6547,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 47850,"Farmersburg, IN",IN,2214,2104,-110,-5.0,967,984,17,1.8,40.5,True,True,False,0.928
 47928,"Cayuga, IN",IN,2055,1730,-325,-15.8,916,815,-101,-11.0,40.5,True,True,False,0.9
 47967,"New Richmond, IN",IN,884,873,-11,-1.2,312,318,6,1.9,26.1,False,False,False,0.916
+46945,"Fulton County, IN",IN,,,,,,,,,,False,False,True,0.0
 46035,"Colfax, IN",IN,1058,1348,290,27.4,420,535,115,27.4,54.1,True,True,False,0.915
 46040,"Fortville, IN",IN,10867,15943,5076,46.7,3826,5535,1709,44.7,506.9,True,True,False,0.964
 46041,"Frankfort, IN",IN,23865,23134,-731,-3.1,9718,9814,96,1.0,93.1,True,True,False,0.993
@@ -6548,6 +6616,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 42409,"Dixon, KY",KY,2403,2293,-110,-4.6,1067,1020,-47,-4.4,28.3,True,True,False,0.973
 42539,"Liberty, KY",KY,9461,9249,-212,-2.2,4598,4458,-140,-3.0,42.1,True,True,False,0.925
 42746,"Hardyville, KY",KY,2259,2101,-158,-7.0,900,978,78,8.7,44.3,True,True,False,0.942
+42252,"Butler County, KY",KY,,,,,,,,,,False,False,True,0.0
 40004,"Bardstown, KY",KY,27925,30601,2676,9.6,11780,13130,1350,11.5,210.6,True,True,False,0.954
 40007,"Henry County, KY",KY,166,47,-119,-71.7,61,70,9,14.8,5.7,False,False,False,0.959
 40013,"Fairfield, KY",KY,5336,6670,1334,25.0,2070,2644,574,27.7,88.3,True,True,False,0.95
@@ -6722,6 +6791,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 98513,"Nisqually Indian Community, WA",WA,32167,38017,5850,18.2,12638,14479,1841,14.6,762.3,True,True,False,0.989
 98569,"Ocean Shores, WA",WA,5596,7489,1893,33.8,5168,6045,877,17.0,565.2,True,True,False,0.886
 79927,"Socorro, TX",TX,37738,44444,6706,17.8,10746,14522,3776,35.1,1619.1,True,True,False,0.995
+75434,"Lamar County, TX",TX,,,,,,,,,,False,False,True,0.0
 75025,"Plano, TX",TX,50894,53202,2308,4.5,18627,19452,825,4.4,5568.7,True,True,False,0.975
 75032,"McLendon-Chisholm, TX",TX,28271,39865,11594,41.0,10393,13847,3454,33.2,828.4,True,True,False,0.966
 75034,"Frisco, TX",TX,66738,53818,-12920,-19.4,23949,24756,807,3.4,3375.5,True,True,False,0.991
@@ -6905,6 +6975,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79528,"Jayton, TX",TX,625,578,-47,-7.5,383,319,-64,-16.7,1.7,False,False,True,0.329
 79562,"Tuscola, TX",TX,3491,5070,1579,45.2,1452,1695,243,16.7,44.2,True,True,False,0.941
 79748,"Howard County, TX",TX,118,232,114,96.6,56,61,5,8.9,4.7,False,False,True,0.711
+79223,"Cottle County, TX",TX,,,,,,,,,,False,False,True,0.0
 04286,"Oxford County, ME",ME,100,0,-100,-100.0,51,0,-51,-100.0,0.0,False,False,False,1.0
 79244,"Matador, TX",TX,534,776,242,45.3,415,472,57,13.7,3.5,False,True,True,0.743
 79258,"Floyd County, TX",TX,0,14,14,,35,6,-29,-82.9,0.8,False,False,False,0.911
@@ -7000,6 +7071,10 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79783,"Martin County, TX",TX,120,113,-7,-5.8,55,49,-6,-10.9,0.7,False,False,True,0.62
 79839,"Fort Hancock, TX",TX,1990,1416,-574,-28.8,594,430,-164,-27.6,4.3,True,True,True,0.657
 79915,"El Paso, TX",TX,39650,34230,-5420,-13.7,13739,14311,572,4.2,3847.6,True,True,False,0.997
+75886,"Anderson County, TX",TX,,,,,,,,,,False,False,True,0.0
+78842,"Val Verde County, TX",TX,,,,,,,,,,False,False,True,0.0
+75659,"Harrison County, TX",TX,,,,,,,,,,False,False,True,0.0
+76880,"Mills County, TX",TX,,,,,,,,,,False,False,True,0.0
 75050,"Grand Prairie, TX",TX,39375,44889,5514,14.0,16583,17548,965,5.8,1738.0,True,True,False,0.95
 75061,"Irving, TX",TX,52571,56013,3442,6.5,19860,20274,414,2.1,4823.7,True,True,False,0.989
 75065,"Hickory Creek, TX",TX,10764,13657,2893,26.9,4235,5454,1219,28.8,1651.4,True,True,False,0.961
@@ -7107,6 +7182,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 99146,"Laurier, WA",WA,62,28,-34,-54.8,13,24,11,84.6,0.6,False,False,False,1.0
 99169,"Ritzville, WA",WA,2668,2587,-81,-3.0,1188,1233,45,3.8,3.6,True,True,False,0.906
 99353,"West Richland, WA",WA,13061,19251,6190,47.4,4858,6804,1946,40.1,745.9,True,True,False,0.993
+98025,"King County, WA",WA,,,,,,,,,,False,False,True,0.0
 98005,"Bellevue, WA",WA,17276,21846,4570,26.5,7945,9506,1561,19.6,2977.0,True,True,False,0.981
 98029,"Issaquah, WA",WA,24542,30586,6044,24.6,10276,12722,2446,23.8,3006.4,True,True,False,0.869
 77045,"Houston, TX",TX,31578,33563,1985,6.3,9802,11101,1299,13.3,3009.8,True,True,False,0.985
@@ -7401,6 +7477,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 96059,"Manton, CA",CA,703,826,123,17.5,341,470,129,37.8,13.0,False,False,False,0.909
 96114,"Janesville, CA",CA,3075,2959,-116,-3.8,1154,1394,240,20.8,45.1,True,True,False,0.986
 96148,"Tahoe Vista, CA",CA,855,562,-293,-34.3,633,905,272,43.0,269.0,False,True,True,0.615
+93246,"Lemoore Station, CA",CA,,,,,,,,,,False,False,True,0.0
 23805,"Petersburg, VA",VA,19807,21408,1601,8.1,8605,9358,753,8.8,299.4,True,True,False,0.974
 23830,"Dinwiddie County, VA",VA,1368,1412,44,3.2,580,676,96,16.6,28.0,True,True,False,0.904
 23831,"Chester, VA",VA,31409,39529,8120,25.9,12911,16003,3092,23.9,1671.6,True,True,False,0.972
@@ -7559,6 +7636,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 24458,"McDowell, VA",VA,450,244,-206,-45.8,355,200,-155,-43.7,3.5,False,False,False,0.99
 24467,"Mount Sidney, VA",VA,2263,2318,55,2.4,919,995,76,8.3,95.6,True,True,False,0.771
 24529,"Mecklenburg County, VA",VA,1317,1345,28,2.1,981,1036,55,5.6,36.7,True,True,False,0.973
+24061,"Blacksburg, VA",VA,,,,,,,,,,False,False,True,0.0
 20112,"Buckhall, VA",VA,25046,30500,5454,21.8,8131,9657,1526,18.8,900.1,True,True,False,0.983
 20141,"Round Hill, VA",VA,6231,8359,2128,34.2,2110,2630,520,24.6,321.4,True,True,False,0.934
 20144,"Rectortown, VA",VA,1396,1340,-56,-4.0,582,629,47,8.1,30.0,True,True,False,0.795
@@ -7647,6 +7725,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 74827,"Atwood, OK",OK,553,330,-223,-40.3,323,214,-109,-33.7,8.9,False,False,False,0.984
 74851,"McLoud, OK",OK,10001,11489,1488,14.9,3493,3976,483,13.8,136.7,True,True,False,0.934
 74948,"Nicut, OK",OK,12553,12382,-171,-1.4,5301,5430,129,2.4,57.0,True,True,False,0.964
+73435,"Fox, OK",OK,,,,,,,,,,False,False,True,0.0
 73004,"Amber, OK",OK,752,853,101,13.4,363,376,13,3.6,13.7,False,False,False,0.782
 73029,"Cyril, OK",OK,1749,1525,-224,-12.8,854,687,-167,-19.6,35.7,True,True,False,0.976
 73044,"Guthrie, OK",OK,20311,25398,5087,25.0,8787,10190,1403,16.0,96.0,True,True,False,0.943
@@ -8119,6 +8198,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 26582,"Mannington, WV",WV,5163,3743,-1420,-27.5,2425,1853,-572,-23.6,43.3,True,True,False,0.981
 26678,"Nicholas County, WV",WV,1240,1427,187,15.1,587,746,159,27.1,99.9,True,True,False,1.0
 26722,"Green Spring, WV",WV,928,496,-432,-46.6,456,306,-150,-32.9,26.3,False,False,False,0.839
+26162,"Wetzel County, WV",WV,,,,,,,,,,False,False,True,0.0
 24715,"Bramwell, WV",WV,671,275,-396,-59.0,350,194,-156,-44.6,34.2,False,False,False,0.763
 24813,"Bartley, WV",WV,413,400,-13,-3.1,292,151,-141,-48.3,43.9,False,False,False,0.914
 24823,"Wyoming County, WV",WV,508,413,-95,-18.7,207,148,-59,-28.5,38.5,False,False,False,1.0
@@ -8171,6 +8251,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 96024,"Douglas City, CA",CA,1274,1082,-192,-15.1,808,518,-290,-35.9,10.3,True,True,False,0.996
 96058,"Mount Hebron, CA",CA,672,661,-11,-1.6,420,323,-97,-23.1,1.8,False,False,False,0.946
 96129,"Beckwourth, CA",CA,215,306,91,42.3,168,152,-16,-9.5,2.6,False,False,True,0.741
+95480,"Sonoma County, CA",CA,,,,,,,,,,False,False,True,0.0
+93737,"Fresno, CA",CA,,,,,,,,,,False,False,True,0.0
 54932,"Fond du Lac County, WI",WI,984,1218,234,23.8,376,445,69,18.4,43.2,False,False,False,0.953
 54937,"Fond du Lac, WI",WI,18745,21687,2942,15.7,7546,9284,1738,23.0,180.6,True,True,False,0.936
 54950,"Marion, WI",WI,3079,2802,-277,-9.0,1518,1393,-125,-8.2,34.3,True,True,False,0.996
@@ -8224,6 +8306,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 96071,"Old Station, CA",CA,49,20,-29,-59.2,152,154,2,1.3,0.8,False,False,False,0.986
 96136,"Lassen County, CA",CA,170,27,-143,-84.1,84,11,-73,-86.9,0.2,False,False,False,0.972
 96150,"South Lake Tahoe, CA",CA,29206,29646,440,1.5,21930,23739,1809,8.2,181.7,True,True,False,0.751
+94018,"El Granada, CA",CA,,,,,,,,,,False,False,True,0.0
 90019,"Los Angeles, CA",CA,63894,59548,-4346,-6.8,25294,26358,1064,4.2,15384.4,True,True,False,0.988
 90022,"East Los Angeles, CA",CA,67322,60343,-6979,-10.4,18037,17860,-177,-1.0,13645.0,True,True,False,0.989
 90023,"Los Angeles, CA",CA,44706,43857,-849,-1.9,11477,12290,813,7.1,10158.2,True,True,False,0.975
@@ -8281,6 +8364,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 54853,"Luck, WI",WI,4211,3506,-705,-16.7,2654,2458,-196,-7.4,39.8,True,True,False,0.968
 54914,"Appleton, WI",WI,31213,31849,636,2.0,14220,14289,69,0.5,1656.5,True,True,False,0.92
 54941,"Green Lake, WI",WI,2596,2563,-33,-1.3,1899,1902,3,0.2,79.1,True,True,False,1.0
+53127,"Waukesha County, WI",WI,,,,,,,,,,False,False,True,0.0
 53004,"Belgium, WI",WI,3205,3475,270,8.4,1249,1479,230,18.4,103.5,True,True,False,0.999
 53034,"Hustisford, WI",WI,2069,1652,-417,-20.2,896,744,-152,-17.0,214.0,True,True,False,0.998
 53045,"Brookfield, WI",WI,21504,23329,1825,8.5,8661,9976,1315,15.2,1618.4,True,True,False,0.992
@@ -8293,6 +8377,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 53508,"Belleville, WI",WI,5268,5654,386,7.3,2115,2393,278,13.1,83.3,True,True,False,0.956
 26767,"Wiley Ford, WV",WV,559,393,-166,-29.7,353,256,-97,-27.5,168.7,False,False,False,0.975
 26847,"Petersburg, WV",WV,6699,5305,-1394,-20.8,3260,2982,-278,-8.5,38.9,True,True,False,0.835
+26667,"Nicholas County, WV",WV,,,,,,,,,,False,False,True,0.0
 24736,"Matoaka, WV",WV,1004,426,-578,-57.6,516,289,-227,-44.0,15.2,False,False,False,0.87
 24811,"McDowell County, WV",WV,438,295,-143,-32.6,203,232,29,14.3,9.3,False,False,True,0.481
 24815,"Berwind, WV",WV,481,176,-305,-63.4,229,151,-78,-34.1,14.7,False,False,True,0.611
@@ -8405,6 +8490,11 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 26739,"Grant County, WV",WV,1043,702,-341,-32.7,646,546,-100,-15.5,8.3,False,True,True,0.743
 26845,"Hardy County, WV",WV,564,1015,451,80.0,416,359,-57,-13.7,34.6,False,False,False,0.996
 26884,"Pendleton County, WV",WV,757,204,-553,-73.1,567,187,-380,-67.0,3.5,False,False,False,0.905
+26289,"Tucker County, WV",WV,,,,,,,,,,False,False,True,0.0
+96916,"Merizo, ",,,,,,,,,,,False,False,True,0.517
+96929,"Anao, ",,,,,,,,,,,False,False,False,0.999
+96913,"Pagat, ",,,,,,,,,,,False,False,False,0.985
+00850,"St. Croix Island, ",,,,,,,,,,,False,False,True,0.492
 74354,"Miami, OK",OK,18067,17208,-859,-4.8,7768,7591,-177,-2.3,93.4,True,True,False,0.954
 74455,"Simms, OK",OK,2453,2346,-107,-4.4,2004,1799,-205,-10.2,20.2,True,True,False,0.963
 93953,"Del Monte Forest, CA",CA,4312,3613,-699,-16.2,2783,2988,205,7.4,446.1,True,True,False,0.993
@@ -8516,6 +8606,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 96096,"Whitmore, CA",CA,724,577,-147,-20.3,388,352,-36,-9.3,5.6,False,False,False,0.871
 96113,"Patton Village, CA",CA,1884,2039,155,8.2,439,284,-155,-35.3,93.3,True,False,True,0.293
 96122,"Beckwourth, CA",CA,4575,4447,-128,-2.8,2496,2481,-15,-0.6,69.5,True,True,False,0.927
+95972,"Yuba County, CA",CA,,,,,,,,,,False,False,True,0.0
 90008,"Los Angeles, CA",CA,34429,33252,-1177,-3.4,15777,16033,256,1.6,11492.5,True,True,False,0.986
 90035,"Los Angeles, CA",CA,29113,29000,-113,-0.4,13810,14366,556,4.0,12742.4,True,True,False,0.894
 90042,"Los Angeles, CA",CA,63424,56835,-6589,-10.4,21630,22639,1009,4.7,12576.1,True,True,False,0.985
@@ -8945,6 +9036,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 60188,"Carol Stream, IL",IL,42196,42307,111,0.3,15781,15982,201,1.3,4209.4,True,True,False,0.986
 60406,"Blue Island, IL",IL,25899,23327,-2572,-9.9,9857,9680,-177,-1.8,4343.1,True,True,False,0.992
 14905,"West Elmira, NY",NY,9742,8751,-991,-10.2,4425,4349,-76,-1.7,2358.4,True,True,False,0.985
+13482,"Otsego County, NY",NY,,,,,,,,,,False,False,True,0.0
 10152,"New York, NY",NY,0,7,7,,0,87,87,,1459.4,False,False,False,1.0
 10153,"New York, NY",NY,0,0,0,,0,0,0,,0.0,False,False,False,1.0
 10168,"New York, NY",NY,0,0,0,,0,0,0,,0.0,False,False,False,1.0
@@ -9243,6 +9335,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 14822,"Canaseraga, NY",NY,1250,851,-399,-31.9,771,563,-208,-27.0,21.4,False,True,False,0.984
 14879,"Savona, NY",NY,2325,2160,-165,-7.1,1029,999,-30,-2.9,49.1,True,True,False,0.937
 14895,"Stannards, NY",NY,9723,9061,-662,-6.8,4958,4475,-483,-9.7,78.1,True,True,False,0.947
+14413,"Wayne County, NY",NY,,,,,,,,,,False,False,True,0.0
+13457,"Schuyler Lake, NY",NY,,,,,,,,,,False,False,True,0.0
 10005,"New York, NY",NY,4935,9439,4504,91.3,3590,6606,3016,84.0,129535.8,True,True,False,0.911
 10170,"New York, NY",NY,0,0,0,,0,0,0,,0.0,False,False,False,1.0
 10173,"New York, NY",NY,0,0,0,,0,0,0,,0.0,False,False,False,1.0
@@ -9268,6 +9362,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79766,"Odessa, TX",TX,6671,11041,4370,65.5,1945,3682,1737,89.3,36.2,True,True,True,0.671
 79924,"El Paso, TX",TX,58932,60364,1432,2.4,21397,23182,1785,8.3,4875.3,True,True,False,0.988
 79932,"El Paso, TX",TX,25461,30786,5325,20.9,8289,11394,3105,37.5,2243.5,True,True,False,1.0
+76203,"Denton, TX",TX,,,,,,,,,,False,False,True,0.0
+78074,"Kendall County, TX",TX,,,,,,,,,,False,False,True,0.0
 75023,"Plano, TX",TX,46001,49229,3228,7.0,18628,19670,1042,5.6,5351.7,True,True,False,0.997
 75038,"Irving, TX",TX,26696,32755,6059,22.7,14014,15632,1618,11.5,4288.3,True,True,False,0.96
 75043,"Garland, TX",TX,57259,63152,5893,10.3,21910,23884,1974,9.0,4305.8,True,True,False,0.983
@@ -9417,6 +9513,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 62905,"Alto Pass, IL",IL,773,779,6,0.8,349,367,18,5.2,23.4,False,False,False,0.963
 62926,"Dongola, IL",IL,2347,1998,-349,-14.9,1080,928,-152,-14.1,25.7,True,True,False,0.969
 62954,"Junction, IL",IL,563,411,-152,-27.0,245,199,-46,-18.8,8.4,False,False,False,0.965
+60418,"Crestwood, IL",IL,,,,,,,,,,False,False,True,0.0
 10154,"New York, NY",NY,0,0,0,,0,0,0,,0.0,False,False,False,1.0
 12871,"Schuylerville, NY",NY,4047,3813,-234,-5.8,1763,1736,-27,-1.5,136.6,True,True,False,0.958
 12874,"Warren County, NY",NY,154,205,51,33.1,463,430,-33,-7.1,9.6,False,True,False,1.0
@@ -9630,6 +9727,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 12465,"Pine Hill, NY",NY,218,255,37,17.0,286,299,13,4.5,87.8,False,False,False,0.98
 12483,"Sullivan County, NY",NY,524,45,-479,-91.4,168,77,-91,-54.2,36.6,False,False,False,1.0
 12538,"Haviland, NY",NY,14336,14391,55,0.4,5622,5625,3,0.1,564.6,True,True,False,0.966
+76005,"Arlington, TX",TX,,,,,,,,,,False,False,True,0.0
 75039,"Irving, TX",TX,9438,24164,14726,156.0,6492,13674,7182,110.6,4251.3,True,True,False,0.894
 75044,"Garland, TX",TX,41234,47529,6295,15.3,15265,17470,2205,14.4,4502.5,True,True,False,0.996
 75052,"Grand Prairie, TX",TX,87647,97278,9631,11.0,29518,34171,4653,15.8,3678.5,True,True,False,0.948
@@ -9778,6 +9876,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 14840,"Hammondsport, NY",NY,3052,2425,-627,-20.5,2907,2813,-94,-3.2,41.4,True,True,False,0.974
 14873,"Prattsburgh, NY",NY,2444,1945,-499,-20.4,1573,1412,-161,-10.2,26.3,True,True,False,0.979
 14885,"Steuben County, NY",NY,1130,749,-381,-33.7,456,344,-112,-24.6,17.6,False,False,False,0.952
+14029,"Allegany County, NY",NY,,,,,,,,,,False,False,True,0.0
 10103,"New York, NY",NY,0,0,0,,0,0,0,,0.0,False,False,False,1.0
 10112,"New York, NY",NY,0,0,0,,0,0,0,,0.0,False,False,True,0.613
 10169,"New York, NY",NY,0,0,0,,0,0,0,,0.0,False,False,False,1.0
@@ -9914,6 +10013,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79560,"Sylvester, TX",TX,108,37,-71,-65.7,100,43,-57,-57.0,0.5,False,False,False,0.938
 79731,"Crane, TX",TX,4167,4196,29,0.7,1533,1741,208,13.6,9.5,True,True,True,0.627
 79777,"Pyote, TX",TX,462,116,-346,-74.9,198,53,-145,-73.2,0.7,False,False,True,0.53
+75072,"McKinney, TX",TX,,,,,,,,,,False,False,True,0.0
 73949,"Texhoma, OK",OK,1590,1620,30,1.9,754,659,-95,-12.6,3.6,True,True,False,0.814
 75022,"Flower Mound, TX",TX,22132,26090,3958,17.9,6828,9270,2442,35.8,1334.8,True,True,False,0.952
 75069,"McKinney, TX",TX,33267,40032,6765,20.3,13090,17022,3932,30.0,1188.7,True,True,False,0.948
@@ -10068,6 +10168,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 14816,"Breesport, NY",NY,610,534,-76,-12.5,204,239,35,17.2,141.9,False,False,False,0.893
 14836,"Dalton, NY",NY,1036,1055,19,1.8,563,568,5,0.9,34.8,True,True,False,0.884
 14858,"Steuben County, NY",NY,1560,1425,-135,-8.7,595,627,32,5.4,39.0,True,True,False,0.928
+13632,"Depauville, NY",NY,,,,,,,,,,False,False,True,0.0
 10162,"New York, NY",NY,1608,1603,-5,-0.3,836,899,63,7.5,125256.5,True,True,False,0.899
 10171,"New York, NY",NY,0,0,0,,0,0,0,,0.0,False,False,False,1.0
 10172,"New York, NY",NY,0,0,0,,0,0,0,,0.0,False,False,False,1.0
@@ -10176,6 +10277,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 14779,"Salamanca, NY",NY,6704,6738,34,0.5,3613,3516,-97,-2.7,48.5,True,True,False,0.795
 14837,"Dundee, NY",NY,5558,5801,243,4.4,3058,3013,-45,-1.5,73.7,True,True,False,0.98
 14892,"Waverly, NY",NY,7934,7703,-231,-2.9,3507,4059,552,15.7,182.3,True,True,False,0.997
+14785,"Chautauqua County, NY",NY,,,,,,,,,,False,False,True,0.0
+13649,"Akwesasne, NY",NY,,,,,,,,,,False,False,True,0.0
 10110,"New York, NY",NY,4,0,-4,-100.0,0,0,0,,0.0,False,False,False,1.0
 10119,"New York, NY",NY,0,0,0,,0,0,0,,0.0,False,False,True,0.646
 10199,"New York, NY",NY,0,0,0,,0,0,0,,0.0,False,False,False,1.0
@@ -10213,6 +10316,9 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79761,"Odessa, TX",TX,29837,30164,327,1.1,12266,13549,1283,10.5,2889.7,True,True,False,0.959
 79765,"Odessa, TX",TX,7135,25904,18769,263.1,2570,10668,8098,315.1,1105.5,True,True,False,0.792
 79925,"El Paso, TX",TX,41708,38621,-3087,-7.4,16751,16297,-454,-2.7,2211.9,True,True,False,0.971
+77341,"Huntsville, TX",TX,,,,,,,,,,False,False,True,0.0
+78658,"Gonzales County, TX",TX,,,,,,,,,,False,False,True,0.0
+75689,"Rusk County, TX",TX,,,,,,,,,,False,False,True,0.0
 75007,"Carrollton, TX",TX,50921,54646,3725,7.3,19223,21696,2473,12.9,4589.6,True,True,False,0.967
 68357,"Filley, NE",NE,380,347,-33,-8.7,171,185,14,8.2,6.9,False,False,False,0.989
 68406,"Milligan, NE",NE,570,468,-102,-17.9,286,281,-5,-1.7,8.7,False,False,False,0.905
@@ -10342,6 +10448,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 52730,"Camanche, IA",IA,4860,4776,-84,-1.7,2221,1948,-273,-12.3,126.0,True,True,False,0.963
 52760,"Moscow, IA",IA,390,992,602,154.4,169,413,244,144.4,45.3,False,False,False,0.986
 52806,"Davenport, IA",IA,27019,26871,-148,-0.5,11804,11850,46,0.4,864.4,True,True,False,0.964
+50241,"St. Marys, IA",IA,,,,,,,,,,False,False,True,0.0
 50006,"Alden, IA",IA,1686,1437,-249,-14.8,795,730,-65,-8.2,11.6,True,True,False,0.96
 50009,"Altoona, IA",IA,15880,22886,7006,44.1,6314,9394,3080,48.8,819.9,True,True,False,0.887
 50036,"Boone, IA",IA,16187,16154,-33,-0.2,7415,7491,76,1.0,84.3,True,True,False,0.978
@@ -10424,6 +10531,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 69163,"Stapleton, NE",NE,816,847,31,3.8,462,366,-96,-20.8,1.2,False,False,False,0.83
 69211,"Cody, NE",NE,346,201,-145,-41.9,195,151,-44,-22.6,0.5,False,False,False,1.0
 69346,"Harrison, NE",NE,548,480,-68,-12.4,445,353,-92,-20.7,0.4,False,False,False,0.931
+68429,"Reynolds, NE",NE,,,,,,,,,,False,False,True,0.0
 57735,"Edgemont, SD",SD,1553,1727,174,11.2,936,1001,65,6.9,1.9,True,True,False,0.975
 68019,"Craig, NE",NE,606,386,-220,-36.3,249,200,-49,-19.7,4.9,False,False,False,0.924
 68022,"Omaha, NE",NE,15145,36538,21393,141.3,5644,13457,7813,138.4,962.5,True,True,False,0.973
@@ -10468,6 +10576,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 24557,"Gretna, VA",VA,7632,7678,46,0.6,4207,4053,-154,-3.7,47.3,True,True,False,0.979
 24595,"Amherst County, VA",VA,895,630,-265,-29.6,65,79,14,21.5,417.7,False,False,False,1.0
 24639,"Raven, VA",VA,4435,2736,-1699,-38.3,1931,1553,-378,-19.6,57.0,True,True,False,0.817
+22746,"Culpeper County, VA",VA,,,,,,,,,,False,False,True,0.0
 20152,"South Riding, VA",VA,24296,36674,12378,50.9,7814,11186,3372,43.2,2752.5,True,True,False,0.996
 20164,"Sterling, VA",VA,35123,43436,8313,23.7,12343,13177,834,6.8,5710.4,True,True,False,0.97
 20187,"New Baltimore, VA",VA,15762,18980,3218,20.4,5372,6851,1479,27.5,371.7,True,True,False,0.912
@@ -10813,6 +10922,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 57523,"Burke, SD",SD,1171,1041,-130,-11.1,594,585,-9,-1.5,4.1,True,True,False,0.987
 57625,"North Eagle Butte, SD",SD,4101,3775,-326,-7.9,1284,1356,72,5.6,2.9,True,True,False,0.936
 57661,"Whitehorse, SD",SD,139,177,38,27.3,53,56,3,5.7,6.3,False,False,True,0.684
+57737,"Meade County, SD",SD,,,,,,,,,,False,False,True,0.0
 57001,"Alcester, SD",SD,1752,1540,-212,-12.1,808,661,-147,-18.2,15.5,True,True,False,0.965
 57005,"Brandon, SD",SD,10130,12290,2160,21.3,3780,4653,873,23.1,251.1,True,True,False,0.991
 52064,"Miles, IA",IA,821,685,-136,-16.6,408,411,3,0.7,16.2,False,True,False,0.962
@@ -10827,6 +10937,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 52720,"Atalissa, IA",IA,1067,964,-103,-9.7,454,415,-39,-8.6,23.2,False,True,False,0.976
 52755,"Lone Tree, IA",IA,1881,2092,211,11.2,804,834,30,3.7,36.2,True,True,False,0.997
 52777,"Wheatland, IA",IA,1394,1389,-5,-0.4,614,611,-3,-0.5,24.9,True,True,False,0.922
+50649,"Butler County, IA",IA,,,,,,,,,,False,False,True,0.0
 50003,"Adel, IA",IA,6530,9948,3418,52.3,2622,3863,1241,47.3,86.5,True,True,False,0.968
 50051,"Clemons, IA",IA,329,224,-105,-31.9,187,139,-48,-25.7,9.8,False,False,False,0.99
 50056,"Colo, IA",IA,1445,1003,-442,-30.6,576,514,-62,-10.8,16.5,True,True,False,0.933
@@ -11009,6 +11120,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 57574,"Bennett County, SD",SD,116,73,-43,-37.1,68,73,5,7.4,0.4,False,False,False,0.926
 57651,"Harding County, SD",SD,67,191,124,185.1,38,83,45,118.4,0.4,False,False,True,0.656
 06801,"Bethel, CT",CT,18459,20796,2337,12.7,6968,8181,1213,17.4,1229.4,True,True,False,1.0
+06753,"Cornwall, CT",CT,,,,,,,,,,False,False,True,0.0
 06002,"Blue Hills, CT",CT,20406,21865,1459,7.1,8954,9844,890,9.9,851.0,True,True,False,0.975
 06024,"Litchfield County, CT",CT,846,634,-212,-25.1,367,269,-98,-26.7,103.8,False,False,False,0.931
 06107,"West Hartford, CT",CT,18275,19891,1616,8.8,7529,8129,600,8.0,2989.4,True,True,False,0.954
@@ -11476,6 +11588,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 52639,"Montrose, IA",IA,2090,1745,-345,-16.5,916,797,-119,-13.0,44.6,True,True,False,0.925
 52654,"Wayland, IA",IA,1780,1884,104,5.8,729,701,-28,-3.8,34.4,True,True,False,0.942
 52660,"Yarmouth, IA",IA,143,279,136,95.1,65,151,86,132.3,11.6,False,False,False,0.825
+51460,"Ricketts, IA",IA,,,,,,,,,,False,False,True,0.0
+52344,"Linn County, IA",IA,,,,,,,,,,False,False,True,0.0
 50014,"Ames, IA",IA,28657,32958,4301,15.0,12029,15026,2997,24.9,607.7,True,True,False,0.966
 50020,"Anita, IA",IA,1682,1197,-485,-28.8,746,549,-197,-26.4,12.4,True,True,False,0.955
 50021,"Ankeny, IA",IA,20822,30283,9461,45.4,8913,12846,3933,44.1,1257.6,True,True,False,0.996
@@ -14331,6 +14445,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 15640,"Westmoreland County, PA",PA,729,355,-374,-51.3,213,130,-83,-39.0,883.6,False,False,False,1.0
 15723,"Indiana County, PA",PA,31,26,-5,-16.1,24,58,34,141.7,24.3,False,False,False,0.908
 15727,"Jacksonville, PA",PA,134,195,61,45.5,76,87,11,14.5,108.2,False,False,True,0.543
+11717,"Brentwood, NY",NY,,,,,,,,,,False,False,False,0.996
 11718,"Brightwaters, NY",NY,3121,3179,58,1.9,1054,1054,0,0.0,3392.0,True,True,False,0.996
 11379,"New York, NY",NY,34529,36773,2244,6.5,14441,15415,974,6.7,16597.3,True,True,False,0.935
 11385,"New York, NY",NY,99295,101704,2409,2.4,37086,40186,3100,8.4,28133.0,True,True,False,0.998
@@ -14546,6 +14661,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 16802,"State College, PA",PA,14392,14793,401,2.8,0,63,63,,19291.6,True,False,True,0.723
 16821,"Allport, PA",PA,266,93,-173,-65.0,100,37,-63,-63.0,67.5,False,False,True,0.693
 11795,"West Islip, NY",NY,25811,25379,-432,-1.7,8434,8111,-323,-3.8,4459.1,True,True,False,0.994
+11798,"Wyandanch, NY",NY,,,,,,,,,,False,False,False,0.952
 16223,"Armstrong County, PA",PA,113,65,-48,-42.5,46,51,5,10.9,42.5,False,False,True,0.165
 16230,"Hawthorn, PA",PA,562,501,-61,-10.9,228,211,-17,-7.5,488.9,False,False,False,1.0
 16645,"Glen Hope, PA",PA,130,204,74,56.9,65,98,33,50.8,107.1,False,False,False,0.807
@@ -32428,6 +32544,12 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79853,"Tornillo, TX",TX,3167,2686,-481,-15.2,845,862,17,2.0,77.2,True,True,False,0.858
 79854,"Valentine, TX",TX,178,86,-92,-51.7,195,97,-98,-50.3,0.1,False,False,False,0.925
 79855,"Van Horn, TX",TX,2420,2177,-243,-10.0,1153,1053,-100,-8.7,4.8,True,True,False,0.956
+32313,"Tallahassee, FL",FL,,,,,,,,,,False,False,True,0.0
+32816,"University, FL",FL,,,,,,,,,,False,False,True,0.0
+31727,"Tift County, GA",GA,,,,,,,,,,False,False,True,0.0
+72066,"Prairie County, AR",AR,,,,,,,,,,False,False,True,0.0
+71678,"Lincoln County, AR",AR,,,,,,,,,,False,False,True,0.0
+72391,"Mississippi County, AR",AR,,,,,,,,,,False,False,True,0.0
 78590,"San Perlita, TX",TX,351,428,77,21.9,116,152,36,31.0,427.4,False,False,False,0.764
 78592,"Iglesia Antigua, TX",TX,1002,677,-325,-32.4,321,278,-43,-13.4,195.9,False,False,False,1.0
 78595,"Sullivan City, TX",TX,5675,6118,443,7.8,1773,2035,262,14.8,200.4,True,True,True,0.478
@@ -32455,6 +32577,13 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79901,"El Paso, TX",TX,10575,8554,-2021,-19.1,4453,4750,297,6.7,3887.8,True,True,False,0.977
 79907,"El Paso, TX",TX,54982,46365,-8617,-15.7,17354,17532,178,1.0,3381.2,True,True,False,0.989
 79934,"El Paso, TX",TX,17995,28861,10866,60.4,5997,11001,5004,83.4,488.3,True,True,False,1.0
+96950,"Talafofo, ",,,,,,,,,,,False,False,False,1.0
+96917,"Malojloj, ",,,,,,,,,,,False,False,False,0.91
+30598,"Stephens County, GA",GA,,,,,,,,,,False,False,True,0.0
+39832,"Cedar Springs, GA",GA,,,,,,,,,,False,False,True,0.0
+31599,"Jesup, GA",GA,,,,,,,,,,False,False,True,0.0
+00830,"Cruz Bay, ",,,,,,,,,,,False,False,False,0.996
+96951,"Sinapalo, ",,,,,,,,,,,False,False,False,1.0
 94502,"Alameda, CA",CA,13140,13430,290,2.2,5161,4991,-170,-3.3,5324.8,True,True,False,0.999
 78594,"Sebastian, TX",TX,2129,1206,-923,-43.4,646,559,-87,-13.5,380.6,True,True,True,0.584
 96069,"Oak Run, CA",CA,929,1426,497,53.5,448,640,192,42.9,15.4,False,True,False,0.861
@@ -32464,6 +32593,7 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79101,"Amarillo, TX",TX,2494,2526,32,1.3,1306,1388,82,6.3,1581.3,True,True,False,0.993
 79102,"Amarillo, TX",TX,9309,9393,84,0.9,4337,4711,374,8.6,3446.9,True,True,False,0.969
 79103,"Amarillo, TX",TX,11338,11306,-32,-0.3,3889,3906,17,0.4,2645.4,True,True,False,0.902
+32634,"Marion County, FL",FL,,,,,,,,,,False,False,True,0.0
 79902,"El Paso, TX",TX,20440,19031,-1409,-6.9,9400,9650,250,2.7,2913.9,True,True,False,0.982
 79903,"El Paso, TX",TX,18107,14715,-3392,-18.7,7363,6801,-562,-7.6,4825.3,True,True,False,0.998
 79904,"El Paso, TX",TX,33229,32976,-253,-0.8,12304,13696,1392,11.3,2759.3,True,True,True,0.722
@@ -32492,6 +32622,8 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79930,"El Paso, TX",TX,28528,24123,-4405,-15.4,10934,11360,426,3.9,3221.8,True,True,False,0.999
 79936,"El Paso, TX",TX,114941,102991,-11950,-10.4,35902,36663,761,2.1,3976.7,True,True,False,0.993
 79938,"Homestead Meadows North, TX",TX,51367,99621,48254,93.9,14041,30376,16335,116.3,255.3,True,True,False,0.772
+96910,"Ordot, ",,,,,,,,,,,False,False,False,0.947
+96799,"Si'ufaga, ",,,,,,,,,,,False,False,False,1.0
 95826,"Sacramento, CA",CA,37748,40165,2417,6.4,16473,16683,210,1.3,3811.5,True,True,False,0.993
 78376,"Realitos, TX",TX,600,105,-495,-82.5,337,203,-134,-39.8,0.7,False,False,False,0.992
 78377,"Refugio, TX",TX,3694,3421,-273,-7.4,1839,1597,-242,-13.2,7.1,True,True,False,0.917
@@ -32523,6 +32655,16 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79311,"Abernathy, TX",TX,3492,3536,44,1.3,1380,1492,112,8.1,18.4,True,True,False,0.837
 79343,"Lorenzo, TX",TX,1427,1233,-194,-13.6,738,572,-166,-22.5,9.6,True,True,False,0.887
 79357,"Ralls, TX",TX,2517,1810,-707,-28.1,1068,929,-139,-13.0,7.5,True,True,False,0.826
+96952,"Northern Tinian, ",,,,,,,,,,,False,False,False,1.0
+96915,"Apra Harbor, ",,,,,,,,,,,False,False,False,0.882
+96928,"Agat, ",,,,,,,,,,,False,False,True,0.105
+00802,"Charlotte Amalie West, ",,,,,,,,,,,False,False,False,0.928
+00820,"Christiansted, ",,,,,,,,,,,False,False,True,0.701
+00840,"Frederiksted Southeast, ",,,,,,,,,,,False,False,True,0.607
+00851,"St. Croix Island, ",,,,,,,,,,,False,False,True,0.639
+36130,"Montgomery, AL",AL,,,,,,,,,,False,False,True,0.0
+36057,"Montgomery, AL",AL,,,,,,,,,,False,False,True,0.0
+35249,"Birmingham, AL",AL,,,,,,,,,,False,False,True,0.0
 95831,"Sacramento, CA",CA,41345,43545,2200,5.3,19641,20038,397,2.0,6225.1,True,True,False,1.0
 78380,"Robstown, TX",TX,23218,23149,-69,-0.3,9097,9322,225,2.5,67.6,True,True,False,0.913
 96092,"Vina, CA",CA,213,327,114,53.5,140,107,-33,-23.6,4.9,False,False,True,0.597
@@ -32566,6 +32708,13 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79236,"Guthrie, TX",TX,241,197,-44,-18.3,141,164,23,16.3,0.8,False,False,False,0.834
 79237,"Hedley, TX",TX,542,503,-39,-7.2,301,371,70,23.3,2.5,False,False,True,0.721
 79314,"Bledsoe, TX",TX,59,130,71,120.3,39,75,36,92.3,8.8,False,False,True,0.338
+36652,"Mobile, AL",AL,,,,,,,,,,False,False,True,0.0
+35181,"Jefferson County, AL",AL,,,,,,,,,,False,False,True,0.0
+35573,"Kansas, AL",AL,,,,,,,,,,False,False,True,0.0
+30111,"Austell, GA",GA,,,,,,,,,,False,False,True,0.0
+30090,"Marietta, GA",GA,,,,,,,,,,False,False,True,0.0
+36503,"Atmore, AL",AL,,,,,,,,,,False,False,True,0.0
+36764,"Nanafalia, AL",AL,,,,,,,,,,False,False,True,0.0
 95834,"Sacramento, CA",CA,23715,36245,12530,52.8,9359,14118,4759,50.8,3637.6,True,True,False,0.993
 96128,"Lassen County, CA",CA,491,656,165,33.6,225,249,24,10.7,29.0,False,False,False,1.0
 78629,"Gonzales, TX",TX,11526,12740,1214,10.5,4758,5559,801,16.8,30.2,True,True,False,0.959
@@ -32598,6 +32747,11 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79347,"Muleshoe, TX",TX,7250,7176,-74,-1.0,2895,2820,-75,-2.6,10.5,True,True,False,0.905
 79350,"New Deal, TX",TX,254,296,42,16.5,140,162,22,15.7,123.2,False,False,True,0.589
 79353,"Hockley County, TX",TX,6,67,61,1016.7,3,31,28,933.3,4.4,False,False,True,0.704
+34729,"Ferndale, FL",FL,,,,,,,,,,False,False,True,0.0
+32899,"Brevard County, FL",FL,,,,,,,,,,False,False,True,0.0
+32337,"Lloyd, FL",FL,,,,,,,,,,False,False,True,0.0
+36114,"Montgomery, AL",AL,,,,,,,,,,False,False,True,0.0
+32306,"Tallahassee, FL",FL,,,,,,,,,,False,False,True,0.0
 95835,"Sacramento, CA",CA,35980,42004,6024,16.7,13801,15908,2107,15.3,4730.5,True,True,False,0.982
 95841,"North Highlands, CA",CA,19143,20500,1357,7.1,8508,8769,261,3.1,5259.4,True,True,False,0.961
 78663,"Round Mountain, TX",TX,720,503,-217,-30.1,432,288,-144,-33.3,4.6,False,False,False,0.952
@@ -32624,6 +32778,11 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79381,"New Home, TX",TX,1269,1463,194,15.3,474,579,105,22.2,12.3,True,True,False,0.879
 79403,"Lubbock, TX",TX,17511,16089,-1422,-8.1,6340,6755,415,6.5,122.5,True,True,False,0.97
 79404,"Lubbock, TX",TX,10866,8529,-2337,-21.5,3896,4293,397,10.2,298.8,True,True,False,0.95
+35487,"Tuscaloosa, AL",AL,,,,,,,,,,False,False,True,0.0
+31421,"Savannah, GA",GA,,,,,,,,,,False,False,True,0.0
+32512,"Myrtle Grove, FL",FL,,,,,,,,,,False,False,True,0.0
+33858,"Loughman, FL",FL,,,,,,,,,,False,False,True,0.0
+32163,"Wildwood, FL",FL,,,,,,,,,,False,False,True,0.0
 95842,"Foothill Farms, CA",CA,31547,34034,2487,7.9,12327,12117,-210,-1.7,8569.0,True,True,False,0.98
 78387,"Morgan Farm, TX",TX,10455,9640,-815,-7.8,4000,3799,-201,-5.0,56.0,True,True,False,0.965
 95901,"Loma Rica, CA",CA,32266,37732,5466,16.9,12471,14119,1648,13.2,188.5,True,True,False,0.964
@@ -32656,6 +32815,11 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79378,"Wellman, TX",TX,346,289,-57,-16.5,99,111,12,12.1,29.6,False,False,True,0.483
 79406,"Lubbock, TX",TX,7318,7995,677,9.3,18,32,14,77.8,8384.2,True,False,False,1.0
 79407,"Lubbock, TX",TX,18432,24000,5568,30.2,8627,12511,3884,45.0,316.2,True,True,False,0.872
+33574,"St. Leo, FL",FL,,,,,,,,,,False,False,True,0.0
+32723,"DeLand, FL",FL,,,,,,,,,,False,False,True,0.0
+33388,"Plantation, FL",FL,,,,,,,,,,False,False,True,0.0
+34487,"Homosassa, FL",FL,,,,,,,,,,False,False,True,0.0
+32192,"Marion County, FL",FL,,,,,,,,,,False,False,True,0.0
 95971,"East Quincy, CA",CA,5940,6419,479,8.1,2990,2900,-90,-3.0,42.6,True,True,True,0.597
 95977,"Smartsville, CA",CA,1410,1780,370,26.2,569,830,261,45.9,47.3,True,True,False,0.972
 95981,"Little Grass Valley, CA",CA,82,99,17,20.7,315,256,-59,-18.7,1.9,False,False,True,0.606
@@ -32687,6 +32851,10 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 78726,"Austin, TX",TX,13198,14506,1308,9.9,6072,6585,513,8.4,1252.1,True,True,False,0.938
 79410,"Lubbock, TX",TX,8563,10137,1574,18.4,4488,4751,263,5.9,4196.3,True,True,False,0.994
 79411,"Lubbock, TX",TX,7806,6865,-941,-12.1,3446,3466,20,0.6,4625.9,True,True,False,0.979
+32182,"Marion County, FL",FL,,,,,,,,,,False,False,True,0.0
+36851,"Russell County, AL",AL,,,,,,,,,,False,False,True,0.0
+30272,"South Fulton, GA",GA,,,,,,,,,,False,False,True,0.0
+30639,"Franklin Springs, GA",GA,,,,,,,,,,False,False,True,0.0
 78417,"Corpus Christi, TX",TX,4546,4703,157,3.5,1488,1692,204,13.7,504.7,True,True,False,0.909
 95945,"Grass Valley, CA",CA,24162,27470,3308,13.7,11805,12944,1139,9.6,449.3,True,True,False,0.961
 95946,"Lake Wildwood, CA",CA,9814,9958,144,1.5,4851,4504,-347,-7.2,222.7,True,True,False,0.874
@@ -32710,6 +32878,12 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79413,"Lubbock, TX",TX,21134,23343,2209,10.5,9543,9546,3,0.0,4984.6,True,True,False,0.987
 79424,"Lubbock, TX",TX,38885,53478,14593,37.5,16572,23427,6855,41.4,1285.6,True,True,False,0.953
 79511,"Coahoma, TX",TX,874,1811,937,107.2,527,633,106,20.1,6.9,False,True,True,0.649
+30539,"East Ellijay, GA",GA,,,,,,,,,,False,False,True,0.0
+33835,"Bradley Junction, FL",FL,,,,,,,,,,False,False,True,0.0
+32768,"Apopka, FL",FL,,,,,,,,,,False,False,True,0.0
+30597,"Dahlonega, GA",GA,,,,,,,,,,False,False,True,0.0
+32013,"Day, FL",FL,,,,,,,,,,False,False,True,0.0
+33530,"Hillsborough County, FL",FL,,,,,,,,,,False,False,True,0.0
 95968,"Palermo, CA",CA,1544,1364,-180,-11.7,453,638,185,40.8,758.5,True,True,False,0.861
 78537,"Donna, TX",TX,36075,51426,15351,42.6,12834,16457,3623,28.2,893.1,True,True,False,0.939
 95974,"Richvale, CA",CA,0,98,98,,0,62,62,,235.1,False,False,True,0.0
@@ -32740,6 +32914,12 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79735,"Fort Stockton, TX",TX,13490,13357,-133,-1.0,4750,5086,336,7.1,10.8,True,True,False,0.909
 79744,"Iraan, TX",TX,1223,1283,60,4.9,496,648,152,30.6,2.7,True,True,False,0.855
 79763,"West Odessa, TX",TX,33074,35174,2100,6.3,12034,14914,2880,23.9,697.6,True,True,False,0.959
+30229,"Haralson, GA",GA,,,,,,,,,,False,False,True,0.0
+32203,"Jacksonville, FL",FL,,,,,,,,,,False,False,True,0.0
+31034,"Hardwick, GA",GA,,,,,,,,,,False,False,True,0.0
+32360,"Liberty County, FL",FL,,,,,,,,,,False,False,True,0.0
+35632,"Florence, AL",AL,,,,,,,,,,False,False,True,0.0
+35185,"Westover, AL",AL,,,,,,,,,,False,False,True,0.0
 78542,"Linn, TX",TX,61918,89401,27483,44.4,16083,26187,10104,62.8,508.1,True,True,False,0.843
 78543,"La Blanca, TX",TX,7205,8400,1195,16.6,2522,3129,607,24.1,1321.4,True,True,False,0.827
 78545,"Falcon Village, TX",TX,413,392,-21,-5.1,208,330,122,58.7,18.0,False,False,True,0.259
@@ -32778,6 +32958,14 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79563,"Tye, TX",TX,1377,964,-413,-30.0,595,503,-92,-15.5,54.4,False,True,False,0.912
 79565,"Westbrook, TX",TX,192,202,10,5.2,103,98,-5,-4.9,3.4,False,False,False,0.941
 79566,"Wingate, TX",TX,245,230,-15,-6.1,225,150,-75,-33.3,1.8,False,False,False,0.831
+32214,"Jacksonville, FL",FL,,,,,,,,,,False,False,True,0.0
+31564,"Waresboro, GA",GA,,,,,,,,,,False,False,True,0.0
+33840,"Polk County, FL",FL,,,,,,,,,,False,False,True,0.0
+31753,"Funston, GA",GA,,,,,,,,,,False,False,True,0.0
+36101,"Montgomery, AL",AL,,,,,,,,,,False,False,True,0.0
+36663,"Prichard, AL",AL,,,,,,,,,,False,False,True,0.0
+31333,"Walthourville, GA",GA,,,,,,,,,,False,False,True,0.0
+32610,"Gainesville, FL",FL,,,,,,,,,,False,False,True,0.0
 78565,"Los Ebanos, TX",TX,286,20,-266,-93.0,133,67,-66,-49.6,6.3,False,False,False,0.988
 96006,"Adin, CA",CA,615,512,-103,-16.7,327,272,-55,-16.8,2.5,False,False,True,0.735
 96015,"Canby, CA",CA,647,437,-210,-32.5,137,209,72,52.6,1.9,False,False,True,0.747
@@ -32807,6 +32995,9 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79602,"Abilene, TX",TX,22011,27425,5414,24.6,9313,11341,2028,21.8,225.4,True,True,False,0.931
 79605,"Abilene, TX",TX,29677,28467,-1210,-4.1,13405,12458,-947,-7.1,2592.2,True,True,False,0.991
 79606,"Abilene, TX",TX,23830,29182,5352,22.5,10286,13710,3424,33.3,419.6,True,True,False,0.895
+36547,"Gulf Shores, AL",AL,,,,,,,,,,False,False,True,0.0
+31704,"Dougherty County, GA",GA,,,,,,,,,,False,False,True,0.0
+34267,"DeSoto County, FL",FL,,,,,,,,,,False,False,True,0.0
 78608,"Briggs, TX",TX,188,428,240,127.7,148,183,35,23.6,9.4,False,False,False,0.79
 96038,"Grenada, CA",CA,480,504,24,5.0,290,253,-37,-12.8,27.6,False,False,False,0.976
 96017,"Castella, CA",CA,200,122,-78,-39.0,181,187,6,3.3,1.3,False,False,False,0.953
@@ -32849,6 +33040,17 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79742,"Grandfalls, TX",TX,502,620,118,23.5,232,289,57,24.6,7.2,False,False,True,0.676
 79749,"Martin County, TX",TX,315,477,162,51.4,105,207,102,97.1,8.4,False,False,True,0.552
 79752,"McCamey, TX",TX,2171,1933,-238,-11.0,992,1068,76,7.7,7.1,True,True,True,0.549
+30018,"Jersey, GA",GA,,,,,,,,,,False,False,True,0.0
+32775,"Scottsmoor, FL",FL,,,,,,,,,,False,False,True,0.0
+72905,"Sebastian County, AR",AR,,,,,,,,,,False,False,True,0.0
+70609,"Lake Charles, LA",LA,,,,,,,,,,False,False,True,0.0
+28788,"Webster, NC",NC,,,,,,,,,,False,False,True,0.0
+38733,"Cleveland, MS",MS,,,,,,,,,,False,False,True,0.0
+71320,"Avoyelles Parish, LA",LA,,,,,,,,,,False,False,True,0.0
+71066,"Powhatan, LA",LA,,,,,,,,,,False,False,True,0.0
+39529,"Hancock County, MS",MS,,,,,,,,,,False,False,True,0.0
+32307,"Tallahassee, FL",FL,,,,,,,,,,False,False,True,0.0
+34250,"Manatee County, FL",FL,,,,,,,,,,False,False,True,0.0
 78575,"Brownsville, TX",TX,9177,4575,-4602,-50.1,3372,1924,-1448,-42.9,549.3,True,True,True,0.701
 96022,"Cottonwood, CA",CA,16335,17092,757,4.6,6533,6725,192,2.9,68.8,True,True,False,0.92
 96025,"Dunsmuir, CA",CA,2444,1906,-538,-22.0,1656,1524,-132,-8.0,18.4,True,True,False,0.832
@@ -32902,6 +33104,11 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79849,"San Elizario, TX",TX,13935,14409,474,3.4,3381,4292,911,26.9,1057.2,True,True,False,0.954
 79851,"Sierra Blanca, TX",TX,696,1198,502,72.1,208,217,9,4.3,2.7,False,False,True,0.744
 79852,"Terlingua, TX",TX,799,641,-158,-19.8,686,503,-183,-26.7,1.4,False,True,False,0.827
+30724,"Eton, GA",GA,,,,,,,,,,False,False,True,0.0
+35491,"Greene County, AL",AL,,,,,,,,,,False,False,True,0.0
+31004,"Bolingbroke, GA",GA,,,,,,,,,,False,False,True,0.0
+30414,"Bellville, GA",GA,,,,,,,,,,False,False,True,0.0
+32959,"Sharpes, FL",FL,,,,,,,,,,False,False,True,0.0
 78585,"Starr County, TX",TX,442,0,-442,-100.0,213,0,-213,-100.0,0.0,False,False,True,0.0
 96055,"Los Molinos, CA",CA,4358,3473,-885,-20.3,1837,1654,-183,-10.0,36.5,True,True,True,0.606
 96057,"McCloud, CA",CA,1622,1025,-597,-36.8,977,895,-82,-8.4,9.6,True,True,False,0.995
@@ -32920,3 +33127,666 @@ zcta,label,state,pop_2011,pop_2024,pop_change,pop_pct,housing_units_2011,housing
 79013,"Cactus, TX",TX,3197,3048,-149,-4.7,1134,1041,-93,-8.2,648.9,True,True,True,0.636
 79015,"Canyon, TX",TX,19297,23765,4468,23.2,8163,9465,1302,16.0,72.3,True,True,False,0.988
 79016,"Canyon, TX",TX,83,310,227,273.5,0,0,0,,11943.8,False,False,True,0.0
+27877,"Severn, NC",NC,,,,,,,,,,False,False,True,0.0
+28042,"Fallston, NC",NC,,,,,,,,,,False,False,True,0.0
+28362,"Marietta, NC",NC,,,,,,,,,,False,False,True,0.0
+43510,"Henry County, OH",OH,,,,,,,,,,False,False,True,0.0
+45469,"Dayton, OH",OH,,,,,,,,,,False,False,True,0.0
+45893,"Vaughnsville, OH",OH,,,,,,,,,,False,False,True,0.0
+44424,"Trumbull County, OH",OH,,,,,,,,,,False,False,True,0.0
+25966,"Summers County, WV",WV,,,,,,,,,,False,False,True,0.0
+20889,"Bethesda, MD",MD,,,,,,,,,,False,False,True,0.0
+21233,"Baltimore, MD",MD,,,,,,,,,,False,False,True,0.0
+21285,"Towson, MD",MD,,,,,,,,,,False,False,True,0.0
+20892,"Bethesda, MD",MD,,,,,,,,,,False,False,True,0.0
+72075,"Jacksonport, AR",AR,,,,,,,,,,False,False,True,0.0
+72387,"Vanndale, AR",AR,,,,,,,,,,False,False,True,0.0
+72829,"Centerville, AR",AR,,,,,,,,,,False,False,True,0.0
+96820,"Urban Honolulu, HI",HI,,,,,,,,,,False,False,True,0.0
+27708,"Durham, NC",NC,,,,,,,,,,False,False,True,0.0
+40221,"Louisville, KY",KY,,,,,,,,,,False,False,True,0.0
+42742,"Adair County, KY",KY,,,,,,,,,,False,False,True,0.0
+42759,"Marrowbone, KY",KY,,,,,,,,,,False,False,True,0.0
+41778,"Perry County, KY",KY,,,,,,,,,,False,False,True,0.0
+40536,"Lexington-Fayette urban county, KY",KY,,,,,,,,,,False,False,True,0.0
+26544,"Pentress, WV",WV,,,,,,,,,,False,False,True,0.0
+26546,"Monongalia County, WV",WV,,,,,,,,,,False,False,True,0.0
+26886,"Pendleton County, WV",WV,,,,,,,,,,False,False,True,0.0
+25387,"Charleston, WV",WV,,,,,,,,,,False,False,True,0.0
+26524,"Preston County, WV",WV,,,,,,,,,,False,False,True,0.0
+26671,"Nicholas County, WV",WV,,,,,,,,,,False,False,True,0.0
+24895,"Gary, WV",WV,,,,,,,,,,False,False,True,0.0
+28770,"Buncombe County, NC",NC,,,,,,,,,,False,False,True,0.0
+28378,"Rex, NC",NC,,,,,,,,,,False,False,True,0.0
+96848,"Urban Honolulu, HI",HI,,,,,,,,,,False,False,True,0.0
+96858,"Urban Honolulu, HI",HI,,,,,,,,,,False,False,True,0.0
+71218,"Richland Parish, LA",LA,,,,,,,,,,False,False,True,0.0
+71002,"Ashland, LA",LA,,,,,,,,,,False,False,True,0.0
+71434,"Natchitoches Parish, LA",LA,,,,,,,,,,False,False,True,0.0
+40061,"Springfield, KY",KY,,,,,,,,,,False,False,True,0.0
+42131,"Barren County, KY",KY,,,,,,,,,,False,False,True,0.0
+40357,"North Middletown, KY",KY,,,,,,,,,,False,False,True,0.0
+65666,"Ozark County, MO",MO,,,,,,,,,,False,False,True,0.0
+65216,"Columbia, MO",MO,,,,,,,,,,False,False,True,0.0
+26506,"Morgantown, WV",WV,,,,,,,,,,False,False,True,0.0
+24943,"Greenbrier County, WV",WV,,,,,,,,,,False,False,True,0.0
+25544,"Lincoln County, WV",WV,,,,,,,,,,False,False,True,0.0
+25851,"Raleigh County, WV",WV,,,,,,,,,,False,False,True,0.0
+25943,"Wyoming County, WV",WV,,,,,,,,,,False,False,True,0.0
+28755,"Yancey County, NC",NC,,,,,,,,,,False,False,True,0.0
+28024,"Cliffside, NC",NC,,,,,,,,,,False,False,True,0.0
+37450,"Chattanooga, TN",TN,,,,,,,,,,False,False,True,0.0
+71428,"Natchitoches Parish, LA",LA,,,,,,,,,,False,False,True,0.0
+70148,"New Orleans, LA",LA,,,,,,,,,,False,False,True,0.0
+71475,"Vernon Parish, LA",LA,,,,,,,,,,False,False,True,0.0
+64868,"McDonald County, MO",MO,,,,,,,,,,False,False,True,0.0
+63840,"Deering, MO",MO,,,,,,,,,,False,False,True,0.0
+63950,"Wayne County, MO",MO,,,,,,,,,,False,False,True,0.0
+63365,"New Melle, MO",MO,,,,,,,,,,False,False,True,0.0
+26058,"Brooke County, WV",WV,,,,,,,,,,False,False,True,0.0
+24855,"McDowell County, WV",WV,,,,,,,,,,False,False,True,0.0
+25612,"Chauncey, WV",WV,,,,,,,,,,False,False,True,0.0
+25755,"Huntington, WV",WV,,,,,,,,,,False,False,True,0.0
+38338,"Gibson, TN",TN,,,,,,,,,,False,False,True,0.0
+38113,"Memphis, TN",TN,,,,,,,,,,False,False,True,0.0
+37316,"Conasauga, TN",TN,,,,,,,,,,False,False,True,0.0
+71330,"Echo, LA",LA,,,,,,,,,,False,False,True,0.0
+71359,"Pineville, LA",LA,,,,,,,,,,False,False,True,0.0
+70310,"Thibodaux, LA",LA,,,,,,,,,,False,False,True,0.0
+71242,"Forest, LA",LA,,,,,,,,,,False,False,True,0.0
+71212,"Monroe, LA",LA,,,,,,,,,,False,False,True,0.0
+65409,"Rolla, MO",MO,,,,,,,,,,False,False,True,0.0
+65801,"Springfield, MO",MO,,,,,,,,,,False,False,True,0.0
+45119,"Brown County, OH",OH,,,,,,,,,,False,False,True,0.0
+24739,"Oakvale, WV",WV,,,,,,,,,,False,False,True,0.0
+26838,"Hardy County, WV",WV,,,,,,,,,,False,False,True,0.0
+25986,"Fayette County, WV",WV,,,,,,,,,,False,False,True,0.0
+25866,"Fayette County, WV",WV,,,,,,,,,,False,False,True,0.0
+64028,"Farley, MO",MO,,,,,,,,,,False,False,True,0.0
+45267,"Cincinnati, OH",OH,,,,,,,,,,False,False,True,0.0
+65688,"Brandsville, MO",MO,,,,,,,,,,False,False,True,0.0
+63850,"Grayridge, MO",MO,,,,,,,,,,False,False,True,0.0
+26210,"Adrian, WV",WV,,,,,,,,,,False,False,True,0.0
+67221,"McConnell AFB, KS",KS,,,,,,,,,,False,False,True,0.0
+66251,"Overland Park, KS",KS,,,,,,,,,,False,False,True,0.0
+37929,"Knoxville, TN",TN,,,,,,,,,,False,False,True,0.0
+37232,"Nashville-Davidson metropolitan government (balance), TN",TN,,,,,,,,,,False,False,True,0.0
+37238,"Nashville-Davidson metropolitan government (balance), TN",TN,,,,,,,,,,False,False,True,0.0
+37383,"Sewanee, TN",TN,,,,,,,,,,False,False,True,0.0
+38389,"Yorkville, TN",TN,,,,,,,,,,False,False,True,0.0
+71415,"Clarks, LA",LA,,,,,,,,,,False,False,True,0.0
+71497,"Natchitoches, LA",LA,,,,,,,,,,False,False,True,0.0
+70457,"St. Tammany Parish, LA",LA,,,,,,,,,,False,False,True,0.0
+70522,"Centerville, LA",LA,,,,,,,,,,False,False,True,0.0
+63466,"Clark County, MO",MO,,,,,,,,,,False,False,True,0.0
+63380,"Truesdale, MO",MO,,,,,,,,,,False,False,True,0.0
+65741,"Ozark County, MO",MO,,,,,,,,,,False,False,True,0.0
+66961,"Norway, KS",KS,,,,,,,,,,False,False,True,0.0
+66160,"Kansas City, KS",KS,,,,,,,,,,False,False,True,0.0
+67476,"Roxbury, KS",KS,,,,,,,,,,False,False,True,0.0
+66742,"Gas, KS",KS,,,,,,,,,,False,False,True,0.0
+67627,"Catharine, KS",KS,,,,,,,,,,False,False,True,0.0
+00636,"San Germán Municipio, PR",PR,,,,,,,,,,False,False,True,0.0
+00611,"Utuado Municipio, PR",PR,,,,,,,,,,False,False,True,0.0
+47573,"Ragsdale, IN",IN,,,,,,,,,,False,False,True,0.0
+46624,"St. Joseph County, IN",IN,,,,,,,,,,False,False,True,0.0
+70551,"Leonville, LA",LA,,,,,,,,,,False,False,True,0.0
+70813,"Baton Rouge, LA",LA,,,,,,,,,,False,False,True,0.0
+65897,"Springfield, MO",MO,,,,,,,,,,False,False,True,0.0
+65675,"Hurley, MO",MO,,,,,,,,,,False,False,True,0.0
+65726,"Taney County, MO",MO,,,,,,,,,,False,False,True,0.0
+68056,"Sarpy County, NE",NE,,,,,,,,,,False,False,True,0.0
+68588,"Lincoln, NE",NE,,,,,,,,,,False,False,True,0.0
+68330,"Cordova, NE",NE,,,,,,,,,,False,False,True,0.0
+68183,"Omaha, NE",NE,,,,,,,,,,False,False,True,0.0
+68182,"Omaha, NE",NE,,,,,,,,,,False,False,True,0.0
+58313,"Balta, ND",ND,,,,,,,,,,False,False,True,0.0
+57354,"Kaylor, SD",SD,,,,,,,,,,False,False,True,0.0
+73488,"Carter County, OK",OK,,,,,,,,,,False,False,True,0.0
+20591,"Washington, DC",DC,,,,,,,,,,False,False,True,0.0
+46778,"Wells County, IN",IN,,,,,,,,,,False,False,True,0.0
+47225,"Clarksburg, IN",IN,,,,,,,,,,False,False,True,0.0
+46102,"Advance, IN",IN,,,,,,,,,,False,False,True,0.0
+46154,"Hancock County, IN",IN,,,,,,,,,,False,False,True,0.0
+47021,"Ripley County, IN",IN,,,,,,,,,,False,False,True,0.0
+46789,"LaGrange County, IN",IN,,,,,,,,,,False,False,True,0.0
+47370,"East Germantown, IN",IN,,,,,,,,,,False,False,True,0.0
+39173,"Yazoo County, MS",MS,,,,,,,,,,False,False,True,0.0
+39148,"Rankin County, MS",MS,,,,,,,,,,False,False,True,0.0
+45720,"Meigs County, OH",OH,,,,,,,,,,False,False,True,0.0
+44232,"Green, OH",OH,,,,,,,,,,False,False,True,0.0
+45501,"Springfield, OH",OH,,,,,,,,,,False,False,True,0.0
+44325,"Akron, OH",OH,,,,,,,,,,False,False,True,0.0
+44555,"Youngstown, OH",OH,,,,,,,,,,False,False,True,0.0
+21023,"Baltimore County, MD",MD,,,,,,,,,,False,False,True,0.0
+49685,"Chums Corner, MI",MI,,,,,,,,,,False,False,True,0.0
+05746,"Windsor County, VT",VT,,,,,,,,,,False,False,True,0.0
+58074,"Richland County, ND",ND,,,,,,,,,,False,False,True,0.0
+58236,"Pembina County, ND",ND,,,,,,,,,,False,False,True,0.0
+74721,"Albany, OK",OK,,,,,,,,,,False,False,True,0.0
+20894,"Bethesda, MD",MD,,,,,,,,,,False,False,True,0.0
+58255,"Cavalier County, ND",ND,,,,,,,,,,False,False,True,0.0
+57659,"Corson County, SD",SD,,,,,,,,,,False,False,True,0.0
+47366,"Henry County, IN",IN,,,,,,,,,,False,False,True,0.0
+46971,"Grissom AFB, IN",IN,,,,,,,,,,False,False,True,0.0
+47831,"Blanford, IN",IN,,,,,,,,,,False,False,True,0.0
+46513,"Marshall County, IN",IN,,,,,,,,,,False,False,True,0.0
+47986,"Templeton, IN",IN,,,,,,,,,,False,False,True,0.0
+47875,"St. Bernice, IN",IN,,,,,,,,,,False,False,True,0.0
+28331,"Falcon, NC",NC,,,,,,,,,,False,False,True,0.0
+27697,"Raleigh, NC",NC,,,,,,,,,,False,False,True,0.0
+28664,"Avery County, NC",NC,,,,,,,,,,False,False,True,0.0
+27259,"Moore County, NC",NC,,,,,,,,,,False,False,True,0.0
+44415,"Columbiana County, OH",OH,,,,,,,,,,False,False,True,0.0
+43530,"Defiance County, OH",OH,,,,,,,,,,False,False,True,0.0
+44619,"Damascus, OH",OH,,,,,,,,,,False,False,True,0.0
+43007,"Union County, OH",OH,,,,,,,,,,False,False,True,0.0
+43325,"Iberia, OH",OH,,,,,,,,,,False,False,True,0.0
+58644,"Dunn County, ND",ND,,,,,,,,,,False,False,True,0.0
+58310,"Rolette County, ND",ND,,,,,,,,,,False,False,True,0.0
+57007,"Brookings, SD",SD,,,,,,,,,,False,False,True,0.0
+46302,"Porter County, IN",IN,,,,,,,,,,False,False,True,0.0
+47845,"Coalmont, IN",IN,,,,,,,,,,False,False,True,0.0
+47445,"Greene County, IN",IN,,,,,,,,,,False,False,True,0.0
+47870,"Vigo County, IN",IN,,,,,,,,,,False,False,True,0.0
+27570,"Warren County, NC",NC,,,,,,,,,,False,False,True,0.0
+27374,"Welcome, NC",NC,,,,,,,,,,False,False,True,0.0
+27411,"Greensboro, NC",NC,,,,,,,,,,False,False,True,0.0
+28041,"Faith, NC",NC,,,,,,,,,,False,False,True,0.0
+45677,"Scioto County, OH",OH,,,,,,,,,,False,False,True,0.0
+43218,"Columbus, OH",OH,,,,,,,,,,False,False,True,0.0
+43027,"Licking County, OH",OH,,,,,,,,,,False,False,True,0.0
+73022,"El Reno, OK",OK,,,,,,,,,,False,False,True,0.0
+73523,"Altus, OK",OK,,,,,,,,,,False,False,True,0.0
+73070,"Norman, OK",OK,,,,,,,,,,False,False,True,0.0
+74866,"St. Louis, OK",OK,,,,,,,,,,False,False,True,0.0
+46796,"Noble County, IN",IN,,,,,,,,,,False,False,True,0.0
+46170,"Putnam County, IN",IN,,,,,,,,,,False,False,True,0.0
+46206,"Indianapolis city (balance), IN",IN,,,,,,,,,,False,False,True,0.0
+47392,"Wayne County, IN",IN,,,,,,,,,,False,False,True,0.0
+28653,"Avery County, NC",NC,,,,,,,,,,False,False,True,0.0
+28509,"Alliance, NC",NC,,,,,,,,,,False,False,True,0.0
+28074,"Rutherford County, NC",NC,,,,,,,,,,False,False,True,0.0
+27815,"Edgecombe County, NC",NC,,,,,,,,,,False,False,True,0.0
+43350,"Sparta, OH",OH,,,,,,,,,,False,False,True,0.0
+44665,"Columbiana County, OH",OH,,,,,,,,,,False,False,True,0.0
+44068,"North Kingsville, OH",OH,,,,,,,,,,False,False,True,0.0
+45699,"Scioto County, OH",OH,,,,,,,,,,False,False,True,0.0
+73668,"Texola, OK",OK,,,,,,,,,,False,False,True,0.0
+74737,"Golden, OK",OK,,,,,,,,,,False,False,True,0.0
+74077,"Stillwater, OK",OK,,,,,,,,,,False,False,True,0.0
+46937,"Howard County, IN",IN,,,,,,,,,,False,False,True,0.0
+47033,"Ripley County, IN",IN,,,,,,,,,,False,False,True,0.0
+46572,"Marshall County, IN",IN,,,,,,,,,,False,False,True,0.0
+47851,"Fontanet, IN",IN,,,,,,,,,,False,False,True,0.0
+40526,"Lexington-Fayette urban county, KY",KY,,,,,,,,,,False,False,True,0.0
+41310,"Breathitt County, KY",KY,,,,,,,,,,False,False,True,0.0
+41651,"McDowell, KY",KY,,,,,,,,,,False,False,True,0.0
+41351,"Owsley County, KY",KY,,,,,,,,,,False,False,True,0.0
+42444,"Poole, KY",KY,,,,,,,,,,False,False,True,0.0
+28641,"Burke County, NC",NC,,,,,,,,,,False,False,True,0.0
+27506,"Buies Creek, NC",NC,,,,,,,,,,False,False,True,0.0
+43047,"Champaign County, OH",OH,,,,,,,,,,False,False,True,0.0
+45815,"Belmore, OH",OH,,,,,,,,,,False,False,True,0.0
+45435,"Fairborn, OH",OH,,,,,,,,,,False,False,True,0.0
+44639,"Leesville, OH",OH,,,,,,,,,,False,False,True,0.0
+74947,"Monroe, OK",OK,,,,,,,,,,False,False,True,0.0
+74171,"Tulsa, OK",OK,,,,,,,,,,False,False,True,0.0
+73001,"Caddo County, OK",OK,,,,,,,,,,False,False,True,0.0
+73031,"Dibble, OK",OK,,,,,,,,,,False,False,True,0.0
+73436,"Gene Autry, OK",OK,,,,,,,,,,False,False,True,0.0
+72199,"Pulaski County, AR",AR,,,,,,,,,,False,False,True,0.0
+72352,"LaGrange, AR",AR,,,,,,,,,,False,False,True,0.0
+72615,"Bergman, AR",AR,,,,,,,,,,False,False,True,0.0
+72180,"Woodson, AR",AR,,,,,,,,,,False,False,True,0.0
+72052,"Garner, AR",AR,,,,,,,,,,False,False,True,0.0
+71721,"Beirne, AR",AR,,,,,,,,,,False,False,True,0.0
+27213,"Chatham County, NC",NC,,,,,,,,,,False,False,True,0.0
+28710,"Henderson County, NC",NC,,,,,,,,,,False,False,True,0.0
+27351,"Southmont, NC",NC,,,,,,,,,,False,False,True,0.0
+38503,"Cookeville, TN",TN,,,,,,,,,,False,False,True,0.0
+43520,"Defiance County, OH",OH,,,,,,,,,,False,False,True,0.0
+45055,"Butler County, OH",OH,,,,,,,,,,False,False,True,0.0
+43791,"Muskingum County, OH",OH,,,,,,,,,,False,False,True,0.0
+73770,"Blaine County, OK",OK,,,,,,,,,,False,False,True,0.0
+06079,"Litchfield County, CT",CT,,,,,,,,,,False,False,True,0.0
+06459,"Middletown, CT",CT,,,,,,,,,,False,False,True,0.0
+06338,"Mashantucket, CT",CT,,,,,,,,,,False,False,True,0.0
+06439,"New London County, CT",CT,,,,,,,,,,False,False,True,0.0
+71728,"Clark County, AR",AR,,,,,,,,,,False,False,True,0.0
+72183,"Wrightsville, AR",AR,,,,,,,,,,False,False,True,0.0
+27247,"Montgomery County, NC",NC,,,,,,,,,,False,False,True,0.0
+47236,"Bartholomew County, IN",IN,,,,,,,,,,False,False,True,0.0
+41364,"Owsley County, KY",KY,,,,,,,,,,False,False,True,0.0
+40355,"Owen County, KY",KY,,,,,,,,,,False,False,True,0.0
+38550,"Warren County, TN",TN,,,,,,,,,,False,False,True,0.0
+40981,"Perry County, KY",KY,,,,,,,,,,False,False,True,0.0
+46965,"Kokomo, IN",IN,,,,,,,,,,False,False,True,0.0
+28368,"Harnett County, NC",NC,,,,,,,,,,False,False,True,0.0
+45739,"Hockingport, OH",OH,,,,,,,,,,False,False,True,0.0
+44660,"Mount Hope, OH",OH,,,,,,,,,,False,False,True,0.0
+43909,"Blaine, OH",OH,,,,,,,,,,False,False,True,0.0
+06072,"Tolland County, CT",CT,,,,,,,,,,False,False,True,0.0
+06080,"Hartford County, CT",CT,,,,,,,,,,False,False,True,0.0
+06258,"Windham County, CT",CT,,,,,,,,,,False,False,True,0.0
+19980,"Woodside, DE",DE,,,,,,,,,,False,False,True,0.0
+71831,"Howard County, AR",AR,,,,,,,,,,False,False,True,0.0
+71864,"Willisville, AR",AR,,,,,,,,,,False,False,True,0.0
+72133,"Jefferson County, AR",AR,,,,,,,,,,False,False,True,0.0
+27594,"Warren County, NC",NC,,,,,,,,,,False,False,True,0.0
+27533,"Goldsboro, NC",NC,,,,,,,,,,False,False,True,0.0
+28274,"Charlotte, NC",NC,,,,,,,,,,False,False,True,0.0
+27268,"High Point, NC",NC,,,,,,,,,,False,False,True,0.0
+28758,"Mountain Home, NC",NC,,,,,,,,,,False,False,True,0.0
+27202,"Altamahaw, NC",NC,,,,,,,,,,False,False,True,0.0
+27412,"Greensboro, NC",NC,,,,,,,,,,False,False,True,0.0
+45848,"Glandorf, OH",OH,,,,,,,,,,False,False,True,0.0
+43436,"Ottawa County, OH",OH,,,,,,,,,,False,False,True,0.0
+45105,"Bentonville, OH",OH,,,,,,,,,,False,False,True,0.0
+43018,"Etna, OH",OH,,,,,,,,,,False,False,True,0.0
+20059,"Washington, DC",DC,,,,,,,,,,False,False,True,0.0
+20542,"Washington, DC",DC,,,,,,,,,,False,False,True,0.0
+20250,"Washington, DC",DC,,,,,,,,,,False,False,True,0.0
+20408,"Washington, DC",DC,,,,,,,,,,False,False,True,0.0
+20415,"Washington, DC",DC,,,,,,,,,,False,False,True,0.0
+20530,"Washington, DC",DC,,,,,,,,,,False,False,True,0.0
+20220,"Washington, DC",DC,,,,,,,,,,False,False,True,0.0
+20422,"Washington, DC",DC,,,,,,,,,,False,False,True,0.0
+72028,"Clinton, AR",AR,,,,,,,,,,False,False,True,0.0
+72313,"Mississippi County, AR",AR,,,,,,,,,,False,False,True,0.0
+72178,"West Point, AR",AR,,,,,,,,,,False,False,True,0.0
+28355,"Lee County, NC",NC,,,,,,,,,,False,False,True,0.0
+27599,"Chapel Hill, NC",NC,,,,,,,,,,False,False,True,0.0
+27593,"Wilson's Mills, NC",NC,,,,,,,,,,False,False,True,0.0
+27342,"Sedalia, NC",NC,,,,,,,,,,False,False,True,0.0
+27256,"Gulf, NC",NC,,,,,,,,,,False,False,True,0.0
+27695,"Raleigh, NC",NC,,,,,,,,,,False,False,True,0.0
+45783,"Tuppers Plains, OH",OH,,,,,,,,,,False,False,True,0.0
+43981,"New Athens, OH",OH,,,,,,,,,,False,False,True,0.0
+43346,"Hardin County, OH",OH,,,,,,,,,,False,False,True,0.0
+20515,"Washington, DC",DC,,,,,,,,,,False,False,True,0.0
+20388,"Washington, DC",DC,,,,,,,,,,False,False,True,0.0
+21715,"Brownsville, MD",MD,,,,,,,,,,False,False,True,0.0
+20661,"Cobb Island, MD",MD,,,,,,,,,,False,False,True,0.0
+21287,"Baltimore, MD",MD,,,,,,,,,,False,False,True,0.0
+20771,"Prince George's County, MD",MD,,,,,,,,,,False,False,True,0.0
+50152,"Luther, IA",IA,,,,,,,,,,False,False,True,0.0
+52252,"Jones County, IA",IA,,,,,,,,,,False,False,True,0.0
+52771,"Clinton County, IA",IA,,,,,,,,,,False,False,True,0.0
+50552,"Knierim, IA",IA,,,,,,,,,,False,False,True,0.0
+13119,"Onondaga County, NY",NY,,,,,,,,,,False,False,True,0.0
+95613,"Coloma, CA",CA,,,,,,,,,,False,False,True,0.0
+93740,"Fresno, CA",CA,,,,,,,,,,False,False,True,0.0
+62256,"Maeystown, IL",IL,,,,,,,,,,False,False,True,0.0
+62464,"Stoy, IL",IL,,,,,,,,,,False,False,True,0.0
+13154,"Wayne County, NY",NY,,,,,,,,,,False,False,True,0.0
+13455,"Oneida County, NY",NY,,,,,,,,,,False,False,True,0.0
+14453,"Ontario County, NY",NY,,,,,,,,,,False,False,True,0.0
+89315,"White Pine County, NV",NV,,,,,,,,,,False,False,True,0.0
+89158,"Paradise, NV",NV,,,,,,,,,,False,False,True,0.0
+97335,"Crabtree, OR",OR,,,,,,,,,,False,False,True,0.0
+97336,"Crawfordsville, OR",OR,,,,,,,,,,False,False,True,0.0
+97917,"Malheur County, OR",OR,,,,,,,,,,False,False,True,0.0
+52071,"St. Donatus, IA",IA,,,,,,,,,,False,False,True,0.0
+50831,"Arispe, IA",IA,,,,,,,,,,False,False,True,0.0
+50657,"Morrison, IA",IA,,,,,,,,,,False,False,True,0.0
+50592,"Truesdale, IA",IA,,,,,,,,,,False,False,True,0.0
+52631,"Houghton, IA",IA,,,,,,,,,,False,False,True,0.0
+50623,"Black Hawk County, IA",IA,,,,,,,,,,False,False,True,0.0
+60967,"Iroquois County, IL",IL,,,,,,,,,,False,False,True,0.0
+60939,"Iroquois County, IL",IL,,,,,,,,,,False,False,True,0.0
+61371,"Triumph, IL",IL,,,,,,,,,,False,False,True,0.0
+60956,"Papineau, IL",IL,,,,,,,,,,False,False,True,0.0
+61402,"Galesburg, IL",IL,,,,,,,,,,False,False,True,0.0
+72369,"Oneida, AR",AR,,,,,,,,,,False,False,True,0.0
+70786,"Watson, LA",LA,,,,,,,,,,False,False,True,0.0
+71230,"Franklin Parish, LA",LA,,,,,,,,,,False,False,True,0.0
+71009,"Blanchard, LA",LA,,,,,,,,,,False,False,True,0.0
+38776,"Stoneville, MS",MS,,,,,,,,,,False,False,True,0.0
+97432,"Dillard, OR",OR,,,,,,,,,,False,False,True,0.0
+97709,"Deschutes County, OR",OR,,,,,,,,,,False,False,True,0.0
+97258,"Portland, OR",OR,,,,,,,,,,False,False,True,0.0
+97310,"Salem, OR",OR,,,,,,,,,,False,False,True,0.0
+97078,"Aloha, OR",OR,,,,,,,,,,False,False,True,0.0
+17232,"Franklin County, PA",PA,,,,,,,,,,False,False,True,0.0
+17720,"Lycoming County, PA",PA,,,,,,,,,,False,False,True,0.0
+17323,"Franklintown, PA",PA,,,,,,,,,,False,False,True,0.0
+15565,"Somerset County, PA",PA,,,,,,,,,,False,False,True,0.0
+18627,"Luzerne County, PA",PA,,,,,,,,,,False,False,True,0.0
+50427,"Chapin, IA",IA,,,,,,,,,,False,False,True,0.0
+52568,"Martinsburg, IA",IA,,,,,,,,,,False,False,True,0.0
+51340,"Fostoria, IA",IA,,,,,,,,,,False,False,True,0.0
+51452,"Lidderdale, IA",IA,,,,,,,,,,False,False,True,0.0
+50137,"Jasper County, IA",IA,,,,,,,,,,False,False,True,0.0
+50145,"Warren County, IA",IA,,,,,,,,,,False,False,True,0.0
+60208,"Evanston, IL",IL,,,,,,,,,,False,False,True,0.0
+61237,"Buffalo Prairie, IL",IL,,,,,,,,,,False,False,True,0.0
+61233,"Andover, IL",IL,,,,,,,,,,False,False,True,0.0
+39210,"Jackson, MS",MS,,,,,,,,,,False,False,True,0.0
+39058,"Clinton, MS",MS,,,,,,,,,,False,False,True,0.0
+38839,"Derma, MS",MS,,,,,,,,,,False,False,True,0.0
+39595,"Pascagoula, MS",MS,,,,,,,,,,False,False,True,0.0
+39324,"Clara, MS",MS,,,,,,,,,,False,False,True,0.0
+17054,"Mattawana, PA",PA,,,,,,,,,,False,False,True,0.0
+19490,"Montgomery County, PA",PA,,,,,,,,,,False,False,True,0.0
+51651,"Shambaugh, IA",IA,,,,,,,,,,False,False,True,0.0
+51045,"Oyens, IA",IA,,,,,,,,,,False,False,True,0.0
+52759,"Montpelier, IA",IA,,,,,,,,,,False,False,True,0.0
+50013,"Ames, IA",IA,,,,,,,,,,False,False,True,0.0
+52075,"Springbrook, IA",IA,,,,,,,,,,False,False,True,0.0
+62026,"Edwardsville, IL",IL,,,,,,,,,,False,False,True,0.0
+60075,"Lake County, IL",IL,,,,,,,,,,False,False,True,0.0
+95309,"Chinese Camp, CA",CA,,,,,,,,,,False,False,True,0.0
+92317,"Lake Arrowhead, CA",CA,,,,,,,,,,False,False,True,0.0
+93408,"San Luis Obispo County, CA",CA,,,,,,,,,,False,False,True,0.0
+39753,"Lowndes County, MS",MS,,,,,,,,,,False,False,True,0.0
+21560,"Spring Gap, MD",MD,,,,,,,,,,False,False,True,0.0
+20656,"St. Mary's County, MD",MD,,,,,,,,,,False,False,True,0.0
+19052,"Delaware County, PA",PA,,,,,,,,,,False,False,True,0.0
+16172,"New Wilmington, PA",PA,,,,,,,,,,False,False,True,0.0
+17506,"Blue Ball, PA",PA,,,,,,,,,,False,False,True,0.0
+15619,"Westmoreland County, PA",PA,,,,,,,,,,False,False,True,0.0
+19108,"Philadelphia, PA",PA,,,,,,,,,,False,False,True,0.0
+52652,"Swedesburg, IA",IA,,,,,,,,,,False,False,True,0.0
+52036,"Delaware, IA",IA,,,,,,,,,,False,False,True,0.0
+50631,"Frederika, IA",IA,,,,,,,,,,False,False,True,0.0
+95419,"Occidental, CA",CA,,,,,,,,,,False,False,True,0.0
+90840,"Long Beach, CA",CA,,,,,,,,,,False,False,True,0.0
+93581,"Tehachapi, CA",CA,,,,,,,,,,False,False,True,0.0
+92415,"San Bernardino, CA",CA,,,,,,,,,,False,False,True,0.0
+90052,"Los Angeles, CA",CA,,,,,,,,,,False,False,True,0.0
+02823,"Cranston, RI",RI,,,,,,,,,,False,False,True,0.0
+02918,"Providence, RI",RI,,,,,,,,,,False,False,True,0.0
+02824,"Providence County, RI",RI,,,,,,,,,,False,False,True,0.0
+17303,"Arendtsville, PA",PA,,,,,,,,,,False,False,True,0.0
+19369,"Sadsburyville, PA",PA,,,,,,,,,,False,False,True,0.0
+15282,"Pittsburgh, PA",PA,,,,,,,,,,False,False,True,0.0
+19516,"Centerport, PA",PA,,,,,,,,,,False,False,True,0.0
+52562,"Hayesville, IA",IA,,,,,,,,,,False,False,True,0.0
+52056,"Luxemburg, IA",IA,,,,,,,,,,False,False,True,0.0
+51015,"Climbing Hill, IA",IA,,,,,,,,,,False,False,True,0.0
+50040,"Boxholm, IA",IA,,,,,,,,,,False,False,True,0.0
+56563,"Moorhead, MN",MN,,,,,,,,,,False,False,True,0.0
+56030,"Essig, MN",MN,,,,,,,,,,False,False,True,0.0
+95958,"Durham, CA",CA,,,,,,,,,,False,False,True,0.0
+92521,"Riverside, CA",CA,,,,,,,,,,False,False,True,0.0
+04737,"Aroostook County, ME",ME,,,,,,,,,,False,False,True,0.0
+04341,"Lincoln County, ME",ME,,,,,,,,,,False,False,True,0.0
+02133,"Boston, MA",MA,,,,,,,,,,False,False,True,0.0
+01965,"Beverly, MA",MA,,,,,,,,,,False,False,True,0.0
+02205,"Boston, MA",MA,,,,,,,,,,False,False,True,0.0
+02350,"Plymouth County, MA",MA,,,,,,,,,,False,False,True,0.0
+01144,"Springfield, MA",MA,,,,,,,,,,False,False,True,0.0
+18927,"Bucks County, PA",PA,,,,,,,,,,False,False,True,0.0
+18065,"Lehigh County, PA",PA,,,,,,,,,,False,False,True,0.0
+55796,"Winton, MN",MN,,,,,,,,,,False,False,True,0.0
+56562,"Moorhead, MN",MN,,,,,,,,,,False,False,True,0.0
+07844,"Hope, NJ",NJ,,,,,,,,,,False,False,True,0.0
+90639,"La Mirada, CA",CA,,,,,,,,,,False,False,True,0.0
+95676,"Robbins, CA",CA,,,,,,,,,,False,False,True,0.0
+95538,"Fort Dick, CA",CA,,,,,,,,,,False,False,True,0.0
+02325,"Bridgewater Town, MA",MA,,,,,,,,,,False,False,True,0.0
+48862,"Gratiot County, MI",MI,,,,,,,,,,False,False,True,0.0
+49258,"Hillsdale County, MI",MI,,,,,,,,,,False,False,True,0.0
+48859,"Mount Pleasant, MI",MI,,,,,,,,,,False,False,True,0.0
+48620,"Midland County, MI",MI,,,,,,,,,,False,False,True,0.0
+49430,"Lamont, MI",MI,,,,,,,,,,False,False,True,0.0
+16430,"Erie County, PA",PA,,,,,,,,,,False,False,True,0.0
+18921,"Bucks County, PA",PA,,,,,,,,,,False,False,True,0.0
+08032,"Grenloch, NJ",NJ,,,,,,,,,,False,False,True,0.0
+08544,"Princeton, NJ",NJ,,,,,,,,,,False,False,True,0.0
+07831,"Warren County, NJ",NJ,,,,,,,,,,False,False,True,0.0
+08245,"South Dennis, NJ",NJ,,,,,,,,,,False,False,True,0.0
+96078,"Proberta, CA",CA,,,,,,,,,,False,False,True,0.0
+92179,"San Diego County, CA",CA,,,,,,,,,,False,False,True,0.0
+93407,"California Polytechnic State University, CA",CA,,,,,,,,,,False,False,True,0.0
+93944,"Monterey, CA",CA,,,,,,,,,,False,False,True,0.0
+48824,"East Lansing, MI",MI,,,,,,,,,,False,False,True,0.0
+49443,"Muskegon, MI",MI,,,,,,,,,,False,False,True,0.0
+48410,"Sanilac County, MI",MI,,,,,,,,,,False,False,True,0.0
+49784,"Chippewa County, MI",MI,,,,,,,,,,False,False,True,0.0
+49409,"Ferrysburg, MI",MI,,,,,,,,,,False,False,True,0.0
+16654,"Huntingdon County, PA",PA,,,,,,,,,,False,False,True,0.0
+17342,"Loganville, PA",PA,,,,,,,,,,False,False,True,0.0
+15488,"Fayette County, PA",PA,,,,,,,,,,False,False,True,0.0
+84602,"Provo, UT",UT,,,,,,,,,,False,False,True,0.0
+84114,"Salt Lake City, UT",UT,,,,,,,,,,False,False,True,0.0
+84008,"Bonanza, UT",UT,,,,,,,,,,False,False,True,0.0
+84644,"Meadow, UT",UT,,,,,,,,,,False,False,True,0.0
+84150,"Salt Lake City, UT",UT,,,,,,,,,,False,False,True,0.0
+84408,"Ogden, UT",UT,,,,,,,,,,False,False,True,0.0
+84138,"Salt Lake City, UT",UT,,,,,,,,,,False,False,True,0.0
+92369,"San Bernardino, CA",CA,,,,,,,,,,False,False,True,0.0
+92096,"San Marcos, CA",CA,,,,,,,,,,False,False,True,0.0
+92697,"Irvine, CA",CA,,,,,,,,,,False,False,True,0.0
+49063,"Van Buren County, MI",MI,,,,,,,,,,False,False,True,0.0
+05840,"Essex County, VT",VT,,,,,,,,,,False,False,True,0.0
+05768,"Bennington County, VT",VT,,,,,,,,,,False,False,True,0.0
+05088,"Wilder, VT",VT,,,,,,,,,,False,False,True,0.0
+05073,"Windsor County, VT",VT,,,,,,,,,,False,False,True,0.0
+05344,"Windham County, VT",VT,,,,,,,,,,False,False,True,0.0
+15275,"Allegheny County, PA",PA,,,,,,,,,,False,False,True,0.0
+16684,"Tipton, PA",PA,,,,,,,,,,False,False,True,0.0
+15705,"Indiana, PA",PA,,,,,,,,,,False,False,True,0.0
+84059,"Vineyard, UT",UT,,,,,,,,,,False,False,True,0.0
+84009,"South Jordan, UT",UT,,,,,,,,,,False,False,True,0.0
+93106,"University of California-Santa Barbara, CA",CA,,,,,,,,,,False,False,True,0.0
+95929,"Chico, CA",CA,,,,,,,,,,False,False,True,0.0
+92182,"San Diego, CA",CA,,,,,,,,,,False,False,True,0.0
+05030,"Ascutney, VT",VT,,,,,,,,,,False,False,True,0.0
+05009,"White River Junction, VT",VT,,,,,,,,,,False,False,True,0.0
+05670,"South Barre, VT",VT,,,,,,,,,,False,False,True,0.0
+85734,"Tucson, AZ",AZ,,,,,,,,,,False,False,True,0.0
+15720,"Indiana County, PA",PA,,,,,,,,,,False,False,True,0.0
+15123,"West Mifflin, PA",PA,,,,,,,,,,False,False,True,0.0
+98623,"Klickitat County, WA",WA,,,,,,,,,,False,False,True,0.0
+99014,"Four Lakes, WA",WA,,,,,,,,,,False,False,True,0.0
+98539,"Lewis County, WA",WA,,,,,,,,,,False,False,True,0.0
+93741,"Fresno, CA",CA,,,,,,,,,,False,False,True,0.0
+92350,"Loma Linda, CA",CA,,,,,,,,,,False,False,True,0.0
+92092,"San Diego, CA",CA,,,,,,,,,,False,False,True,0.0
+93670,"Yettem, CA",CA,,,,,,,,,,False,False,True,0.0
+93227,"Goshen, CA",CA,,,,,,,,,,False,False,True,0.0
+85532,"Claypool, AZ",AZ,,,,,,,,,,False,False,True,0.0
+85026,"Phoenix, AZ",AZ,,,,,,,,,,False,False,True,0.0
+80474,"Rollinsville, CO",CO,,,,,,,,,,False,False,True,0.0
+87101,"Albuquerque, NM",NM,,,,,,,,,,False,False,True,0.0
+97902,"Malheur County, OR",OR,,,,,,,,,,False,False,True,0.0
+16220,"Crown, PA",PA,,,,,,,,,,False,False,True,0.0
+87547,"White Rock, NM",NM,,,,,,,,,,False,False,True,0.0
+85329,"Avondale, AZ",AZ,,,,,,,,,,False,False,True,0.0
+85721,"Tucson, AZ",AZ,,,,,,,,,,False,False,True,0.0
+15674,"Norvelt, PA",PA,,,,,,,,,,False,False,True,0.0
+16856,"Mingoville, PA",PA,,,,,,,,,,False,False,True,0.0
+50269,"Whitten, IA",IA,,,,,,,,,,False,False,True,0.0
+50031,"Beaver, IA",IA,,,,,,,,,,False,False,True,0.0
+55903,"Rochester, MN",MN,,,,,,,,,,False,False,True,0.0
+99258,"Spokane, WA",WA,,,,,,,,,,False,False,True,0.0
+99251,"Country Homes, WA",WA,,,,,,,,,,False,False,True,0.0
+98566,"Neilton, WA",WA,,,,,,,,,,False,False,True,0.0
+98556,"Thurston County, WA",WA,,,,,,,,,,False,False,True,0.0
+98505,"Thurston County, WA",WA,,,,,,,,,,False,False,True,0.0
+92136,"San Diego, CA",CA,,,,,,,,,,False,False,True,0.0
+94562,"Oakville, CA",CA,,,,,,,,,,False,False,True,0.0
+91125,"Pasadena, CA",CA,,,,,,,,,,False,False,True,0.0
+86005,"Flagstaff, AZ",AZ,,,,,,,,,,False,False,True,0.0
+85236,"Gilbert, AZ",AZ,,,,,,,,,,False,False,True,0.0
+85902,"Navajo County, AZ",AZ,,,,,,,,,,False,False,True,0.0
+85191,"Pinal County, AZ",AZ,,,,,,,,,,False,False,True,0.0
+85709,"Tucson, AZ",AZ,,,,,,,,,,False,False,True,0.0
+80646,"Weld County, CO",CO,,,,,,,,,,False,False,True,0.0
+80266,"Denver, CO",CO,,,,,,,,,,False,False,True,0.0
+53157,"Bloomfield, WI",WI,,,,,,,,,,False,False,True,0.0
+17504,"Lancaster County, PA",PA,,,,,,,,,,False,False,True,0.0
+18012,"Carbon County, PA",PA,,,,,,,,,,False,False,True,0.0
+16910,"Alba, PA",PA,,,,,,,,,,False,False,True,0.0
+18440,"Lackawanna County, PA",PA,,,,,,,,,,False,False,True,0.0
+16550,"Erie, PA",PA,,,,,,,,,,False,False,True,0.0
+98609,"Cowlitz County, WA",WA,,,,,,,,,,False,False,True,0.0
+53812,"Kieler, WI",WI,,,,,,,,,,False,False,True,0.0
+54215,"Kellnersville, WI",WI,,,,,,,,,,False,False,True,0.0
+54926,"Big Falls, WI",WI,,,,,,,,,,False,False,True,0.0
+53584,"Sextonville, WI",WI,,,,,,,,,,False,False,True,0.0
+95671,"Folsom, CA",CA,,,,,,,,,,False,False,True,0.0
+92093,"San Diego, CA",CA,,,,,,,,,,False,False,True,0.0
+92161,"San Diego, CA",CA,,,,,,,,,,False,False,True,0.0
+81228,"Chaffee County, CO",CO,,,,,,,,,,False,False,True,0.0
+81046,"Hoehne, CO",CO,,,,,,,,,,False,False,True,0.0
+18933,"Bucks County, PA",PA,,,,,,,,,,False,False,True,0.0
+17858,"Columbia County, PA",PA,,,,,,,,,,False,False,True,0.0
+17534,"Intercourse, PA",PA,,,,,,,,,,False,False,True,0.0
+17568,"Refton, PA",PA,,,,,,,,,,False,False,True,0.0
+53962,"Union Center, WI",WI,,,,,,,,,,False,False,True,0.0
+54464,"Langlade County, WI",WI,,,,,,,,,,False,False,True,0.0
+54152,"Nichols, WI",WI,,,,,,,,,,False,False,True,0.0
+54978,"Shawano County, WI",WI,,,,,,,,,,False,False,True,0.0
+95913,"Artois, CA",CA,,,,,,,,,,False,False,True,0.0
+93409,"San Luis Obispo County, CA",CA,,,,,,,,,,False,False,True,0.0
+12082,"Rensselaer County, NY",NY,,,,,,,,,,False,False,True,0.0
+12854,"Washington County, NY",NY,,,,,,,,,,False,False,True,0.0
+80732,"Weld County, CO",CO,,,,,,,,,,False,False,True,0.0
+80430,"Jackson County, CO",CO,,,,,,,,,,False,False,True,0.0
+83720,"Boise City, ID",ID,,,,,,,,,,False,False,True,0.0
+83725,"Boise City, ID",ID,,,,,,,,,,False,False,True,0.0
+83438,"Parker, ID",ID,,,,,,,,,,False,False,True,0.0
+87060,"Tome, NM",NM,,,,,,,,,,False,False,True,0.0
+15763,"Indiana County, PA",PA,,,,,,,,,,False,False,True,0.0
+15831,"Elk County, PA",PA,,,,,,,,,,False,False,True,0.0
+18946,"Bucks County, PA",PA,,,,,,,,,,False,False,True,0.0
+53099,"Dodge County, WI",WI,,,,,,,,,,False,False,True,0.0
+53940,"Lake Delton, WI",WI,,,,,,,,,,False,False,True,0.0
+53942,"Lime Ridge, WI",WI,,,,,,,,,,False,False,True,0.0
+62706,"Springfield, IL",IL,,,,,,,,,,False,False,True,0.0
+93237,"Three Rivers, CA",CA,,,,,,,,,,False,False,True,0.0
+95221,"Angels, CA",CA,,,,,,,,,,False,False,True,0.0
+95253,"Victor, CA",CA,,,,,,,,,,False,False,True,0.0
+14056,"Genesee County, NY",NY,,,,,,,,,,False,False,True,0.0
+13065,"Seneca County, NY",NY,,,,,,,,,,False,False,True,0.0
+13738,"Blodgett Mills, NY",NY,,,,,,,,,,False,False,True,0.0
+14166,"Chautauqua County, NY",NY,,,,,,,,,,False,False,True,0.0
+88244,"Hobbs, NM",NM,,,,,,,,,,False,False,True,0.0
+88439,"San Miguel County, NM",NM,,,,,,,,,,False,False,True,0.0
+87151,"Bernalillo County, NM",NM,,,,,,,,,,False,False,True,0.0
+87365,"McKinley County, NM",NM,,,,,,,,,,False,False,True,0.0
+82310,"Jeffrey City, WY",WY,,,,,,,,,,False,False,True,0.0
+82218,"Huntley, WY",WY,,,,,,,,,,False,False,True,0.0
+99623,"Point MacKenzie, AK",AK,,,,,,,,,,False,False,True,0.0
+99530,"Anchorage, AK",AK,,,,,,,,,,False,False,True,0.0
+99635,"Tyonek, AK",AK,,,,,,,,,,False,False,True,0.0
+18820,"Susquehanna County, PA",PA,,,,,,,,,,False,False,True,0.0
+53176,"Springfield, WI",WI,,,,,,,,,,False,False,True,0.0
+60183,"Campton Hills, IL",IL,,,,,,,,,,False,False,True,0.0
+94188,"San Francisco, CA",CA,,,,,,,,,,False,False,True,0.0
+14260,"University at Buffalo, NY",NY,,,,,,,,,,False,False,True,0.0
+13611,"Belleville, NY",NY,,,,,,,,,,False,False,True,0.0
+14463,"Hall, NY",NY,,,,,,,,,,False,False,True,0.0
+13814,"Chenango County, NY",NY,,,,,,,,,,False,False,True,0.0
+14642,"Rochester, NY",NY,,,,,,,,,,False,False,True,0.0
+13699,"Potsdam, NY",NY,,,,,,,,,,False,False,True,0.0
+14515,"Monroe County, NY",NY,,,,,,,,,,False,False,True,0.0
+99850,"Excursion Inlet, AK",AK,,,,,,,,,,False,False,True,0.0
+99707,"Fairbanks North Star Borough, AK",AK,,,,,,,,,,False,False,True,0.0
+59083,"Rosebud County, MT",MT,,,,,,,,,,False,False,True,0.0
+59316,"Powder River County, MT",MT,,,,,,,,,,False,False,True,0.0
+59812,"Missoula, MT",MT,,,,,,,,,,False,False,True,0.0
+59625,"Helena, MT",MT,,,,,,,,,,False,False,True,0.0
+59345,"Custer County, MT",MT,,,,,,,,,,False,False,True,0.0
+59623,"Helena, MT",MT,,,,,,,,,,False,False,True,0.0
+59435,"Toole County, MT",MT,,,,,,,,,,False,False,True,0.0
+89034,"Mesquite, NV",NV,,,,,,,,,,False,False,True,0.0
+89557,"Reno, NV",NV,,,,,,,,,,False,False,True,0.0
+15465,"Fayette County, PA",PA,,,,,,,,,,False,False,True,0.0
+50110,"Gray, IA",IA,,,,,,,,,,False,False,True,0.0
+51432,"Aspinwall, IA",IA,,,,,,,,,,False,False,True,0.0
+50608,"Butler County, IA",IA,,,,,,,,,,False,False,True,0.0
+24327,"Emory, VA",VA,,,,,,,,,,False,False,True,0.0
+24129,"New River, VA",VA,,,,,,,,,,False,False,True,0.0
+23955,"Nottoway Court House, VA",VA,,,,,,,,,,False,False,True,0.0
+13121,"Oswego County, NY",NY,,,,,,,,,,False,False,True,0.0
+29486,"Goose Creek, SC",SC,,,,,,,,,,False,False,True,0.0
+77866,"Brazos County, TX",TX,,,,,,,,,,False,False,True,0.0
+78841,"Val Verde County, TX",TX,,,,,,,,,,False,False,True,0.0
+75680,"Rusk County, TX",TX,,,,,,,,,,False,False,True,0.0
+78599,"Weslaco, TX",TX,,,,,,,,,,False,False,True,0.0
+75036,"Frisco, TX",TX,,,,,,,,,,False,False,True,0.0
+78360,"Guerra, TX",TX,,,,,,,,,,False,False,True,0.0
+75671,"Harrison County, TX",TX,,,,,,,,,,False,False,True,0.0
+79721,"Big Spring, TX",TX,,,,,,,,,,False,False,True,0.0
+75711,"Tyler, TX",TX,,,,,,,,,,False,False,True,0.0
+22908,"Charlottesville, VA",VA,,,,,,,,,,False,False,True,0.0
+24022,"Roanoke, VA",VA,,,,,,,,,,False,False,True,0.0
+24515,"Lynchburg, VA",VA,,,,,,,,,,False,False,True,0.0
+22472,"Richmond County, VA",VA,,,,,,,,,,False,False,True,0.0
+14556,"Livingston County, NY",NY,,,,,,,,,,False,False,True,0.0
+29425,"Charleston, SC",SC,,,,,,,,,,False,False,True,0.0
+29177,"Lake Murray of Richland, SC",SC,,,,,,,,,,False,False,True,0.0
+29589,"Rains, SC",SC,,,,,,,,,,False,False,True,0.0
+22725,"Madison County, VA",VA,,,,,,,,,,False,False,True,0.0
+23668,"Hampton, VA",VA,,,,,,,,,,False,False,True,0.0
+24469,"New Hope, VA",VA,,,,,,,,,,False,False,True,0.0
+22957,"Orange County, VA",VA,,,,,,,,,,False,False,True,0.0
+76241,"Gainesville, TX",TX,,,,,,,,,,False,False,True,0.0
+79402,"Lubbock, TX",TX,,,,,,,,,,False,False,True,0.0
+79776,"Ector County, TX",TX,,,,,,,,,,False,False,True,0.0
+75694,"Harrison County, TX",TX,,,,,,,,,,False,False,True,0.0
+79073,"Hale County, TX",TX,,,,,,,,,,False,False,True,0.0
+75033,"Frisco, TX",TX,,,,,,,,,,False,False,True,0.0
+23870,"Greensville County, VA",VA,,,,,,,,,,False,False,True,0.0
+23667,"Hampton, VA",VA,,,,,,,,,,False,False,True,0.0
+75782,"Poynor, TX",TX,,,,,,,,,,False,False,True,0.0
+77204,"Houston, TX",TX,,,,,,,,,,False,False,True,0.0
+77431,"Brazoria County, TX",TX,,,,,,,,,,False,False,True,0.0
+73960,"Texhoma, TX",TX,,,,,,,,,,False,False,True,0.0
+75903,"Lufkin, TX",TX,,,,,,,,,,False,False,True,0.0
+79769,"Ector County, TX",TX,,,,,,,,,,False,False,True,0.0
+75261,"Grapevine, TX",TX,,,,,,,,,,False,False,True,0.0
+76267,"Wise County, TX",TX,,,,,,,,,,False,False,True,0.0
+76902,"Tom Green County, TX",TX,,,,,,,,,,False,False,True,0.0
+75564,"Cass County, TX",TX,,,,,,,,,,False,False,True,0.0
+75429,"Commerce, TX",TX,,,,,,,,,,False,False,True,0.0
+77582,"Devers, TX",TX,,,,,,,,,,False,False,True,0.0
+77555,"Galveston, TX",TX,,,,,,,,,,False,False,True,0.0
+79066,"Gray County, TX",TX,,,,,,,,,,False,False,True,0.0
+79002,"Alanreed, TX",TX,,,,,,,,,,False,False,True,0.0
+79832,"Alpine, TX",TX,,,,,,,,,,False,False,True,0.0
+77882,"Robertson County, TX",TX,,,,,,,,,,False,False,True,0.0
+78111,"Karnes County, TX",TX,,,,,,,,,,False,False,True,0.0
+78674,"Weir, TX",TX,,,,,,,,,,False,False,True,0.0
+79383,"New Home, TX",TX,,,,,,,,,,False,False,True,0.0
+78547,"Garciasville, TX",TX,,,,,,,,,,False,False,True,0.0
+77875,"Grimes County, TX",TX,,,,,,,,,,False,False,True,0.0
+75865,"Trinity County, TX",TX,,,,,,,,,,False,False,True,0.0
+78540,"Hidalgo County, TX",TX,,,,,,,,,,False,False,True,0.0
+77843,"College Station, TX",TX,,,,,,,,,,False,False,True,0.0
+79008,"Hutchinson County, TX",TX,,,,,,,,,,False,False,True,0.0
+77852,"Deanville, TX",TX,,,,,,,,,,False,False,True,0.0
+77863,"Lyons, TX",TX,,,,,,,,,,False,False,True,0.0
+76909,"San Angelo, TX",TX,,,,,,,,,,False,False,True,0.0
+13244,"Syracuse, NY",NY,,,,,,,,,,False,False,True,0.0
+13683,"Akwesasne, NY",NY,,,,,,,,,,False,False,True,0.0
+14083,"Wyoming County, NY",NY,,,,,,,,,,False,False,True,0.0
+12226,"Albany, NY",NY,,,,,,,,,,False,False,True,0.0
+10542,"Mahopac, NY",NY,,,,,,,,,,False,False,True,0.0
+79918,"Fort Bliss, TX",TX,,,,,,,,,,False,False,True,0.0
+76439,"Dennis, TX",TX,,,,,,,,,,False,False,True,0.0
+77986,"Lavaca County, TX",TX,,,,,,,,,,False,False,True,0.0
+78347,"Nueces County, TX",TX,,,,,,,,,,False,False,True,0.0
+75884,"Anderson County, TX",TX,,,,,,,,,,False,False,True,0.0
+14027,"Erie County, NY",NY,,,,,,,,,,False,False,True,0.0
+14557,"Genesee County, NY",NY,,,,,,,,,,False,False,True,0.0
+12915,"Franklin County, NY",NY,,,,,,,,,,False,False,True,0.0
+75658,"Rusk County, TX",TX,,,,,,,,,,False,False,True,0.0
+75687,"Rusk County, TX",TX,,,,,,,,,,False,False,True,0.0
+78062,"Atascosa County, TX",TX,,,,,,,,,,False,False,True,0.0
+12820,"Warren County, NY",NY,,,,,,,,,,False,False,True,0.0
+11439,"New York, NY",NY,,,,,,,,,,False,False,True,0.0
+13645,"Hailesboro, NY",NY,,,,,,,,,,False,False,True,0.0
+13747,"Otsego County, NY",NY,,,,,,,,,,False,False,True,0.0
+23284,"Richmond, VA",VA,,,,,,,,,,False,False,True,0.0
+23681,"Hampton, VA",VA,,,,,,,,,,False,False,True,0.0
+11249,"New York, NY",NY,,,,,,,,,,False,False,True,0.0
+10540,"Westchester County, NY",NY,,,,,,,,,,False,False,True,0.0
+23081,"James City County, VA",VA,,,,,,,,,,False,False,True,0.0
+23147,"Charles City County, VA",VA,,,,,,,,,,False,False,True,0.0
+23298,"Richmond, VA",VA,,,,,,,,,,False,False,True,0.0
+12544,"Columbia County, NY",NY,,,,,,,,,,False,False,True,0.0

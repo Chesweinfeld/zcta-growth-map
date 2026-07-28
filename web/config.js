@@ -25,7 +25,7 @@ const q = new URLSearchParams(location.search);
 const BUCKET = "https://pub-87663236083743889aff2a008693c67f.r2.dev";
 
 export const TILES_URL =
-  q.get("tiles") || `${BUCKET}/zctas-z13-tiger.pmtiles`;
+  q.get("tiles") || `${BUCKET}/zctas-z13-tiger-full.pmtiles`;
 
 // The grey for land no ZCTA covers - about a fifth of the country. Precomputed
 // as (US land - all ZCTAs) and tiled rather than shipped as GeoJSON, where it

@@ -172,12 +172,22 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     acs = load_acs()
     stability = load_boundary_stability()
+    # LEFT, not inner. 870 ZCTAs have a 2020 polygon but no usable ACS pair -
+    # 868 are new in the 2020 vintage and absent from the 2011 release, and 19
+    # (Brentwood NY 11717 among them) are simply not published in 2024, where
+    # the API answers 204. An inner join dropped them, and because they ARE
+    # TIGER ZCTAs the no-ZCTA mask did not cover them either, so 29,004 km2 fell
+    # between the two and rendered as bare basemap. Keeping them with null
+    # metrics makes them grey - "this ZIP exists, no estimate" - which is true.
     gdf = (
         load_geometry()
-        .merge(acs, on="zcta", how="inner")
+        .merge(acs, on="zcta", how="left")
         .merge(stability, on="zcta", how="left")
         .merge(load_names(), on="zcta", how="left")
     )
+    # A row with no ACS pair can never be a like-for-like comparison.
+    for c in ["comparable", "comparable_hu"]:
+        gdf[c] = gdf[c].fillna(False).astype(bool)
     gdf["same_area_share"] = gdf["same_area_share"].fillna(0)
     gdf["boundary_changed"] = gdf["same_area_share"] < STABLE_AREA_SHARE
 

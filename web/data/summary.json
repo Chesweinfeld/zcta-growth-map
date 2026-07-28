@@ -5,9 +5,9 @@
     "years": 13
   },
   "counts": {
-    "zctas_mapped": 32921,
+    "zctas_mapped": 33791,
     "comparable": 22237,
-    "boundary_changed": 3425,
+    "boundary_changed": 4282,
     "ranked": 21229
   },
   "min_pop": 1000,
