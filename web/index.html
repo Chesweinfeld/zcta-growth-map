@@ -45,6 +45,10 @@
     <section>
       <h2>Filters</h2>
       <label class="field">
+        <span>Minimum 2024 population <output id="minpop-out">0</output></span>
+        <input type="range" id="minpop" min="0" max="20000" step="500" value="0">
+      </label>
+      <label class="field">
         <span>State</span>
         <select id="state"><option value="">All states</option></select>
       </label>
@@ -86,12 +90,10 @@
       <strong>20% of U.S. land area</strong> sits outside every ZCTA, and no
       filter setting will fill it in because there is no polygon to draw. That
       land is shaded grey, the same as a ZCTA with no usable estimate, because in
-      both cases the answer is the same: no figure exists. On housing metrics the
-      grey also covers ZCTAs with too few units to compare - a barracks or prison
-      holds thousands of people in almost no housing, and the percentage would be
-      meaningless. The first view shows every ZCTA that has an estimate; hiding
-      redrawn boundaries greys out more. The Top 100 applies its own floor of
-      1,000 people at both endpoints, so small-sample swings cannot reach it.</p>
+      both cases the answer is the same: no figure exists. Only 306 ZCTAs are
+      grey for the second reason. Both filters below start off, so the first view
+      shows every ZCTA that has an estimate; raising the minimum population or
+      hiding redrawn boundaries greys out more.</p>
 
       <p>Source: U.S. Census Bureau, ACS 5-year estimates (B01003, B25001) and
       2020 ZCTA boundaries. Percentages are estimates with sampling error;
