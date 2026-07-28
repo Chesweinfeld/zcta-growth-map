@@ -41,22 +41,28 @@ const $ = (s) => document.querySelector(s);
 // has to read as the same color in light and dark, or the two modes encode the
 // data differently and screenshots taken in one cannot be compared against the
 // other. Only the surround - plane, rules, borders, basemap - follows the theme.
-// Nine classes, symmetric about a neutral middle: blue = decline, red = growth.
-const RAMP = ["#184f95", "#2a78d6", "#86b6ef", "#cde2fb", "#f0efec",
+// Nine classes: blue = decline, red = growth.
+// Index 3 is the -2%..+2% band - the "no real change" class - so it carries the
+// neutral light purple. Index 4 (+2%..+10%) opens the growth side in light pink.
+// Previously the near-white neutral sat at index 4, which put the visual centre
+// of the ramp one band above the actual zero point.
+const RAMP = ["#184f95", "#2a78d6", "#86b6ef", "#d3c7e8", "#f9d7e6",
               "#fed4d0", "#ec9991", "#c34c48", "#823430"];
+
+// No estimate for the active metric. Grey, and the same grey in both themes:
+// it is the absence of a value, and it should never read as a ramp class.
+const NODATA = "#a9a9a9";
 
 const PALETTE = {
   light: {
     ramp: RAMP,
-    // nodata stays per-theme: it encodes no value, so it should recede into
-    // whichever plane it sits on rather than read as a class of its own.
-    nodata: "#dedcd5", plane: "#f9f9f7", ink: "#0b0b0b",
+    nodata: NODATA, plane: "#f9f9f7", ink: "#0b0b0b",
     rule: "#c3c2b7", border: "rgba(11,11,11,0.35)",
     basemap: "rastertiles/voyager",
   },
   dark: {
     ramp: RAMP,
-    nodata: "#2c2c2a", plane: "#0d0d0d", ink: "#ffffff",
+    nodata: NODATA, plane: "#0d0d0d", ink: "#ffffff",
     rule: "#383835", border: "rgba(255,255,255,0.35)",
     basemap: "dark_all",
   },
