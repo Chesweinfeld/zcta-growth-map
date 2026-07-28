@@ -8,8 +8,8 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-FILE=web/tiles/zctas.pmtiles
-KEY=${KEY:-zctas.pmtiles}
+FILE=web/tiles/zctas-z13.pmtiles
+KEY=${KEY:-zctas-z13.pmtiles}
 TARGET=${TARGET:-r2}
 : "${BUCKET:?set BUCKET to the bucket name}"
 

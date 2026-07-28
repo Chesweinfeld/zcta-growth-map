@@ -14,10 +14,15 @@
 // To move hosts, replace this one string. The bucket must allow cross-origin
 // GETs *with* the Range header and expose Content-Range.
 //
+// The key is versioned by maxzoom, and that is load-bearing: objects go up with
+// `immutable, max-age=31536000`, so a rebuild MUST land on a new key and update
+// this line. Reusing a key strands clients on the old archive for a year. The
+// previous z10 build is still at .../zctas.pmtiles if this one needs backing out.
+//
 // ?tiles=<url> overrides at runtime, for testing a bucket before committing;
 // ?tiles=tiles/zctas.pmtiles falls back to a local build under web/tiles/.
 const override = new URLSearchParams(location.search).get("tiles");
 
 export const TILES_URL =
   override ||
-  "https://pub-87663236083743889aff2a008693c67f.r2.dev/zctas.pmtiles";
+  "https://pub-87663236083743889aff2a008693c67f.r2.dev/zctas-z13.pmtiles";

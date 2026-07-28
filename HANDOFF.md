@@ -18,7 +18,17 @@ Local: `python3 scripts/serve.py` → http://localhost:8787
   complete count with a survey estimate makes the delta a methodology artifact.
 - **Metrics**: population % and housing-unit % (user's pick), plus people added
   and units added.
-- **Full tile resolution is deliberate.** z10, tippecanoe default detail. A
+- **maxzoom is 13, raised from 10.** z10 looked fine until you zoomed past it:
+  MapLibre overzooms beyond maxzoom, so z10 geometry gets stretched, and
+  `flyTo()` lands at 10.5 already. z13 costs size (34 MB → 192 MB) but not load
+  speed — PMTiles is range-read, so a client only fetches tiles it displays, and
+  the root directory is 0.8 KB. Build takes ~60 s.
+- **R2 objects are `immutable, max-age=31536000`, so a rebuild must use a NEW
+  key** and `web/config.js` must be updated to match. Reusing a key leaves every
+  client on the stale archive for a year. Keys are versioned by maxzoom
+  (`zctas-z13.pmtiles`); the old z10 build is still at `zctas.pmtiles` as a
+  rollback.
+- **Full tile resolution is deliberate.** Tippecanoe default detail. A
   coarser build (maxzoom 9 + `-D 10`) was tried and **explicitly rejected** by
   the user — "i still want to be able to zoom so you should not mess with the
   resolution". They are fine with a slow first load; they want interaction
