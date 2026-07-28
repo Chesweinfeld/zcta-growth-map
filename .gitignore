@@ -8,5 +8,6 @@ web/data/zctas.geojson
 
 __pycache__/
 .DS_Store
+.wrangler/
 web/data/zctas*.geojson
 web/tiles/

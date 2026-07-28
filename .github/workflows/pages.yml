@@ -23,8 +23,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-      # Publishes web/ as the site root. The data and tiles are committed, so
-      # there is nothing to build here - the Python pipeline runs locally.
+      # Publishes web/ as the site root. The sidecar data is committed and the
+      # tiles are hosted off-repo (see TILES_URL in web/config.js), so there is
+      # nothing to build here - the Python pipeline runs locally.
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web

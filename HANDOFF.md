@@ -78,15 +78,37 @@ the Census API key and is gitignored.
 
 ## Open items
 
-1. **Need from user: bucket name + GitHub username.** They go into
-   `web/config.js` (`TILES_URL`) and `scripts/{r2,s3}-cors.json` (origins).
-2. Upload tiles: `BUCKET=<name> bash scripts/upload_tiles.sh`, then set CORS
+GitHub account is **`Chesweinfeld`**; the Pages origin is therefore
+`https://chesweinfeld.github.io`, already filled into
+`scripts/{r2,s3}-cors.json`. Target repo: `Chesweinfeld/zcta-growth-map`
+(public), site at `https://chesweinfeld.github.io/zcta-growth-map/`.
+
+Blocked on the user — account-level, cannot be done from a chat session:
+
+1. **R2 is not enabled on the Cloudflare account.** `wrangler r2 bucket list`
+   fails with `code: 10042 — Please enable R2 through the Cloudflare Dashboard`.
+   Enabling requires accepting the R2 terms and putting a payment method on
+   file, even for the free tier.
+2. **The wrangler OAuth token has no `r2` scope.** `wrangler whoami` lists
+   `workers`, `workers_kv`, `d1`, `pages`, … but no `r2`. After enabling R2,
+   re-run `npx wrangler login` so the new consent screen includes it. Wrangler
+   is otherwise authenticated as `chesapeakeisaiah@gmail.com`, account
+   `4450b4b5b3c9ad94680ca6585c1bd938`.
+3. **The empty GitHub repo must be created by hand.** The GitHub MCP token
+   returns `403 Resource not accessible by personal access token` on
+   `POST /user/repos`. Once the empty repo exists `git push` works on its own —
+   the osxkeychain helper already holds a working credential.
+
+Then, in order:
+
+4. Upload tiles: `BUCKET=<name> bash scripts/upload_tiles.sh`, then set CORS
    once. The bucket **must** allow the `Range` header and expose
    `Content-Range` — this is the failure mode to check first if the map is blank.
    A failed tile load shows an on-screen message naming the URL.
-3. Push to GitHub, then Settings → Pages → Source: GitHub Actions. Workflow is
+5. Set `TILES_URL` in `web/config.js` to the public bucket URL and commit.
+6. Push to GitHub, then Settings → Pages → Source: GitHub Actions. Workflow is
    already committed at `.github/workflows/pages.yml`.
-4. The Cloudflare plugin is installed, but its MCP servers
+7. The Cloudflare plugin is installed, but its MCP servers
    (`cloudflare-api`, `-bindings`, `-builds`, `-observability`) still need OAuth
    authorization in an interactive session before they can be used to verify the
    bucket/CORS from inside a chat.
@@ -107,6 +129,18 @@ the Census API key and is gitignored.
 - **The user's Chrome force-darkens pages** (an extension), inverting the HTML
   panel but not the map canvas. Looks like a theming bug, isn't. The theme is
   stamped explicitly on `<html>` at boot so the panel and map can't disagree.
+- **GitHub Releases cannot host the PMTiles archive — ruled out by test, don't
+  retry it.** It looks ideal (2 GB asset limit, free, same repo) and it used to
+  work, but release assets now redirect to `release-assets.githubusercontent.com`
+  and **no hop sets any `access-control-*` header**; an `OPTIONS` preflight
+  returns 404. Since `Range` is not a CORS-safelisted request header it always
+  preflights, so the browser blocks every tile read cross-origin. `curl` looks
+  fine here (206 + `content-range`) because curl ignores CORS — verify with an
+  `Origin:` header and grep for `access-control`, not by eyeballing the 206.
+- GitHub **Pages** does serve byte ranges (`accept-ranges: bytes`, 206), so
+  committing the archive into `web/tiles/` and letting Pages serve it same-origin
+  is a real fallback if R2 stays blocked — at the cost of ~34 MB in git history
+  per tile rebuild, which is exactly what the current setup avoids.
 - Unexplained: the same tippecanoe flags produced 18.4 MB via `build_tiles.sh`
   but 9.5 MB run directly. Moot now that full resolution is the decision, but
   don't trust a size comparison unless both builds ran the same way.
