@@ -142,6 +142,16 @@ above was done through `wrangler` instead, which is fully authenticated.
 - **The user's Chrome force-darkens pages** (an extension), inverting the HTML
   panel but not the map canvas. Looks like a theming bug, isn't. The theme is
   stamped explicitly on `<html>` at boot so the panel and map can't disagree.
+- **Two layers draw the country, and a ZCTA can fall between them.** The
+  choropleth draws ZCTAs that survived the ACS join; `nozcta.pmtiles` greys land
+  that is in no TIGER ZCTA. A ZCTA with a polygon but no ACS pair belongs to
+  neither set and renders as bare basemap - that was Brentwood NY 11717 and 869
+  others, 29,004 km². Fixed by left-joining ACS in `build_dataset.py` so every
+  2020 ZCTA survives with null metrics and paints grey. **If the join ever goes
+  back to inner, the holes come back**, and they look like a rendering bug rather
+  than a data one. 19 ZCTAs are absent from the 2024 ACS release outright - the
+  API returns HTTP 204 for 11717 while its neighbours return normally - so
+  "missing from ACS" is not a fetch failure and retrying will not fix it.
 - **`scripts/r2-cors.json` is NOT in S3 syntax.** R2's API wants
   `{"rules":[{"allowed":{origins,methods,headers}, exposeHeaders, maxAgeSeconds}]}`
   — request-side fields nested under `allowed`, the rest as siblings. The file
