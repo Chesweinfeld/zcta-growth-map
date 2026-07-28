@@ -1,12 +1,16 @@
-[
-  {
-    "AllowedOrigins": [
-      "https://chesweinfeld.github.io",
-      "http://localhost:8787"
-    ],
-    "AllowedMethods": ["GET", "HEAD"],
-    "AllowedHeaders": ["range", "if-match"],
-    "ExposeHeaders": ["content-range", "content-length", "etag"],
-    "MaxAgeSeconds": 86400
-  }
-]
+{
+  "rules": [
+    {
+      "allowed": {
+        "origins": [
+          "https://chesweinfeld.github.io",
+          "http://localhost:8787"
+        ],
+        "methods": ["GET", "HEAD"],
+        "headers": ["range", "if-match"]
+      },
+      "exposeHeaders": ["content-range", "content-length", "etag"],
+      "maxAgeSeconds": 86400
+    }
+  ]
+}

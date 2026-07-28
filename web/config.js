@@ -1,17 +1,23 @@
 // Where the PMTiles archive lives. This is the only file to edit when moving
 // tiles between hosts.
 //
-// Local default: the file written by scripts/build_tiles.sh, resolved relative
-// to the page so it works from a GitHub Pages project subpath.
+// Live: the public r2.dev URL of the Cloudflare R2 bucket `zcta-tiles`. CORS is
+// applied from scripts/r2-cors.json - cross-origin GETs with the Range header,
+// with Content-Range exposed back. Verified: preflight returns 204 with
+// Access-Control-Allow-Headers: range, and a ranged GET returns 206 with
+// Content-Range plus Access-Control-Expose-Headers.
 //
-// To serve from object storage, set an absolute URL, e.g.
-//   export const TILES_URL = "https://tiles.example.com/zctas.pmtiles";
-//   export const TILES_URL = "https://pub-<hash>.r2.dev/zctas.pmtiles";
-// The bucket must allow cross-origin GETs *with* the Range header and expose
-// Content-Range - see scripts/r2-cors.json and the README.
+// If the map is blank, check that pairing first - it is the usual culprit, and
+// a plain 206 in curl does NOT prove it, since curl ignores CORS entirely. Send
+// an Origin header and look for access-control-allow-origin in the response.
 //
-// ?tiles=<url> overrides at runtime, for testing a bucket before committing.
+// To move hosts, replace this one string. The bucket must allow cross-origin
+// GETs *with* the Range header and expose Content-Range.
+//
+// ?tiles=<url> overrides at runtime, for testing a bucket before committing;
+// ?tiles=tiles/zctas.pmtiles falls back to a local build under web/tiles/.
 const override = new URLSearchParams(location.search).get("tiles");
 
 export const TILES_URL =
-  override || new URL("tiles/zctas.pmtiles", location.href).href;
+  override ||
+  "https://pub-87663236083743889aff2a008693c67f.r2.dev/zctas.pmtiles";
