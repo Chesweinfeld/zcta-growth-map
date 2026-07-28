@@ -6,6 +6,12 @@
 <!-- Declares that the page themes itself, so Chrome's auto-dark leaves it
      alone - it darkens the HTML but not the map canvas, which splits the UI. -->
 <meta name="color-scheme" content="light dark">
+<!-- Dark Reader and similar extensions re-tint backgrounds regardless of the
+     declaration above, which wrecks the legend specifically: the swatches carry
+     the choropleth colors inline, so a darkened panel stops matching the map
+     canvas (extensions cannot touch WebGL). This meta asks them to stand down.
+     The page already ships its own light and dark themes. -->
+<meta name="darkreader-lock">
 <title>Fastest-growing ZIP code areas, 2011-2024</title>
 <link rel="stylesheet" href="vendor/maplibre-gl.css">
 <link rel="stylesheet" href="style.css">
@@ -76,6 +82,17 @@
       There is no single-year alternative at this geography &mdash; ZIP Code
       Tabulation Areas are not published in the ACS 1-year product at all, at any
       population size.</p>
+
+      <p><strong>Why parts of the map are blank.</strong> ZIP Code Tabulation
+      Areas do not tile the country. They are built from address ranges, so land
+      with no addresses &mdash; wilderness, national parks, desert, large water
+      bodies, some military land &mdash; belongs to no ZCTA at all. About
+      <strong>20% of U.S. land area</strong> sits outside every ZCTA and stays
+      blank at any filter setting. The rest of the blank space is the filters:
+      the minimum-population slider and the re-cut boundary toggle both hide
+      areas, and turning them fully off fills in everything that has a polygon.
+      Areas that exist but have no usable estimate are drawn grey rather than
+      left blank &mdash; there are only 306 of those.</p>
 
       <p>Source: U.S. Census Bureau, ACS 5-year estimates (B01003, B25001) and
       2020 ZCTA boundaries. Percentages are estimates with sampling error;
