@@ -362,7 +362,13 @@ function detailHTML(zcta) {
   const flags = [];
   if (p.boundary_changed)
     flags.push("Boundary redrawn between the 2010 and 2020 ZCTA vintages - the two endpoints do not cover the same ground.");
-  if (p.pop_2024 < 1000) flags.push("Small population: the estimate is noisy.");
+  // null < 1000 is true in JS, so the null check has to come first or a ZCTA
+  // with no estimate at all claims to be merely small.
+  if (p.pop_2024 == null)
+    flags.push("No ACS estimate published for this ZCTA in the 2011 or 2024 release.");
+  else if (p.pop_2024 < 1000) flags.push("Small population: the estimate is noisy.");
+  if (!p.comparable_hu)
+    flags.push("Too few housing units to compare: the housing percentage is left grey.");
   return `<b>${p.zcta}</b> &middot; ${p.label ?? ""}
     <div class="r"><span>Population</span><i>${fmt(p.pop_2011)} → ${fmt(p.pop_2024)}</i></div>
     <div class="r"><span>Change</span><i>${fmtPct(p.pop_pct)} (${p.pop_change > 0 ? "+" : ""}${fmt(p.pop_change)})</i></div>
@@ -407,11 +413,20 @@ function wireMap() {
     tip.hidden = false;
     tip.style.left = `${e.point.x}px`;
     tip.style.top = `${e.point.y}px`;
-    tip.innerHTML = `<b>${p.zcta}</b> ${byZcta[p.zcta]?.label ?? ""}
+    // The context row follows the metric: quoting a population count under a
+    // housing percentage invites reading one as the base of the other.
+    // Housing counts are not in the tiles - only the nine attributes the map
+    // paints on are - so that number comes from the sidecar, which may not have
+    // landed yet. fmt() renders the gap as "-" rather than breaking.
+    const rec = byZcta[p.zcta];
+    const isHu = state.metric.startsWith("hu");
+    const ctxLabel = isHu ? "Housing units 2024" : "Population 2024";
+    const ctxValue = isHu ? fmt(rec?.housing_units_2024) : fmt(p.pop_2024);
+    tip.innerHTML = `<b>${p.zcta}</b> ${rec?.label ?? ""}
       <div class="r"><span>${METRICS[state.metric].noun}</span><i>${fmtVal(
         p[state.metric] == null ? null : Number(p[state.metric])
       )}</i></div>
-      <div class="r"><span>Population 2024</span><i>${fmt(p.pop_2024)}</i></div>`;
+      <div class="r"><span>${ctxLabel}</span><i>${ctxValue}</i></div>`;
   });
   map.on("mouseleave", "zcta-fill", () => {
     map.getCanvas().style.cursor = "";
