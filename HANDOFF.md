@@ -18,6 +18,19 @@ Local: `python3 scripts/serve.py` → http://localhost:8787
   complete count with a survey estimate makes the delta a methodology artifact.
 - **Metrics**: population % and housing-unit % (user's pick), plus people added
   and units added.
+- **Geometry is TIGER/Line, and it is barely simplified — do not "optimize"
+  either back.** The original pipeline used `cb_2020_us_zcta520_500k` (Census
+  pre-generalizes it to 1:500,000) *and* then applied a 250 m Douglas-Peucker
+  pass on top. Together those left 10025 as a **five-vertex polygon** and 10001
+  as thirteen, so ZIP boundaries cut straight across city blocks. It reads fine
+  nationally and falls apart the moment you zoom into a metro.
+  The 250 m tolerance was justified in a comment as keeping the file small
+  enough "for the browser to handle as plain GeoJSON" — obsolete, since the
+  browser stopped loading GeoJSON when the map moved to PMTiles. `zctas.geojson`
+  is now only an intermediate feeding tippecanoe. Tolerance is now 0.000005°
+  (~0.5 m), deliberately below tippecanoe's own ~1.2 m quantization at z13, so
+  the zoom level decides detail rather than a constant. Vertex counts went up
+  5-17x (07047: 19 → 287). `zctas.geojson` is now 878 MB, still gitignored.
 - **maxzoom is 13, raised from 10.** z10 looked fine until you zoomed past it:
   MapLibre overzooms beyond maxzoom, so z10 geometry gets stretched, and
   `flyTo()` lands at 10.5 already. z13 costs size (34 MB → 192 MB) but not load

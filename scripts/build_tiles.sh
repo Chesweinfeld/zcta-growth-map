@@ -23,7 +23,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 IN=web/data/zctas.geojson
-OUT=web/tiles/zctas-z13.pmtiles
+OUT=web/tiles/zctas-z13-tiger.pmtiles
 
 [ -f "$IN" ] || { echo "missing $IN - run build_dataset.py first"; exit 1; }
 mkdir -p "$(dirname "$OUT")"

@@ -1,7 +1,7 @@
-"""Join the two ACS vintages into one growth table + a simplified GeoJSON.
+"""Join the two ACS vintages into one growth table + a GeoJSON of the polygons.
 
 Outputs (web/data/):
-  zctas.geojson   simplified 2020-vintage ZCTA polygons with growth properties
+  zctas.geojson   full-resolution 2020-vintage ZCTA polygons with growth props
   summary.json    national roll-up + metric distributions for the legend
 
 Growth metrics are 2007-2011 ACS -> 2020-2024 ACS (13 years apart; ZCTA-level
@@ -26,9 +26,23 @@ OUT = ROOT / "web" / "data"
 MIN_POP = 1000
 # Same idea for housing units.
 MIN_HU = 400
-# Douglas-Peucker tolerance in degrees (~250 m). Keeps the national file small
-# enough for the browser to handle as plain GeoJSON.
-SIMPLIFY_TOL = 0.0025
+# Douglas-Peucker tolerance in degrees. ~0.5 m: strips exactly-collinear noise
+# from the source and nothing else. Deliberately below tippecanoe's own
+# quantization at maxzoom (a z13 tile is ~4.9 km across over 4096 units, so
+# ~1.2 m per unit), which makes the tiler the limiting factor rather than this
+# step - the thing that should decide detail is the zoom level, not a constant
+# chosen years earlier for a delivery mechanism the project no longer uses.
+#
+# This was 0.0025 (~250 m), which was catastrophic for urban ZCTAs - it left
+# 10025 as a FIVE-vertex polygon and 10001 as thirteen, so ZIP boundaries cut
+# straight across blocks instead of following streets. The comment justifying it
+# said the file had to stay "small enough for the browser to handle as plain
+# GeoJSON", but the browser stopped loading GeoJSON when the map moved to
+# PMTiles; zctas.geojson is now only an intermediate feeding tippecanoe, and
+# tippecanoe does its own per-zoom generalization (--simplification=6) while
+# keeping full detail at maxzoom. Generalizing here just destroyed data the
+# tiler would have kept.
+SIMPLIFY_TOL = 0.000005
 # Share of a 2020 ZCTA's land that came from the same-numbered 2010 ZCTA.
 # Below this the number was re-cut enough that the comparison is not
 # like-for-like. Almost every ZCTA moved a little between vintages (median
@@ -136,7 +150,13 @@ def load_names() -> pd.DataFrame:
 
 
 def load_geometry() -> gpd.GeoDataFrame:
-    zf = GEO / "cb_2020_us_zcta520_500k.zip"
+    # TIGER/Line, not the cartographic boundary file. cb_2020_us_zcta520_500k is
+    # pre-generalized by Census to 1:500,000 - fine for a national thumbnail,
+    # but it cuts corners across city blocks, which is visible the moment you
+    # zoom past a metro area. TIGER follows the actual boundary. It costs a
+    # 528 MB download and a heavier build; the tiles are range-read, so it does
+    # not cost load speed.
+    zf = GEO / "tl_2020_us_zcta520.zip"
     with zipfile.ZipFile(zf) as z:
         name = next(n for n in z.namelist() if n.endswith(".shp"))
     gdf = gpd.read_file(f"zip://{zf}!{name}")

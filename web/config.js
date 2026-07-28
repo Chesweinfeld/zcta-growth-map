@@ -25,4 +25,4 @@ const override = new URLSearchParams(location.search).get("tiles");
 
 export const TILES_URL =
   override ||
-  "https://pub-87663236083743889aff2a008693c67f.r2.dev/zctas-z13.pmtiles";
+  "https://pub-87663236083743889aff2a008693c67f.r2.dev/zctas-z13-tiger.pmtiles";
