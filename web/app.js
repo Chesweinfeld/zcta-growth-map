@@ -125,7 +125,19 @@ function fillColor() {
   const expr = ["step", ["to-number", ["get", state.metric], -1e9], ramp[0]];
   b.forEach((cut, i) => expr.push(cut, ramp[i + 1]));
   // A ZCTA with no estimate for this metric is drawn flat, not as "big decline".
-  return ["case", ["==", ["get", state.metric], null], pal().nodata, expr];
+  //
+  // Housing metrics also grey out anything failing the small-base guard. Those
+  // used to be hidden outright, which punched 10,181 holes - 30% of the country
+  // - into the housing views. Grey is the honest reading: the ZCTA exists and
+  // the percentage would be meaningless, since a barracks or prison holds
+  // thousands of people in almost no housing units and posts absurd swings off
+  // a base of a dozen. They stay out of the rankings either way.
+  const unknown = state.metric.startsWith("hu")
+    ? ["any",
+       ["==", ["get", state.metric], null],
+       ["!", ["to-boolean", ["get", "comparable_hu"]]]]
+    : ["==", ["get", state.metric], null];
+  return ["case", unknown, pal().nodata, expr];
 }
 
 // Filters are expressed as PAINT, not as layer filters. Changing a layer
@@ -136,8 +148,9 @@ function visibleExpr() {
   const f = ["all", [">=", ["coalesce", ["get", "pop_2024"], 0], state.minPop]];
   if (state.hideRecut) f.push(["!", ["get", "boundary_changed"]]);
   if (state.st) f.push(["==", ["get", "state"], state.st]);
-  // Housing metrics carry their own small-base guard.
-  if (state.metric.startsWith("hu")) f.push(["get", "comparable_hu"]);
+  // The housing small-base guard deliberately does NOT live here. Hiding on it
+  // blanked 30% of the map on housing views; it greys those out in fillColor()
+  // instead, and still gates the rankings in renderTop().
   return f;
 }
 
@@ -148,7 +161,6 @@ function passesFilter(rec) {
   if ((rec.pop_2024 ?? 0) < state.minPop) return false;
   if (state.hideRecut && rec.boundary_changed) return false;
   if (state.st && rec.state !== state.st) return false;
-  if (state.metric.startsWith("hu") && !rec.comparable_hu) return false;
   return true;
 }
 
@@ -300,8 +312,13 @@ function renderLegend() {
       : `${fmtVal(lo)} to ${fmtVal(hi)}`;
     return `<div class="row"><span class="sw" style="background:${v}"></span>${t}</div>`;
   });
+  // On housing views the grey covers a second case, so it says so rather than
+  // implying every grey ZCTA is simply unmeasured.
+  const greyLabel = state.metric.startsWith("hu")
+    ? "no estimate, or too few units to compare"
+    : "no estimate";
   rows.push(
-    `<div class="row"><span class="sw" style="background:${pal().nodata}"></span>no estimate</div>`
+    `<div class="row"><span class="sw" style="background:${pal().nodata}"></span>${greyLabel}</div>`
   );
   $("#legend").innerHTML = rows.join("");
   // "2011" and "2024" are ACS 5-year dataset names, not single years - the
