@@ -24,13 +24,12 @@ const BREAKS = {
 
 const state = {
   metric: "pop_pct",
-  // Both guards start OFF, so the first view is the whole country and nothing
-  // is silently withheld. They previously hid 11,201 ZCTAs - a third of the
-  // map - which read as missing data rather than as a filter. The guards still
-  // matter (a 300-person ZCTA going to 900 is a +200% "boom" that is mostly
-  // sampling noise), so they remain one click away and still gate the rankings.
-  minPop: 0,
   st: "",
+  // Starts OFF, so the first view is the whole country and nothing is silently
+  // withheld. The small-population guard that used to live beside this as a
+  // slider is gone from the UI entirely - it only ever removed map coverage,
+  // and it still governs the rankings from the data side, where `comparable`
+  // encodes the 1,000-people-at-both-endpoints rule.
   hideRecut: false,
   selected: null,
   basemap: true,
@@ -158,7 +157,7 @@ function fillColor() {
 // is what made the sliders and checkboxes stutter; changing a data-driven paint
 // property only re-evaluates attributes. Same visual result, no re-tessellation.
 function visibleExpr() {
-  const f = ["all", [">=", ["coalesce", ["get", "pop_2024"], 0], state.minPop]];
+  const f = ["all"];
   if (state.hideRecut) f.push(["!", ["get", "boundary_changed"]]);
   if (state.st) f.push(["==", ["get", "state"], state.st]);
   // The housing small-base guard deliberately does NOT live here. Hiding on it
@@ -171,7 +170,6 @@ function visibleExpr() {
 // zeroed-out opacity still generates pointer events.
 function passesFilter(rec) {
   if (!rec) return false;
-  if ((rec.pop_2024 ?? 0) < state.minPop) return false;
   if (state.hideRecut && rec.boundary_changed) return false;
   if (state.st && rec.state !== state.st) return false;
   return true;
@@ -349,7 +347,6 @@ function renderTop() {
     .filter(
       (r) =>
         r[m] != null &&
-        r.pop_2024 >= state.minPop &&
         (!state.st || r.state === state.st) &&
         (!m.startsWith("hu") || r.comparable_hu)
     )
@@ -472,12 +469,6 @@ function wireUI() {
     renderTop();
   };
 
-  $("#minpop").oninput = (e) => {
-    state.minPop = +e.target.value;
-    $("#minpop-out").textContent = state.minPop.toLocaleString();
-    applyPaint();
-    renderTop();
-  };
   $("#state").onchange = (e) => {
     state.st = e.target.value;
     applyPaint();
@@ -590,10 +581,9 @@ async function loadSidecar() {
   );
 
   // Filters can be set from the query string, so a filtered view is a link you
-  // can send someone: ?state=TX&metric=hu_pct&minpop=5000
+  // can send someone: ?state=TX&metric=hu_pct
   const q = new URLSearchParams(location.search);
   if (METRICS[q.get("metric")]) state.metric = q.get("metric");
-  if (q.has("minpop")) state.minPop = Math.max(0, +q.get("minpop") || 0);
   if (summary.states.includes(q.get("state"))) state.st = q.get("state");
   // Re-cut ZCTAs now show by default, so the link needs to be able to hide
   // them; "show" stays accepted so older shared links keep working.
@@ -601,8 +591,6 @@ async function loadSidecar() {
   if (q.get("recut") === "show") state.hideRecut = false;
 
   $("#state").value = state.st;
-  $("#minpop").value = state.minPop;
-  $("#minpop-out").textContent = state.minPop.toLocaleString();
   $("#hide-recut").checked = state.hideRecut;
   [...$("#metric").children].forEach((c) =>
     c.setAttribute("aria-checked", String(c.dataset.metric === state.metric))
