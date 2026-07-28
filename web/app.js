@@ -86,6 +86,19 @@ function initTheme() {
   document.documentElement.dataset.theme =
     store.get("zcta-theme") ||
     (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  renderThemeButton();
+}
+
+// The button advertises what clicking will DO, not which theme is on. A toggle
+// labelled with its current state reads as a status display and leaves people
+// guessing whether pressing it confirms or reverses that.
+function renderThemeButton() {
+  const b = document.querySelector("#theme");
+  if (!b) return;
+  const toDark = theme() === "light";
+  b.querySelector(".icon").textContent = toDark ? "☾" : "☀︎";
+  b.querySelector(".label").textContent = toDark ? "Dark" : "Light";
+  b.title = toDark ? "Switch to dark theme" : "Switch to light theme";
 }
 const theme = () => document.documentElement.dataset.theme || "light";
 const pal = () => PALETTE[theme()];
@@ -516,7 +529,9 @@ function wireUI() {
     const next = theme() === "dark" ? "light" : "dark";
     document.documentElement.dataset.theme = next;
     store.set("zcta-theme", next);
+    renderThemeButton();
     renderLegend();
+    // Must come after the button and legend update - the map may not exist yet.
     if (!map) return;
     // Recolor in place, same reason as the basemap toggle: repainting is cheap,
     // rebuilding the style is not.

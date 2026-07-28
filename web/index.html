@@ -105,7 +105,9 @@
     <div id="map"></div>
     <div id="tooltip" class="tooltip" hidden></div>
     <div id="detail" class="detail" hidden></div>
-    <button id="theme" title="Toggle light/dark">&#9681;</button>
+    <button id="theme" type="button" aria-label="Switch between light and dark theme">
+      <span class="icon" aria-hidden="true"></span><span class="label"></span>
+    </button>
   </main>
 </div>
 <script type="module" src="app.js"></script>
